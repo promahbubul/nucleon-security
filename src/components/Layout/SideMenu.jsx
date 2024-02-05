@@ -1,0 +1,89 @@
+import { Link, NavLink } from "react-router-dom";
+import {
+  LiaBookSolid,
+  FaBell,
+  RiLogoutBoxRLine,
+} from "../../assets/Icons/Icons";
+import { logo } from "../../assets/Images/Images";
+import { useState } from "react";
+import NotificationSidebar from "../ui/NotificationSidebar/NotificationSidebar";
+
+const SideMenu = ({ sideLinks }) => {
+  const [category, setCategory] = useState();
+  const [showNotification, setShowNotification] = useState(false);
+  return (
+    <>
+      <aside
+        className="w-12 h-full     bg-dark-gray py-3 flex flex-col justify-between
+    "
+      >
+        <div className="">
+          <div className="relative group">
+            <Link to={""}>
+              <img
+                onMouseEnter={() => set}
+                src={logo}
+                alt=""
+                className="w-10 h-10 p-2 cursor-pointer"
+              />
+            </Link>
+            <div className="absolute  hidden group-hover:flex top-0 left-[100%]  bg-dark-gray flex-col w-32 rounded-r-md ">
+              <NavLink
+                className={
+                  "cursor-pointer hover:bg-gray-500 duration-300 p-2 text-secondary w-full rounded-md"
+                }
+                to={"/dashboard"}
+              >
+                Entitie's View
+              </NavLink>
+              <NavLink
+                className={
+                  "cursor-pointer hover:bg-gray-500 duration-300 p-2 text-secondary rounded-md"
+                }
+                to={"/training"}
+              >
+                Training
+              </NavLink>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 mt-2">
+            {sideLinks.map((item, index) => (
+              <NavLink to={item.path} key={index}>
+                <button className="text-[#80817C] text-center   mx-auto text-xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+                  {item.icon()}
+                </button>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <NavLink to="https://nucleonsecurity.freshdesk.com/support/solutions">
+            <button className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+              <LiaBookSolid />
+            </button>
+          </NavLink>
+
+          <button
+            onClick={() => setShowNotification(!showNotification)}
+            className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2"
+          >
+            <FaBell />
+          </button>
+
+          <NavLink to="/">
+            <button className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+              <RiLogoutBoxRLine />
+            </button>
+          </NavLink>
+        </div>
+      </aside>
+      {showNotification ? (
+        <NotificationSidebar setShowNotification={setShowNotification} />
+      ) : (
+        ""
+      )}
+    </>
+  );
+};
+
+export default SideMenu;
