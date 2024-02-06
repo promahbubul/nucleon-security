@@ -1,8 +1,9 @@
-import { IoSearch } from "react-icons/io5";
+import { IoSearch, IoClose, IoWarning } from "react-icons/io5";
 import { AiFillDashboard } from "react-icons/ai";
 import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
 import {
+  FaCheck,
   FaLockOpen,
   FaUser,
   FaUsersCog,
@@ -22,6 +23,7 @@ import {
   FaPowerOff,
   FaHistory,
   FaArchive,
+  FaChevronDown,
 } from "react-icons/fa";
 
 import { MdInsertChart, MdViewList } from "react-icons/md";
@@ -35,6 +37,10 @@ import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
 export {
+  FaChevronDown,
+  FaCheck,
+  IoWarning,
+  IoClose,
   FaSitemap,
   FaGlobeEurope,
   FaFlask,

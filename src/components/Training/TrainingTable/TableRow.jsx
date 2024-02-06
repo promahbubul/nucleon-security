@@ -14,6 +14,10 @@ import {
   FaPowerOff,
   FaHistory,
   FaArchive,
+  FaCheck,
+  IoWarning,
+  IoClose,
+  FaChevronDown,
 } from "../../../assets/Icons/Icons";
 import RowDetails from "./RowDetails";
 import { Link } from "react-router-dom";
@@ -119,27 +123,64 @@ const TableRow = ({ training, handleShowMore }) => {
             <h3 className="text-secondary p-1 text-base peer-checked:border-b peer-checked:border-slate-200 font-medium ">
               Related events (3)
             </h3>
-            <table className="border peer-checked:block hidden">
-              <tr className=" grid grid-cols-12 text-secondary text-base font-bold text-left">
-                <th className=" col-span-2  hover:text-black cursor-pointer">
-                  Date
-                </th>
-                <th className=" col-span-1  hover:text-black cursor-pointer">
-                  Host
-                </th>
-                <th className=" col-span-1  hover:text-black cursor-pointer">
-                  Type
-                </th>
-                <th className=" col-span-4  hover:text-black cursor-pointer">
-                  Process
-                </th>
-                <th className=" col-span-2  hover:text-black cursor-pointer">
-                  Target
-                </th>
-                <th className=" col-span-2  hover:text-black cursor-pointer">
-                  Action
-                </th>
-              </tr>
+            <table className=" peer-checked:block hidden">
+              <div className="tbody">
+                {" "}
+                <tr className=" grid grid-cols-12 text-secondary text-base font-bold text-left border-b border-b-slate-200 mt-3 ">
+                  <th className=" col-span-2  hover:text-black cursor-pointer">
+                    Date
+                  </th>
+                  <th className=" col-span-1  hover:text-black cursor-pointer">
+                    Host
+                  </th>
+                  <th className=" col-span-1  hover:text-black cursor-pointer">
+                    Type
+                  </th>
+                  <th className=" col-span-4  hover:text-black cursor-pointer">
+                    Process
+                  </th>
+                  <th className=" col-span-2  hover:text-black cursor-pointer">
+                    Target
+                  </th>
+                  <th className=" col-span-2  hover:text-black cursor-pointer">
+                    Action
+                  </th>
+                </tr>
+                {relatedEvents.map((event, index) => (
+                  <tr
+                    key={index}
+                    className="last:border-b-0  duration-300  text-base border-b border-b-slate-200 text-black relative"
+                  >
+                    <input
+                      type="checkbox"
+                      className="absolute top-0 right-0 z-10 opacity-0  peer h-10 w-20 cursor-pointer
+                      "
+                    />
+                    <FaChevronDown className="absolute right-6 top-3 peer-checked:rotate-180" />
+
+                    <div className="grid grid-cols-12 hover:bg-[#ececec]  py-2 ">
+                      <td className="col-span-2">
+                        {event.date} <span className="">{event.time}</span>
+                      </td>
+                      <td className="col-span-1">{event.host}</td>
+                      <td className="col-span-1">{event.type}</td>
+                      <td className="col-span-4">{event.process}</td>
+                      <td className="col-span-2">{event.target}</td>
+                      <td className="col-span-2 flex flex-row gap-2 items-center">
+                        {event.action == "Allowed" ? (
+                          <FaCheck className="text-xl font-bold text-success" />
+                        ) : event.action == "Blocked" ? (
+                          <IoClose className="text-xl font-bold text-danger" />
+                        ) : (
+                          <IoWarning className="text-xl font-bold text-warning" />
+                        )}
+                        {event.action}
+                      </td>
+                    </div>
+                    <div className="peer-checked:block hidden h-32"></div>
+                  </tr>
+                ))}
+              </div>
             </table>
           </div>
         </div>

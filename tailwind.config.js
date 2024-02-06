@@ -10,7 +10,7 @@ export default {
         black: "#272727",
         success: "#17B017",
         info: "#31CDFE",
-        warning: "warning",
+        warning: "#ffa500",
         danger: "#DB3549",
       },
     },
