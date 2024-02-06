@@ -1,17 +1,28 @@
-import React from 'react'
-import TableRow from './TableRow'
+import React, { useState } from "react";
+import TableRow from "./TableRow";
 
 const TrainingTable = () => {
-  const trainings = [1, 2, 3, 4]
+  const [showMore, setShowMore] = useState(true);
+  const trainings = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const handleShowMore = (training) => {
+    // const item = training;
+    console.log(training);
+  };
 
   return (
-    <table className=' flex flex-col gap-1 mt-3'>
-     {
-      trainings.map((training, index)=> <TableRow  key={index} />)
-     }
+    <table className=" w-full">
+      <tbody className="flex flex-col gap-1 mt-3  w-full">
+        {trainings.map((training, index) => (
+          <TableRow
+            handleShowMore={handleShowMore}
+            training={training}
+            key={index}
+          />
+        ))}
+      </tbody>
     </table>
+  );
+};
 
-  )
-}
-
-export default TrainingTable
+export default TrainingTable;

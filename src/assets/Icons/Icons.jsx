@@ -14,6 +14,14 @@ import {
   FaBiohazard,
   FaLightbulb,
   FaShieldAlt,
+  FaSitemap,
+  FaGlobeEurope,
+  FaFlask,
+  FaSkull,
+  FaBox,
+  FaPowerOff,
+  FaHistory,
+  FaArchive,
 } from "react-icons/fa";
 
 import { MdInsertChart, MdViewList } from "react-icons/md";
@@ -26,9 +34,15 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
-
-
 export {
+  FaSitemap,
+  FaGlobeEurope,
+  FaFlask,
+  FaSkull,
+  FaBox,
+  FaPowerOff,
+  FaHistory,
+  FaArchive,
   FaShieldAlt,
   PiBankFill,
   GiNuclear,

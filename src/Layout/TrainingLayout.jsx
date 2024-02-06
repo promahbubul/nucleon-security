@@ -30,7 +30,7 @@ const TrainingLayout = () => {
       {/* sidebar */}
       <SideMenu sideLinks={sideLinks} />
       {/* Content Area */}
-      <div className="p-3 bg-black w-full">
+      <div className="p-3 bg-black w-full    overflow-hidden overflow-y-scroll scroll-smooth ">
         <Outlet />
       </div>
     </div>

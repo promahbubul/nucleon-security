@@ -1,0 +1,29 @@
+[
+    {
+        "date": "05/02/2024",
+        "time": "16:38:02",
+        "host": "Bhaji",
+        "type": "Network",
+        "process": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe",
+        "target": "52.178.17.233",
+        "action": "Weak signal"
+    },
+    {
+        "date": "05/02/2024",
+        "time": "16:38:02",
+        "host": "ExampleHost",
+        "type": "System",
+        "process": "C:\\Windows\\System32\\svchost.exe",
+        "target": "192.168.1.1",
+        "action": "Blocked"
+    },
+    {
+        "date": "05/02/2024",
+        "time": "16:38:02",
+        "host": "TestHost",
+        "type": "Security",
+        "process": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+        "target": "10.0.0.1",
+        "action": "Allowed"
+    }
+]

@@ -27,8 +27,6 @@ const Dashboard = () => {
       .then((data) => setEntities(data));
   }, []);
 
-  console.log(entities);
-
   return (
     <div>
       <div className="flex flex-row"></div>
@@ -79,20 +77,20 @@ const Dashboard = () => {
         <div className="mt-3">
           <table className=" w-full ">
             <thead className="w-full py-1 border-b border-b-gray-200 ">
-              <th className=" grid grid-cols-12 text-secondary text-base font-bold text-left">
-                <td className=" col-span-2  hover:text-black cursor-pointer">
+              <tr className=" grid grid-cols-12 text-secondary text-base font-bold text-left">
+                <th className=" col-span-2  hover:text-black cursor-pointer">
                   Logo
-                </td>
-                <td className=" col-span-4  hover:text-black cursor-pointer">
+                </th>
+                <th className=" col-span-4  hover:text-black cursor-pointer">
                   Name
-                </td>
-                <td className=" col-span-2  hover:text-black cursor-pointer">
+                </th>
+                <th className=" col-span-2  hover:text-black cursor-pointer">
                   License Count
-                </td>
-                <td className=" col-span-4  hover:text-black cursor-pointer">
+                </th>
+                <th className=" col-span-4  hover:text-black cursor-pointer">
                   Domain
-                </td>
-              </th>
+                </th>
+              </tr>
             </thead>
 
             <tbody className="">
