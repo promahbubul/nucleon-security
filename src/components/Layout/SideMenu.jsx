@@ -27,7 +27,7 @@ const SideMenu = ({ sideLinks }) => {
                 className="w-10 h-10 p-2 cursor-pointer"
               />
             </Link>
-            <div className="absolute  hidden group-hover:flex top-0 left-[100%]  bg-dark-gray flex-col w-32 rounded-r-md ">
+            <div className="absolute z-20  hidden group-hover:flex top-0 left-[100%]  bg-dark-gray flex-col w-32 rounded-r-md ">
               <NavLink
                 className={
                   "cursor-pointer hover:bg-gray-500 duration-300 p-2 text-secondary w-full rounded-md"
