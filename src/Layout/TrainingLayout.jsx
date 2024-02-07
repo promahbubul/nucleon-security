@@ -17,7 +17,7 @@ const TrainingLayout = () => {
   const sideLinks = [
     { path: "training", icon: AiFillDashboard },
     { path: "events", icon: IoSearch },
-    { path: "feature", icon: ImLab },
+    { path: "analyzes", icon: ImLab },
     { path: "bank", icon: RiBankFill },
     { path: "monitor", icon: ImDisplay },
     { path: "lock", icon: FaLockOpen },

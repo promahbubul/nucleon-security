@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import TrainingLayout from "./Layout/TrainingLayout";
 import Training from "./pages/Training/Training";
 import Events from "./pages/Events/Events";
+import Analyzes from "./pages/Analyzes/Analyzes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<TrainingLayout />}>
           <Route path="training" element={<Training />} />
           <Route path="events" element={<Events />} />
+          <Route path="analyzes" element={<Analyzes />} />
         </Route>
       </Routes>
     </>

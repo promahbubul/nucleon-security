@@ -30,6 +30,7 @@ import {
   FaCalendarDay,
   FaDatabase,
   FaList,
+  FaFile,
 } from "react-icons/fa";
 
 import { MdInsertChart, MdViewList } from "react-icons/md";
@@ -43,6 +44,7 @@ import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
 export {
+  FaFile,
   FaList,
   FaCalendarDay,
   FaDatabase,
