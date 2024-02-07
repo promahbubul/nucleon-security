@@ -8,6 +8,10 @@ import TrainingLayout from "./Layout/TrainingLayout";
 import Training from "./pages/Training/Training";
 import Events from "./pages/Events/Events";
 import Analyzes from "./pages/Analyzes/Analyzes";
+import Policies from "./pages/Policies/Policies";
+import Endpoints from "./pages/Endpoints/Endpoints";
+import Vulnerabilities from "./pages/Vulnerabilities/Vulnerabilities";
+import Capacity from "./pages/Capacity/Capacity";
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
           <Route path="training" element={<Training />} />
           <Route path="events" element={<Events />} />
           <Route path="analyzes" element={<Analyzes />} />
+          <Route path="policies" element={<Policies />} />
+          <Route path="endpoints" element={<Endpoints />} />
+          <Route path="vulnerabilities" element={<Vulnerabilities />} />
+          <Route path="capacity" element={<Capacity />} />
         </Route>
       </Routes>
     </>

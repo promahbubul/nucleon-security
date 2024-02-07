@@ -18,12 +18,12 @@ const TrainingLayout = () => {
     { path: "training", icon: AiFillDashboard },
     { path: "events", icon: IoSearch },
     { path: "analyzes", icon: ImLab },
-    { path: "bank", icon: RiBankFill },
-    { path: "monitor", icon: ImDisplay },
-    { path: "lock", icon: FaLockOpen },
-    { path: "chart", icon: MdInsertChart },
-    { path: "account-setting", icon: FaUsersCog },
-    { path: "account", icon: FaUser },
+    { path: "policies", icon: RiBankFill },
+    { path: "endpoints", icon: ImDisplay },
+    { path: "vulnerabilities", icon: FaLockOpen },
+    { path: "capacity", icon: MdInsertChart },
+    { path: "", icon: FaUsersCog },
+    { path: "", icon: FaUser },
   ];
   return (
     <div className="flex flex-row h-screen">
