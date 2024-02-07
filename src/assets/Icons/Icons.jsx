@@ -27,6 +27,9 @@ import {
   FaSatelliteDish,
   FaMagic,
   FaLevelUpAlt,
+  FaCalendarDay,
+  FaDatabase,
+  FaList,
 } from "react-icons/fa";
 
 import { MdInsertChart, MdViewList } from "react-icons/md";
@@ -40,6 +43,9 @@ import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
 export {
+  FaList,
+  FaCalendarDay,
+  FaDatabase,
   FaLevelUpAlt,
   FaMagic,
   FaSatelliteDish,

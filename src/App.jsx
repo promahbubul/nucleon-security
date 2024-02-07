@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import TrainingLayout from "./Layout/TrainingLayout";
 import Training from "./pages/Training/Training";
+import Events from "./pages/Events/Events";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Dashboard />} />
         </Route>
-        <Route path="/training" element={<TrainingLayout />}>
-          <Route index element={<Training />} />
+        <Route path="/" element={<TrainingLayout />}>
+          <Route path="training" element={<Training />} />
+          <Route path="events" element={<Events />} />
         </Route>
       </Routes>
     </>

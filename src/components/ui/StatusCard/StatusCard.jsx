@@ -9,10 +9,10 @@ const StatusCard = ({ icon, number, title, className }) => {
         {/* icon */}
         <span className="text-info text-4xl">{icon && icon()}</span>
         {/* number */}
-        <span className="text-3xl text-secondary font-normal">{number}</span>
+        <span className="text-3xl text-silver-gray font-normal">{number}</span>
       </div>
       {/* title */}
-      <h5 className="text-sm text-secondary font-normal">{title}</h5>
+      <h5 className="text-sm text-silver-gray font-medium">{title}</h5>
     </div>
   );
 };

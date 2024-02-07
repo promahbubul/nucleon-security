@@ -15,8 +15,8 @@ import { Outlet } from "react-router-dom";
 
 const TrainingLayout = () => {
   const sideLinks = [
-    { path: "", icon: AiFillDashboard },
-    { path: "search", icon: IoSearch },
+    { path: "training", icon: AiFillDashboard },
+    { path: "events", icon: IoSearch },
     { path: "feature", icon: ImLab },
     { path: "bank", icon: RiBankFill },
     { path: "monitor", icon: ImDisplay },
