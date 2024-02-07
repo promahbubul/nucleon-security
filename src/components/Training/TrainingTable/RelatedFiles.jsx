@@ -3,7 +3,7 @@ import Title from "../../ui/Title/Title";
 
 const RelatedFiles = ({ relatedFiles }) => {
   return (
-    <div className="border p-2 rounded-md bg-white w-3/12">
+    <div className="border p-2 rounded-md bg-white shadow-md w-3/12">
       <Title>Related files (0) </Title>
       {/* CONTENT */}
       <div className="">

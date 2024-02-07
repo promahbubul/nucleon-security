@@ -11,6 +11,9 @@ import {
   FaShieldAlt,
   FaSatelliteDish,
 } from "../../../assets/Icons/Icons";
+import ContextInformation from "./ContextInformation";
+import ProcessDetails from "./ProcessDetails";
+import FileDetails from "./FileDetails";
 
 const RelatedEvents = ({ relatedEvents }) => {
   const eventsMenu = [
@@ -19,6 +22,8 @@ const RelatedEvents = ({ relatedEvents }) => {
     { path: "/", icon: FaShieldAlt },
     { path: "/", icon: FaSatelliteDish },
   ];
+
+  //   console.log(relatedEvents);
   return (
     <div className="bg-white shadow-md shadow-secondary px-2 py-1 rounded-md relative">
       <input
@@ -97,17 +102,11 @@ const RelatedEvents = ({ relatedEvents }) => {
                   ))}
                 </div>
                 {/* CONTACT INFO */}
-                <div className="border p-2 rounded-md bg-white w-full">
-                  <Title>Contact information</Title>
-                </div>
+                <ContextInformation context={event?.context} />
                 {/* PROCESS DETAILS */}
-                <div className="border p-2 rounded-md bg-white w-full">
-                  <Title>Process details </Title>
-                </div>
+                <ProcessDetails processes={event?.processes} />
                 {/* FILE DETAILS */}
-                <div className="border px-2 py-1 rounded-md bg-white w-full">
-                  <Title>File details</Title>
-                </div>
+                <FileDetails file={event?.file} />
               </div>
             </tr>
           ))}

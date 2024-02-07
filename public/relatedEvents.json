@@ -37,7 +37,7 @@
       "size": "15.41 MB",
       "md5": "0caf389cd3cc17e05ac018488b9e6690",
       "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
-      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
     }
   },
   {
@@ -78,7 +78,7 @@
       "size": "15.41 MB",
       "md5": "0caf389cd3cc17e05ac018488b9e6690",
       "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
-      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
     }
   },
   {
@@ -119,7 +119,7 @@
       "size": "15.41 MB",
       "md5": "0caf389cd3cc17e05ac018488b9e6690",
       "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
-      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
     }
   }
 ]

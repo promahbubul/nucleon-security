@@ -41,15 +41,15 @@ const TableRow = ({ training, handleShowMore }) => {
   const [accessedProcesses, setAccessProcess] = useState([]);
   const [relatedEvents, setRelatedEvents] = useState([]);
 
- 
-
   useEffect(() => {
     fetch("/relatedEvents.json")
       .then((res) => res.json())
-      .then((data) => setRelatedEvents(data));
+      .then((data) => {
+        setRelatedEvents(data);
+      });
   }, []);
 
-  console.log(relatedEvents);
+  // console.log(relatedEvents);
   return (
     <tr
       onClick={() => handleShowMore(training)}
