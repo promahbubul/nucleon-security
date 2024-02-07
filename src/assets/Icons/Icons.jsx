@@ -24,6 +24,9 @@ import {
   FaHistory,
   FaArchive,
   FaChevronDown,
+  FaSatelliteDish,
+  FaMagic,
+  FaLevelUpAlt,
 } from "react-icons/fa";
 
 import { MdInsertChart, MdViewList } from "react-icons/md";
@@ -37,6 +40,9 @@ import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
 export {
+  FaLevelUpAlt,
+  FaMagic,
+  FaSatelliteDish,
   FaChevronDown,
   FaCheck,
   IoWarning,
