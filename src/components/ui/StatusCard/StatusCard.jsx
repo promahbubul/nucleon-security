@@ -7,12 +7,14 @@ const StatusCard = ({ icon, number, title, className }) => {
     >
       <div className="flex flex-row gap-2">
         {/* icon */}
-        <span className="text-info text-4xl">{icon && icon()}</span>
+        <span className="text-info text-2xl md:text-4xl">{icon && icon()}</span>
         {/* number */}
-        <span className="text-3xl text-silver-gray font-normal">{number}</span>
+        <span className="text-xl md:text-3xl text-silver-gray font-normal">
+          {number}
+        </span>
       </div>
       {/* title */}
-      <h5 className="text-sm text-silver-gray font-medium">{title}</h5>
+      <h5 className="text-sm text-silver-gray  md:font-medium">{title}</h5>
     </div>
   );
 };

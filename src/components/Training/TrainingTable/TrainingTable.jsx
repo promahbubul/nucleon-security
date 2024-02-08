@@ -11,8 +11,8 @@ const TrainingTable = () => {
   };
 
   return (
-    <table className=" w-full">
-      <tbody className="flex flex-col gap-1 mt-3  w-full">
+    <div className=" overflow-hidden overflow-x-auto w-full">
+      <tbody className="flex flex-col gap-1 mt-3 w-max  md:w-full">
         {trainings.map((training, index) => (
           <TableRow
             handleShowMore={handleShowMore}
@@ -21,7 +21,7 @@ const TrainingTable = () => {
           />
         ))}
       </tbody>
-    </table>
+    </div>
   );
 };
 

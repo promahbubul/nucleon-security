@@ -35,7 +35,7 @@ const Dashboard = () => {
         className={"w-full"}
         title={"Entities"}
       >
-        <div className="flex flex-row justify-end gap-2 text-sm">
+        <div className="flex flex-row flex-wrap justify-end gap-2 text-sm">
           <Button icon={IoSearch} className={"bg-info py-2 px-4"}>
             Search
           </Button>
@@ -74,41 +74,42 @@ const Dashboard = () => {
           ></Button>
         </div>
         {/* Table */}
-        <div className="mt-3">
-          <table className=" w-full ">
-            <thead className="w-full py-1 border-b border-b-gray-200 ">
-              <tr className=" grid grid-cols-12 text-secondary text-base font-bold text-left">
-                <th className=" col-span-2  hover:text-black cursor-pointer">
+        <div className="mt-3 w-full overflow-hidden overflow-x-auto">
+          <div className=" w-max md:w-full overflow-hidden overflow-x-auto ">
+            {/* TABLE HEAD */}
+            <div className="w-max md:w-full py-1 border-b border-b-gray-200 ">
+              <div className=" grid grid-cols-12 gap-2 text-secondary text-sm md:text-base font-bold text-left">
+                <p className=" col-span-2  hover:text-black cursor-pointer">
                   Logo
-                </th>
-                <th className=" col-span-4  hover:text-black cursor-pointer">
+                </p>
+                <p className=" col-span-4  hover:text-black cursor-pointer">
                   Name
-                </th>
-                <th className=" col-span-2  hover:text-black cursor-pointer">
+                </p>
+                <p className=" col-span-2  hover:text-black cursor-pointer">
                   License Count
-                </th>
-                <th className=" col-span-4  hover:text-black cursor-pointer">
+                </p>
+                <p className=" col-span-4  hover:text-black cursor-pointer">
                   Domain
-                </th>
-              </tr>
-            </thead>
-
-            <tbody className="">
+                </p>
+              </div>
+            </div>
+            {/* TABLE BODY */}
+            <div className="">
               {entities.map((entitie) => (
-                <tr
+                <div
                   key={entitie.id}
-                  className="grid grid-cols-12  border-b border-b-gray-200  text-left hover:bg-gray-200 items-center py-1 cursor-pointer"
+                  className="grid grid-cols-12 gap-2  border-b border-b-gray-200  text-left hover:bg-gray-200 items-center py-1 cursor-pointer w-auto text-xs md:text-base"
                 >
-                  <td className=" col-span-2">
+                  <p className=" col-span-2">
                     <img src={entitie.logo} alt="" className="w-6" />
-                  </td>
-                  <td className=" col-span-4">{entitie.name}</td>
-                  <td className=" col-span-2">{entitie.licenceCount}</td>
-                  <td className=" col-span-4">{entitie.domain}</td>
-                </tr>
+                  </p>
+                  <p className=" col-span-4">{entitie.name}</p>
+                  <p className=" col-span-2">{entitie.licenceCount}</p>
+                  <p className=" col-span-4">{entitie.domain}</p>
+                </div>
               ))}
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
       </SectionContainer>
     </div>
