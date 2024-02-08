@@ -17,17 +17,21 @@ const Login = () => {
       <div className="bg-black/70 fixed top-0 right-0 bottom-0 left-0 "></div>
       {/* form */}
       <div
-        className="bg-black w-9/12 m-auto  border-t-info border-t-4 rounded-md flex py-8 px-7
-       flex-row gap-5  relative z-10"
+        className="bg-black w-11/12  lg:w-9/12 m-auto  border-t-info border-t-4 rounded-md flex py-8 px-7
+      flex-col md:flex-row gap-5  relative z-10"
       >
         {/* left */}
-        <div className="flex flex-row gap-3 w-full">
-          <img src={logo} alt="" className="w-14 h-16" />
+        <div className="flex flex-col text-center md:flex-row gap-3 w-full">
+          <img
+            src={logo}
+            alt=""
+            className="w-8 md:w-14 h-10 md:h-16 mx-auto md:mx-0"
+          />
           <div className="">
-            <h1 className="text-info text-3xl hover:text-silver-gray duration-300 cursor-pointer font-normal">
+            <h1 className="text-info text-xl  lg:text-3xl hover:text-silver-gray duration-300 cursor-pointer font-normal">
               Nucleon Smart Endpoint
             </h1>
-            <p className="text-silver-gray text-xl mt-1">
+            <p className="text-silver-gray text-base md:text-xl mt-1">
               Protect data that matters
             </p>
           </div>
@@ -41,7 +45,7 @@ const Login = () => {
             type="email"
             name="email"
             id=""
-            className="bg-white text-lg py-1 rounded-sm placeholder:text-gray-500 outline-none px-2"
+            className="bg-white text-sm md:text-lg py-1 rounded-sm placeholder:text-gray-500 outline-none px-2"
             placeholder="Email"
             required
           />
@@ -49,13 +53,13 @@ const Login = () => {
             type="password"
             name="password"
             id=""
-            className="bg-white text-lg py-1 rounded-sm placeholder:text-gray-500 outline-none px-2"
+            className="bg-white text-sm md:text-lg py-1 rounded-sm placeholder:text-gray-500 outline-none px-2"
             placeholder="Password"
             required
           />
           <button
             type="submit"
-            className="bg-white text-black flex flex-row items-center text-center justify-center gap-2 text-lg py-1 rounded-sm cursor-pointer"
+            className="bg-white text-black flex flex-row items-center text-center justify-center gap-2 text-sm md:text-lg py-1 rounded-sm cursor-pointer"
           >
             <LuLogIn /> Login
           </button>
