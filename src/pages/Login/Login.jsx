@@ -12,16 +12,16 @@ const Login = () => {
     navigate("/dashboard");
   };
   return (
-    <div className="bg-[url('/login-bg.jpg')] h-screen w-full flex justify-center items-center bg-no-repeat bg-top bg-cover">
+    <div className="bg-[url('/images/login-bg.jpg')] h-screen w-full flex justify-center items-center bg-no-repeat  bg-cover bg-bottom">
       {/* black shadow */}
-      <div className="bg-black/70 fixed top-0 right-0 bottom-0 left-0 "></div>
+      <div className="bg-black/0 fixed top-0 right-0 bottom-0 left-0 "></div>
       {/* form */}
       <div
         className="bg-black w-11/12  lg:w-9/12 m-auto  border-t-info border-t-4 rounded-md flex py-8 px-7
       flex-col md:flex-row gap-5  relative z-10"
       >
         {/* left */}
-        <div className="flex flex-col text-center md:flex-row gap-3 w-full">
+        {/* <div className="flex flex-col text-center md:flex-row gap-3 w-full">
           <img
             src={logo}
             alt=""
@@ -35,6 +35,9 @@ const Login = () => {
               Protect data that matters
             </p>
           </div>
+        </div> */}
+        <div className="w-full cursor-pointer flex items-center">
+          <img src="/images/login-logo.png" alt="" className="w-65%" />
         </div>
         {/* right */}
         <form

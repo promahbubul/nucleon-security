@@ -37,13 +37,14 @@ import { MdInsertChart, MdViewList } from "react-icons/md";
 import { ImLab } from "react-icons/im";
 import { TiGroup } from "react-icons/ti";
 import { LuArrowLeftRight, LuLogIn } from "react-icons/lu";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoMdSettings } from "react-icons/io";
 import { LiaBookSolid } from "react-icons/lia";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 
 export {
+  IoMdSettings,
   FaFile,
   FaList,
   FaCalendarDay,

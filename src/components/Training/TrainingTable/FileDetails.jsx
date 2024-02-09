@@ -3,7 +3,7 @@ import Title from "../../ui/Title/Title";
 import CardTable from "../../ui/CardTable/CardTable";
 
 const FileDetails = ({ file }) => {
-  console.log(file);
+  // console.log(file);
   return (
     <div className="border px-2 py-1 rounded-md bg-white shadow-md w-full">
       <Title>File details</Title>

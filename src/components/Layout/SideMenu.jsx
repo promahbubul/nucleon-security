@@ -19,12 +19,12 @@ const SideMenu = ({ sideLinks }) => {
       >
         <div className="">
           <div className="relative group">
-            <Link to={""}>
+            <Link to={""} className="flex items-center justify-center">
               <img
                 onMouseEnter={() => set}
-                src={logo}
+                src="/images/logo.png"
                 alt=""
-                className="w-10 h-10 p-2 cursor-pointer"
+                className="w-8 h-8 p-2 cursor-pointer"
               />
             </Link>
             <div className="absolute z-20  hidden group-hover:flex top-0 left-[100%]  bg-dark-gray flex-col w-32 rounded-r-md ">
@@ -49,7 +49,7 @@ const SideMenu = ({ sideLinks }) => {
           <div className="flex flex-col gap-2 mt-2">
             {sideLinks.map((item, index) => (
               <NavLink to={item.path} key={index}>
-                <button className="text-[#80817C] text-center   mx-auto text-xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+                <button className="text-[#80817C] text-center flex items-center justify-center   mx-auto text-lg py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
                   {item.icon()}
                 </button>
               </NavLink>
@@ -58,20 +58,20 @@ const SideMenu = ({ sideLinks }) => {
         </div>
         <div className="flex flex-col items-center gap-2">
           <NavLink to="https://nucleonsecurity.freshdesk.com/support/solutions">
-            <button className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+            <button className="text-[#80817C] text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
               <LiaBookSolid />
             </button>
           </NavLink>
 
           <button
             onClick={() => setShowNotification(!showNotification)}
-            className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2"
+            className="text-[#80817C] text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2"
           >
             <FaBell />
           </button>
 
           <NavLink to="/">
-            <button className="text-[#80817C] text-center   mx-auto text-2xl py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+            <button className="text-[#80817C] text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
               <RiLogoutBoxRLine />
             </button>
           </NavLink>

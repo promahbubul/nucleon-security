@@ -3,7 +3,7 @@ import Title from "../../ui/Title/Title";
 import CardTable from "../../ui/CardTable/CardTable";
 
 const ProcessDetails = ({ processes }) => {
-  console.log(processes);
+  // console.log(processes);
   return (
     <div className="border p-2 rounded-md bg-white shadow-md w-full">
       <Title>Process details </Title>
