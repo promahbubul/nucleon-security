@@ -23,23 +23,24 @@ const Status = () => {
         icon={FaFlask}
       ></StatusCard>
       {/* UPLOAD FILE */}
-      <div className="col-span-3 border-2 border-dashed hover:border-info border-secondary rounded-sm h-full w-full bg-white drop-shadow-md dark:bg-dark-gray flex flex-row items-center justify-center gap-2 relative">
+      <div className="col-span-3 border-2 border-dashed hover:border-info border-slate-400 rounded-sm h-full w-full bg-slate-200  drop-shadow-md dark:bg-navy-700 flex flex-row items-center justify-center gap-2 relative">
         <input
           type="file"
           name="file"
           id=""
-          className="absolute inset-y-0 inset-x-0 bg-orange-500 cursor-pointer opacity-0"
+          className="absolute inset-y-0 inset-x-0  cursor-pointer opacity-0"
         />
         <FaFile className="text-4xl text-info" />
-        <p className="text-silver-gray text-base font-normal">
+        <p className="text-gray-500 dark:text-navy-100  text-base font-normal">
           Upload file to analyze
         </p>
       </div>
       {/* SHARE ANALYSIS  */}
-      <div className="bg-white drop-shadow-md dark:bg-dark-gray h-full w-full col-span-3 flex flex-row justify-center items-center gap-3">
-        <p className="text-silver-gray text-base font-normal">Share Analysis</p>
+      <div className="bg-slate-200 drop-shadow-md dark:bg-navy-700 h-full w-full col-span-3 flex flex-row justify-center items-center gap-3">
+        <p className="text-gray-500 dark:text-navy-100 text-base font-normal">
+          Share Analysis
+        </p>
         <button className="" onClick={() => setToggleButton(!toggleButton)}>
-          {" "}
           {toggleButton ? (
             <OnButton setToggleButton={setToggleButton} />
           ) : (
