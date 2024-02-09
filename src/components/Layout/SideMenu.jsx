@@ -14,7 +14,7 @@ const SideMenu = ({ sideLinks }) => {
   return (
     <>
       <aside
-        className="w-12 h-full     dark:bg-dark-gray py-3 hidden md:flex flex-col justify-between
+        className="w-12 h-full     dark:bg-navy-800 dark:border-r dark:border-slate-700 py-3 hidden md:flex flex-col justify-between
     "
       >
         <div className="">
@@ -49,7 +49,7 @@ const SideMenu = ({ sideLinks }) => {
           <div className="flex flex-col gap-2 mt-2">
             {sideLinks.map((item, index) => (
               <NavLink to={item.path} key={index}>
-                <button className="dark:text-silver-gray text-black  text-center flex items-center justify-center   mx-auto text-lg py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
+                <button className="dark:text-slate-300 text-gray-500  text-center flex items-center justify-center   mx-auto text-lg py-1 border-l-[3px] border-transparent focus:border-info active:border-info  hover:border-info w-full px-2">
                   {item.icon()}
                 </button>
               </NavLink>
@@ -58,20 +58,20 @@ const SideMenu = ({ sideLinks }) => {
         </div>
         <div className="flex flex-col items-center gap-2">
           <NavLink to="https://nucleonsecurity.freshdesk.com/support/solutions">
-            <button className="dark:text-silver-gray text-black text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
+            <button className="dark:text-slate-300 text-gray-500 text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
               <LiaBookSolid />
             </button>
           </NavLink>
 
           <button
             onClick={() => setShowNotification(!showNotification)}
-            className="dark:text-silver-gray text-black text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2"
+            className="dark:text-slate-300 text-gray-500 text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2"
           >
             <FaBell />
           </button>
 
           <NavLink to="/">
-            <button className="dark:text-silver-gray text-black text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
+            <button className="dark:text-slate-300 text-gray-500 text-center   mx-auto text-lg py-1 border-l-[3px] border-transparent flex items-center justify-center focus:border-info active:border-info  hover:border-info w-full px-2">
               <RiLogoutBoxRLine />
             </button>
           </NavLink>

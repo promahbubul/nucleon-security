@@ -32,7 +32,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
   return (
     <div className=" h-screen">
       {/* HEADER */}
-      <header className="h-14 dark:bg-black bg-slate-100  flex flex-row justify-between px-5 items-center">
+      <header className="h-14 dark:bg-navy-800 border-b border-slate-700 bg-slate-100  flex flex-row justify-between px-5 items-center">
         <h3 className="dark:text-white  text-black  text-base font-medium capitalize">
           {pageTitle.path}
         </h3>
@@ -45,7 +45,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
           <div className="flex flex-row gap-2 ">
             {headerMenu.map((menu, index) => (
               <Link key={index} to={"/"} className="">
-                <button className="bg-white dark:bg-dark-gray p-2 text-black dark:text-silver-gray hover:bg-info hover:text-white  rounded-md">
+                <button className=" hover:bg-navy-600 p-2 text-black dark:text-gray-300 dark:hover:bg-navy-600 hover:text-white  rounded-full">
                   {menu.icon()}
                 </button>
               </Link>
@@ -58,7 +58,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
         {/* SIDEBAR */}
         <SideMenu sideLinks={sideLinks} />
         {/* CONTENT AREA */}
-        <div className="p-3 bg-slate-100 shadow-md w-full  dark:bg-black   overflow-hidden overflow-y-auto scroll-smooth">
+        <div className="p-3 bg-slate-100 shadow-md w-full  dark:bg-navy-900   overflow-hidden overflow-y-auto scroll-smooth">
           <Outlet />
         </div>
       </main>

@@ -5,7 +5,7 @@ import CardTable from "../../ui/CardTable/CardTable";
 const ProcessDetails = ({ processes }) => {
   // console.log(processes);
   return (
-    <div className="border p-2 rounded-md bg-white shadow-md w-full">
+    <div className="dark:bg-navy-700 p-2 rounded-md bg-white shadow-md w-full">
       <Title>Process details </Title>
       <div className="mt-2 flex flex-col gap-1">
         {/* HOST */}

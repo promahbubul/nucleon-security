@@ -46,7 +46,7 @@ const TrainingLayout = ({ handleThemeSwitch, theme }) => {
   return (
     <div className=" h-screen">
       {/* HEADER */}
-      <header className="h-14 bg-slate-100 dark:bg-black flex flex-row justify-between px-5 items-center">
+      <header className="h-14 bg-slate-100 dark:bg-navy-800 border-b dark:border-b-slate-700 flex flex-row justify-between px-5 items-center">
         <h3 className="dark:text-white text-black text-base font-medium capitalize">
           {pageTitle.path}
         </h3>
@@ -72,7 +72,7 @@ const TrainingLayout = ({ handleThemeSwitch, theme }) => {
         {/* SIDEBAR */}
         <SideMenu sideLinks={sideLinks} />
         {/* CONTENT AREA */}
-        <div className="p-3 bg-slate-100 dark:bg-black w-full    overflow-hidden overflow-y-auto scroll-smooth">
+        <div className="p-3 bg-slate-100 dark:bg-navy-900 w-full    overflow-hidden overflow-y-auto scroll-smooth">
           <Outlet />
         </div>
       </main>

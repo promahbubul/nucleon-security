@@ -31,12 +31,12 @@ const Training = () => {
           number={1}
           className={"col-span-6 md:col-span-3"}
         />
-        <div className="bg-white drop-shadow-md dark:bg-dark-gray col-span-6 md:col-span-3 cursor-pointer rounded-md flex flex-row p-2 items-center justify-between  gap-1">
+        <div className="bg-white drop-shadow-md dark:bg-navy-700 col-span-6 md:col-span-3 cursor-pointer rounded-md flex flex-row p-2 items-center justify-between  gap-1">
           <div className="w-9/12  ">
             <div className="bg-secondary  h-2 md:h-4 rounded-sm">
               <div className="w-11/12 bg-success h-full rounded-l-sm"></div>
             </div>
-            <h5 className="text-sm md:text-sm text-silver-gray  font-normal text-center mt-2">
+            <h5 className="text-sm md:text-sm text-gray-500 dark:text-navy-100  font-normal text-center mt-2">
               Security level 95%
             </h5>
           </div>

@@ -5,7 +5,7 @@ import CardTable from "../../ui/CardTable/CardTable";
 const FileDetails = ({ file }) => {
   // console.log(file);
   return (
-    <div className="border px-2 py-1 rounded-md bg-white shadow-md w-full">
+    <div className=" px-2 py-1 rounded-md bg-white dark:bg-navy-700 shadow-md w-full">
       <Title>File details</Title>
       <div className="mt-2 flex flex-col gap-1">
         {/* HOST */}

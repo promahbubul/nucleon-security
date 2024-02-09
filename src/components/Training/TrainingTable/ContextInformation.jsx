@@ -5,7 +5,7 @@ import CardTable from "../../ui/CardTable/CardTable";
 const ContextInformation = ({ context }) => {
   //   console.log(context);
   return (
-    <div className="border p-2 rounded-md bg-white shadow-md w-full">
+    <div className=" p-2 rounded-md bg-white dark:bg-navy-700 shadow-md w-full">
       <Title>Contact information</Title>
       <div className="mt-2 flex flex-col gap-1">
         {/* HOST */}
