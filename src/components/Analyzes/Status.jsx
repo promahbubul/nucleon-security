@@ -23,7 +23,7 @@ const Status = () => {
         icon={FaFlask}
       ></StatusCard>
       {/* UPLOAD FILE */}
-      <div className="col-span-3 border-2 border-dashed hover:border-info border-secondary rounded-sm h-full w-full bg-dark-gray flex flex-row items-center justify-center gap-2 relative">
+      <div className="col-span-3 border-2 border-dashed hover:border-info border-secondary rounded-sm h-full w-full bg-white drop-shadow-md dark:bg-dark-gray flex flex-row items-center justify-center gap-2 relative">
         <input
           type="file"
           name="file"
@@ -36,7 +36,7 @@ const Status = () => {
         </p>
       </div>
       {/* SHARE ANALYSIS  */}
-      <div className="bg-dark-gray h-full w-full col-span-3 flex flex-row justify-center items-center gap-3">
+      <div className="bg-white drop-shadow-md dark:bg-dark-gray h-full w-full col-span-3 flex flex-row justify-center items-center gap-3">
         <p className="text-silver-gray text-base font-normal">Share Analysis</p>
         <button className="" onClick={() => setToggleButton(!toggleButton)}>
           {" "}

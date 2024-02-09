@@ -31,7 +31,7 @@ const Training = () => {
           number={1}
           className={"col-span-6 md:col-span-3"}
         />
-        <div className="bg-dark-gray col-span-6 md:col-span-3 cursor-pointer rounded-md flex flex-row p-2 items-center justify-between  gap-1">
+        <div className="bg-white drop-shadow-md dark:bg-dark-gray col-span-6 md:col-span-3 cursor-pointer rounded-md flex flex-row p-2 items-center justify-between  gap-1">
           <div className="w-9/12  ">
             <div className="bg-secondary  h-2 md:h-4 rounded-sm">
               <div className="w-11/12 bg-success h-full rounded-l-sm"></div>

@@ -3,7 +3,7 @@ import React from "react";
 const StatusCard = ({ icon, number, title, className }) => {
   return (
     <div
-      className={`bg-dark-gray rounded-md p-2 cursor-pointer ${className} flex flex-col justify-center items-center gap-2`}
+      className={`bg-white drop-shadow-md dark:bg-dark-gray rounded-md p-2 cursor-pointer ${className} flex flex-col justify-center items-center gap-2`}
     >
       <div className="flex flex-row gap-2">
         {/* icon */}

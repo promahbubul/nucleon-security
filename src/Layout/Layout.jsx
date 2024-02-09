@@ -6,10 +6,13 @@ import {
   IoMdSettings,
   RiLogoutBoxRLine,
 } from "../assets/Icons/Icons";
+import DarkButton from "../components/ui/Buttons/DarkButton";
+import LightButton from "../components/ui/Buttons/LightButton";
+import { useEffect, useState } from "react";
 
-const Layout = () => {
+const Layout = ({ handleThemeSwitch, theme }) => {
   const sideLinks = [
-    { path: "", icon: AiFillDashboard },
+    { path: "dashboard", icon: AiFillDashboard },
     { path: "account", icon: FaUser },
   ];
 
@@ -20,27 +23,34 @@ const Layout = () => {
     { path: "/account", icon: RiLogoutBoxRLine },
   ];
 
-  const params = useLocation();
+  const params = useLocation({ handleThemeSwitch });
 
-  console.log(params);
+  // PAGE TITLE
+  const pathname = params.pathname.split("/")[1];
+  const pageTitle = sideLinks.find((title) => title.path === pathname);
 
   return (
     <div className=" h-screen">
       {/* HEADER */}
-      <header className="h-14 bg-black flex flex-row justify-between px-5 items-center">
-        <h3 className="text-white  text-base font-medium">Entity section</h3>
-        <div className="flex flex-row gap-2 ">
-          {headerMenu.map((menu, index) => (
-            <Link key={index} to={"/"} className="">
-              <button className="bg-dark-gray p-2 text-silver-gray hover:bg-info hover:text-white  rounded-sm">
-                {menu.icon()}
-              </button>
-            </Link>
-          ))}
-
-          {/* ACCOUNT */}
-          {/* SETTINGS */}
-          {/* LOGOUT */}
+      <header className="h-14 dark:bg-black bg-slate-100  flex flex-row justify-between px-5 items-center">
+        <h3 className="dark:text-white  text-black  text-base font-medium capitalize">
+          {pageTitle.path}
+        </h3>
+        <div className="flex flex-row  gap-3">
+          {/* DARK MODE BUTTON */}
+          <button className="" onClick={handleThemeSwitch}>
+            {theme === "dark" ? <DarkButton /> : <LightButton />}
+          </button>
+          {/* HEADER MENU */}
+          <div className="flex flex-row gap-2 ">
+            {headerMenu.map((menu, index) => (
+              <Link key={index} to={"/"} className="">
+                <button className="bg-white dark:bg-dark-gray p-2 text-black dark:text-silver-gray hover:bg-info hover:text-white  rounded-md">
+                  {menu.icon()}
+                </button>
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
       {/* MAIN */}
@@ -48,7 +58,7 @@ const Layout = () => {
         {/* SIDEBAR */}
         <SideMenu sideLinks={sideLinks} />
         {/* CONTENT AREA */}
-        <div className="p-3 bg-black w-full    overflow-hidden overflow-y-auto scroll-smooth">
+        <div className="p-3 bg-slate-100 shadow-md w-full  dark:bg-black   overflow-hidden overflow-y-auto scroll-smooth">
           <Outlet />
         </div>
       </main>

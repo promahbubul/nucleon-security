@@ -12,16 +12,49 @@ import Policies from "./pages/Policies/Policies";
 import Endpoints from "./pages/Endpoints/Endpoints";
 import Vulnerabilities from "./pages/Vulnerabilities/Vulnerabilities";
 import Capacity from "./pages/Capacity/Capacity";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState(null);
+
+  // DARK MODE
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<Layout />}>
-          <Route index element={<Dashboard />} />
+        {/* DASHBOARD LAYOUT */}
+        <Route
+          path="/"
+          element={<Layout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+        >
+          <Route path="dashboard" element={<Dashboard />} />
         </Route>
-        <Route path="/" element={<TrainingLayout />}>
+        {/* TRAINING LAYOUT */}
+        <Route
+          path="/"
+          element={<TrainingLayout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+        >
           <Route path="training" element={<Training />} />
           <Route path="events" element={<Events />} />
           <Route path="analyzes" element={<Analyzes />} />

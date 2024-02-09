@@ -1,4 +1,4 @@
-import { IoSearch, IoClose, IoWarning } from "react-icons/io5";
+import { IoSearch, IoClose, IoWarning, IoMoonOutline } from "react-icons/io5";
 import { AiFillDashboard } from "react-icons/ai";
 import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
@@ -42,8 +42,11 @@ import { LiaBookSolid } from "react-icons/lia";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
+import { FiSun } from "react-icons/fi";
 
 export {
+  IoMoonOutline,
+  FiSun,
   IoMdSettings,
   FaFile,
   FaList,

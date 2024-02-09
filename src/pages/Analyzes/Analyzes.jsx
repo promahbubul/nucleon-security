@@ -13,7 +13,7 @@ const Analyzes = () => {
         <SectionContainer
           title={"Analyzes"}
           icon={FaList}
-          className={"mt-2"}
+          className={"mt-3"}
         ></SectionContainer>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SideMenu from "../components/Layout/SideMenu";
 import {
   FaUsersCog,
@@ -14,8 +14,10 @@ import {
   RiLogoutBoxRLine,
 } from "../assets/Icons/Icons";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import DarkButton from "../components/ui/Buttons/DarkButton";
+import LightButton from "../components/ui/Buttons/LightButton";
 
-const TrainingLayout = () => {
+const TrainingLayout = ({ handleThemeSwitch, theme }) => {
   const sideLinks = [
     { path: "training", icon: AiFillDashboard },
     { path: "events", icon: IoSearch },
@@ -36,44 +38,33 @@ const TrainingLayout = () => {
   ];
 
   const params = useLocation();
-  const pageTitles = [
-    "policies",
-    "events",
-    "training",
-    "endpoints",
-    "analyzes",
-    "vulnerabilities",
-    "capacity",
-  ];
-
-  // console.log(params.pathname.split("/")[1]);
-  // const pageTitleHandeler = () => {
-  //   pageTitle.find(title => params.pathname ==)
-  // };
 
   // PAGE TITLE
   const pathname = params.pathname.split("/")[1];
-  const pageTitle = pageTitles.find((title) => title == pathname);
+  const pageTitle = sideLinks.find((title) => title.path === pathname);
 
   return (
     <div className=" h-screen">
       {/* HEADER */}
-      <header className="h-14 bg-black flex flex-row justify-between px-5 items-center">
-        <h3 className="text-white  text-base font-medium capitalize">
-          {pageTitle}
+      <header className="h-14 bg-slate-100 dark:bg-black flex flex-row justify-between px-5 items-center">
+        <h3 className="dark:text-white text-black text-base font-medium capitalize">
+          {pageTitle.path}
         </h3>
-        <div className="flex flex-row gap-2 ">
-          {headerMenu.map((menu, index) => (
-            <Link key={index} to={"/"} className="">
-              <button className="bg-dark-gray p-2 text-silver-gray hover:bg-info hover:text-white  rounded-sm">
-                {menu.icon()}
-              </button>
-            </Link>
-          ))}
-
-          {/* ACCOUNT */}
-          {/* SETTINGS */}
-          {/* LOGOUT */}
+        <div className="flex flex-row  gap-3">
+          {/* DARK MODE BUTTON */}
+          <button className="" onClick={handleThemeSwitch}>
+            {theme === "dark" ? <DarkButton /> : <LightButton />}
+          </button>
+          {/* HEADER MENU */}
+          <div className="flex flex-row gap-2 ">
+            {headerMenu.map((menu, index) => (
+              <Link key={index} to={"/"} className="">
+                <button className="bg-white dark:bg-dark-gray p-2 text-black dark:text-silver-gray hover:bg-info hover:text-white  rounded-md">
+                  {menu.icon()}
+                </button>
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
       {/* MAIN */}
@@ -81,7 +72,7 @@ const TrainingLayout = () => {
         {/* SIDEBAR */}
         <SideMenu sideLinks={sideLinks} />
         {/* CONTENT AREA */}
-        <div className="p-3 bg-black w-full    overflow-hidden overflow-y-auto scroll-smooth">
+        <div className="p-3 bg-slate-100 dark:bg-black w-full    overflow-hidden overflow-y-auto scroll-smooth">
           <Outlet />
         </div>
       </main>
