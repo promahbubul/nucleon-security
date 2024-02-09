@@ -37,7 +37,7 @@ const Login = () => {
           </div>
         </div> */}
         <div className="w-full cursor-pointer flex items-center">
-          <img src="/images/login-logo.png" alt="" className="w-65%" />
+          <img src="/images/login-logo.png" alt="" className="max-w-xs" />
         </div>
         {/* right */}
         <form
