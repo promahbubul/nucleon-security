@@ -26,10 +26,10 @@ const SideMenu = ({ sideLinks }) => {
                 className="w-8 h-8 p-2 cursor-pointer"
               />
             </Link>
-            <div className="absolute z-20  hidden group-hover:flex top-0 left-[100%]  bg-dark-gray flex-col w-32 rounded-r-md ">
+            <div className="absolute z-20  hidden group-hover:flex top-0 left-[100%] bg-white dark:bg-navy-800  flex-col w-32 rounded-r-md ">
               <NavLink
                 className={
-                  "cursor-pointer hover:bg-gray-500 duration-300 p-2 text-secondary w-full rounded-md"
+                  "cursor-pointer hover:bg-slate-100 duration-300 p-2 text-gray-500 w-full rounded-md"
                 }
                 to={"/dashboard"}
               >
@@ -37,7 +37,7 @@ const SideMenu = ({ sideLinks }) => {
               </NavLink>
               <NavLink
                 className={
-                  "cursor-pointer hover:bg-gray-500 duration-300 p-2 text-secondary rounded-md"
+                  "cursor-pointer hover:bg-slate-100 duration-300 p-2 text-gray-500 rounded-md"
                 }
                 to={"/training"}
               >

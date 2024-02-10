@@ -144,15 +144,15 @@ const EventTable = () => {
                 />
                 <FaChevronDown className="absolute dark:text-navy-100 text-gray-500 right-6 top-3 peer-checked:rotate-180" />
 
-                <div className="grid grid-cols-12 text-gray-500 dark:text-navy-100 hover:bg-slate-100 dark:hover:bg-navy-700  py-2 ">
+                <div className="grid grid-cols-12 gap-3 text-gray-500 dark:text-navy-100 hover:bg-slate-100 dark:hover:bg-navy-700  py-2 ">
                   <p className="col-span-2">
                     {event.date} <span className="">{event.time}</span>
                   </p>
-                  <p className="md:col-span-1">{event.host}</p>
-                  <p className="md:col-span-1">{event.type}</p>
-                  <p className="md:col-span-4">{event.process}</p>
-                  <p className="md:col-span-2">{event.target}</p>
-                  <p className="md:col-span-2 flex flex-row gap-2 items-center">
+                  <p className="col-span-1">{event.host}</p>
+                  <p className="col-span-1">{event.type}</p>
+                  <p className="col-span-4">{event.process}</p>
+                  <p className="col-span-2">{event.target}</p>
+                  <p className="col-span-2 flex flex-row gap-2 items-center">
                     {event.action == "Allowed" ? (
                       <FaCheck className="text-xl font-bold text-success" />
                     ) : event.action == "Blocked" ? (
