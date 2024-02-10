@@ -38,7 +38,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
           {pageTitle.path}
         </h3>
         {/* HEADER LOGO */}
-        <div className="w-2/12 ">
+        <div className="w-2/12 md:block hidden ">
           {theme === "dark" ? (
             <img
               src="/images/header-logo-2.png"
@@ -63,7 +63,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
           <div className="flex flex-row gap-2 ">
             {headerMenu.map((menu, index) => (
               <Link key={index} to={"/"} className="">
-                <button className=" hover:bg-navy-600  p-2 text-gray-500 dark:text-navy-100 dark:hover:bg-navy-600 hover:text-white  rounded-full">
+                <button className=" hover:bg-slate-100  p-2 text-gray-500 dark:text-navy-100 dark:hover:bg-navy-600   rounded-full">
                   {menu.icon()}
                 </button>
               </Link>

@@ -60,7 +60,7 @@ const RelatedEvents = ({ relatedEvents }) => {
           {relatedEvents.map((event, index) => (
             <div
               key={index}
-              className="last:border-b-0  duration-300  text-base border-b dark:border-b-slate-600 text-black relative"
+              className="last:border-b-0  duration-300  text-sm border-b dark:border-b-slate-600 text-black relative"
             >
               <input
                 type="checkbox"

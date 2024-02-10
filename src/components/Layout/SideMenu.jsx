@@ -21,7 +21,6 @@ const SideMenu = ({ sideLinks }) => {
           <div className="relative group">
             <Link to={""} className="flex items-center justify-center">
               <img
-                onMouseEnter={() => set}
                 src="/images/logo.png"
                 alt=""
                 className="w-8 h-8 p-2 cursor-pointer"

@@ -52,7 +52,7 @@ const TrainingLayout = ({ handleThemeSwitch, theme }) => {
           {pageTitle.path}
         </h3>
         {/* HEADER LOGO */}
-        <div className="w-2/12">
+        <div className="w-2/12 md:block hidden">
           {theme === "dark" ? (
             <img src="/images/header-logo-2.png" alt="" className="w-full" />
           ) : (

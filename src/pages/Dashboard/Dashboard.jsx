@@ -79,7 +79,7 @@ const Dashboard = () => {
         <div className="mt-3 w-full overflow-hidden overflow-x-auto">
           <div className=" w-max md:w-full overflow-hidden overflow-x-auto ">
             {/* TABLE HEAD */}
-            <div className="w-max md:w-full py-1 border-b dark:border-b-slate-700 ">
+            <div className="w-max md:w-full py-1 border-b-2 border-b-gray-200 dark:border-b-slate-700 ">
               <div className=" grid grid-cols-12 gap-2 text-gray-600 hover:text-gray-700 dark:text-navy-100  text-sm md:text-base font-semibold text-left">
                 <p className=" col-span-2  dark:hover:text-slate-400 cursor-pointer">
                   Logo
