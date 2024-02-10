@@ -41,7 +41,7 @@ const Dashboard = () => {
           </Button>
           <Button
             className={
-              "bg-gray-200 dark:bg-navy-500   text-navy-100 p-2 text-sm  hover:bg-gray-100  duration-300  "
+              "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 p-2 text-sm  hover:bg-slate-300 hover:text-gray-600  duration-300  "
             }
           >
             5 / 5 results
@@ -49,7 +49,7 @@ const Dashboard = () => {
           <Button
             icon={FaFilter}
             className={
-              "bg-gray-200 dark:bg-navy-500 p-2 text-sm  text-navy-100  hover:bg-gray-100  duration-300  "
+              "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 p-2 text-sm  hover:bg-slate-300 hover:text-gray-600  duration-300"
             }
           >
             Add Filter
@@ -60,7 +60,7 @@ const Dashboard = () => {
           >
             <button
               onClick={() => setShowDropdown(!showDropdown)}
-              className="bg-gray-200 dark:bg-navy-500   text-navy-100 text-sm p-2 rounded-md flex flex-row gap-2 items-center"
+              className="bg-slate-200 text-gray-500 dark:bg-navy-500   dark:text-navy-100  hover:bg-slate-300 hover:text-gray-600 text-sm p-2 rounded-md flex flex-row gap-2 items-center"
             >
               <MdViewList className="text-lg" />
               <span className="">List View</span>
@@ -71,7 +71,7 @@ const Dashboard = () => {
           <Button
             icon={FaDownload}
             className={
-              "bg-gray-200 dark:bg-navy-500   text-navy-100 p-2 text-sm "
+              "bg-slate-200  dark:bg-navy-500  text-gray-500 dark:text-navy-100  hover:bg-slate-300 hover:text-gray-600 dark:bg p-2 text-sm "
             }
           ></Button>
         </div>
@@ -80,7 +80,7 @@ const Dashboard = () => {
           <div className=" w-max md:w-full overflow-hidden overflow-x-auto ">
             {/* TABLE HEAD */}
             <div className="w-max md:w-full py-1 border-b dark:border-b-slate-700 ">
-              <div className=" grid grid-cols-12 gap-2 text-slate-900 dark:text-navy-100  text-sm md:text-base font-bold text-left">
+              <div className=" grid grid-cols-12 gap-2 text-gray-600 hover:text-gray-700 dark:text-navy-100  text-sm md:text-base font-semibold text-left">
                 <p className=" col-span-2  dark:hover:text-slate-400 cursor-pointer">
                   Logo
                 </p>
@@ -100,7 +100,7 @@ const Dashboard = () => {
               {entities.map((entitie) => (
                 <div
                   key={entitie.id}
-                  className="grid grid-cols-12 gap-2  border-b dark:border-b-slate-700  text-left dark:hover:bg-navy-700 dark:hover:text-gray-300 items-center py-1 dark:text-gray-200 cursor-pointer w-auto text-xs md:text-base"
+                  className="grid grid-cols-12 gap-2  border-b dark:border-b-slate-700  text-left dark:hover:bg-navy-700 text-gray-500 dark:hover:text-gray-300 items-center py-1 dark:text-gray-200 cursor-pointer w-auto text-xs md:text-sm"
                 >
                   <p className=" col-span-2">
                     <img src={entitie.logo} alt="" className="w-6" />

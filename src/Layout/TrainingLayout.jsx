@@ -46,10 +46,20 @@ const TrainingLayout = ({ handleThemeSwitch, theme }) => {
   return (
     <div className=" h-screen">
       {/* HEADER */}
-      <header className="h-14 bg-slate-100 dark:bg-navy-800 border-b dark:border-b-slate-700 flex flex-row justify-between px-5 items-center">
-        <h3 className="dark:text-white text-black text-base font-medium capitalize">
+      <header className="h-14 dark:bg-navy-800 border-b border-b-gray-200 dark:border-slate-700 bg-white  flex flex-row justify-between px-5 items-center">
+        {/* PAGE TITLE */}
+        <h3 className="dark:text-white  text-black  text-base font-medium capitalize">
           {pageTitle.path}
         </h3>
+        {/* HEADER LOGO */}
+        <div className="w-2/12">
+          {theme === "dark" ? (
+            <img src="/images/header-logo-2.png" alt="" className="w-full" />
+          ) : (
+            <img src="/images/header-logo-1.png" alt="" className="w-full" />
+          )}
+        </div>
+        {/* HEADER MENU */}
         <div className="flex flex-row  gap-3">
           {/* DARK MODE BUTTON */}
           <button className="" onClick={handleThemeSwitch}>
@@ -59,7 +69,7 @@ const TrainingLayout = ({ handleThemeSwitch, theme }) => {
           <div className="flex flex-row gap-2 ">
             {headerMenu.map((menu, index) => (
               <Link key={index} to={"/"} className="">
-                <button className="bg-white dark:bg-dark-gray p-2 text-black dark:text-silver-gray hover:bg-info hover:text-white  rounded-md">
+                <button className=" hover:bg-navy-600 p-2 text-black dark:text-gray-300 dark:hover:bg-navy-600 hover:text-white  rounded-full">
                   {menu.icon()}
                 </button>
               </Link>

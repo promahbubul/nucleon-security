@@ -14,7 +14,7 @@ const SideMenu = ({ sideLinks }) => {
   return (
     <>
       <aside
-        className="w-12 h-full     dark:bg-navy-800 dark:border-r dark:border-slate-700 py-3 hidden md:flex flex-col justify-between
+        className="w-12 h-full   bg-white  dark:bg-navy-800 border-r border-r-gray-200 dark:border-slate-700 py-3 hidden md:flex flex-col justify-between
     "
       >
         <div className="">

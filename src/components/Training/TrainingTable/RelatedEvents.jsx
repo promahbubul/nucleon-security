@@ -32,12 +32,12 @@ const RelatedEvents = ({ relatedEvents }) => {
         id=""
         className="absolute w-full top-0 peer opacity-0 inset-x-0 h-9 cursor-pointer"
       />
-      <h3 className="text-gray-500 dark:text-navy-100 p-1 text-base peer-checked:border-b peer-checked:border-slate-600 font-medium ">
+      <h3 className="text-gray-500 dark:text-navy-100 p-1 text-base peer-checked:border-b border-b-slate-200  dark:peer-checked:border-slate-600  font-medium ">
         Related events (3)
       </h3>
       <div className=" peer-checked:block hidden">
         <div className="tbody">
-          <div className=" grid grid-cols-12 text-gray-500 dark:text-navy-100 text-base font-bold text-left border-b border-b-slate-600 mt-3 ">
+          <div className=" grid grid-cols-12 text-gray-500 dark:text-navy-100 text-base font-bold text-left border-b-2 border-gray-200 pb-3 dark:border-b-slate-600 mt-3 ">
             <p className=" col-span-2  hover:text-gray-400 cursor-pointer">
               Date
             </p>
@@ -69,7 +69,7 @@ const RelatedEvents = ({ relatedEvents }) => {
               />
               <FaChevronDown className="absolute text-gray-500 dark:text-navy-100 right-6 top-3 peer-checked:rotate-180" />
 
-              <div className="grid grid-cols-12 hover:bg-navy-600  py-2 ">
+              <div className="grid grid-cols-12 hover:bg-slate-100 dark:hover:bg-navy-600  py-2 ">
                 <p className="col-span-2 text-gray-500 dark:text-navy-100">
                   {event.date} <span className="">{event.time}</span>
                 </p>
@@ -101,7 +101,7 @@ const RelatedEvents = ({ relatedEvents }) => {
                 <div className=" flex flex-col gap-2">
                   {eventsMenu.map((menu, i) => (
                     <Link
-                      className="p-2  w- bg-white dark:bg-navy-600 dark:text-slate-300 text-gray-500  rounded-md text-xl"
+                      className="p-2  w- bg-white dark:hover:bg-navy-500 duration-300 dark:bg-navy-600 dark:text-slate-300 text-gray-500  rounded-md text-xl"
                       key={i}
                       to={menu.path}
                     >
