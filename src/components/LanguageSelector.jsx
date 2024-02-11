@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 const LanguageSelector = () => {
   const [showLanguages, setShowLanguages] = useState(false);
-  const { i18n } = useTranslation();
+
   const languages = [
     { code: "en", lang: "English", img: "/images/lg/english.png" },
     { code: "fr", lang: "French", img: "/images/lg/french.png" },
@@ -11,13 +10,14 @@ const LanguageSelector = () => {
     { code: "sp", lang: "Spanish", img: "/images/lg/spanish.png" },
     { code: "ar", lang: "Arabian", img: "/images/lg/arabic.png" },
   ];
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
 
-  useEffect(() => {
-    document.body.dir = i18n.dir();
-  }, [i18n, i18n.language]);
+  const changeLanguage = (language) => {
+    const targetLanguage = language.target.innerText;
+    // const selectLanguage = document.getElementById("selectLanguage").innerText;
+    const languageChange = languages.find((lng) => lng.lang != targetLanguage);
+
+    console.log(languageChange);
+  };
 
   // console.log();
   return (
@@ -31,20 +31,14 @@ const LanguageSelector = () => {
         ""
       )}
 
-      {languages.map(
-        (lng) =>
-          lng.code === i18n.language && (
-            <button
-              key={lng.code}
-              onClick={() => setShowLanguages(!showLanguages)}
-              className="w-full border  border-gray-300 hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
-            >
-              <img src={lng.img} alt="" className="w-7 h-6" />
-              <span>|</span>
-              <span>{lng.lang}</span>
-            </button>
-          )
-      )}
+      <button
+        onClick={() => setShowLanguages(!showLanguages)}
+        className="w-full border  border-gray-300 hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
+      >
+        <img src={"/images/lg/english.png"} alt="" className="w-7 h-6" />
+        <span>|</span>
+        <span id="selectLanguage">{"English"}</span>
+      </button>
 
       {showLanguages ? (
         <div
@@ -53,13 +47,14 @@ const LanguageSelector = () => {
         >
           {languages.map((lng) => (
             <button
-              onClick={() => changeLanguage(lng.code)}
               key={lng.code}
               className="w-full  hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
             >
               <img src={lng.img} alt="" className="w-7 h-6" />
               <span> |</span>
-              <span>{lng.lang}</span>
+              <span onClick={(e) => changeLanguage(e)} id={lng.code}>
+                {lng.lang}
+              </span>
             </button>
           ))}
         </div>
