@@ -50,14 +50,28 @@ function App() {
         {/* DASHBOARD LAYOUT */}
         <Route
           path="/"
-          element={<Layout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+          element={
+            <Layout
+              handleThemeSwitch={handleThemeSwitch}
+              setShowMobileMenu={setShowMobileMenu}
+              showMobileMenu={showMobileMenu}
+              theme={theme}
+            />
+          }
         >
           <Route path="dashboard" element={<Dashboard />} />
         </Route>
         {/* TRAINING LAYOUT */}
         <Route
           path="/"
-          element={<TrainingLayout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+          element={
+            <TrainingLayout
+              handleThemeSwitch={handleThemeSwitch}
+              setShowMobileMenu={setShowMobileMenu}
+              showMobileMenu={showMobileMenu}
+              theme={theme}
+            />
+          }
         >
           <Route path="training" element={<Training />} />
           <Route path="events" element={<Events />} />
