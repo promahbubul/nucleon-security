@@ -33,8 +33,8 @@ const Training = () => {
         />
         <div className=" bg-slate-200  dark:bg-navy-700 col-span-6 md:col-span-3 cursor-pointer rounded-md flex flex-row p-2 items-center justify-between  gap-1">
           <div className="w-9/12  ">
-            <div className="bg-secondary  h-2 md:h-4 rounded-sm">
-              <div className="w-11/12 bg-success h-full rounded-l-sm"></div>
+            <div className="dark:bg-[#384766] bg-slate-300  h-2 md:h-3 rounded-full">
+              <div className="w-7/12 bg-[#11B883] h-full rounded-full"></div>
             </div>
             <h5 className="text-sm md:text-sm text-gray-500 dark:text-navy-100  font-normal text-center mt-2">
               Security level 95%
