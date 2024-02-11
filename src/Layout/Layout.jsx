@@ -32,16 +32,17 @@ const Layout = ({
 }) => {
   const sideLinks = [
     { path: "dashboard", icon: AiFillDashboard },
+    { path: "training", icon: AiFillDashboard },
     { path: "account", icon: FaUser },
   ];
 
   // HEADER MENUS
   const headerMenu = [
-    { path: "/account", icon: IoMdSettings, name: "Settings" },
-    { path: "/account", icon: FaBell, name: "Notification" },
-    { path: "/account", icon: FaBook, name: "Book" },
-    { path: "/account", icon: FaUser, name: "User" },
-    { path: "/account", icon: RiLogoutBoxRLine, name: "Logout" },
+    { path: "/settings", icon: IoMdSettings, name: "Settings" },
+    { path: "/notification", icon: FaBell, name: "Notification" },
+    { path: "/help", icon: FaBook, name: "Book" },
+    { path: "/user", icon: FaUser, name: "User" },
+    { path: "/", icon: RiLogoutBoxRLine, name: "Logout" },
   ];
 
   const params = useLocation({ handleThemeSwitch });
