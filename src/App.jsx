@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import "react-tooltip/dist/react-tooltip.css";
 
 function App() {
+  const [showLanguage, setShowLanguage] = useState(false);
   const [theme, setTheme] = useState(null);
 
   // DARK MODE
@@ -49,7 +50,12 @@ function App() {
         <Route
           path="/"
           element={
-            <Layout handleThemeSwitch={handleThemeSwitch} theme={theme} />
+            <Layout
+              handleThemeSwitch={handleThemeSwitch}
+              theme={theme}
+              showLanguage={showLanguage}
+              setShowLanguage={setShowLanguage}
+            />
           }
         >
           <Route path="dashboard" element={<Dashboard />} />
@@ -61,6 +67,8 @@ function App() {
             <TrainingLayout
               handleThemeSwitch={handleThemeSwitch}
               theme={theme}
+              showLanguage={showLanguage}
+              setShowLanguage={setShowLanguage}
             />
           }
         >

@@ -12,9 +12,15 @@ import LightButton from "../components/ui/Buttons/LightButton";
 import { useEffect, useState } from "react";
 import { FaBook } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "../components/LanguageSelector";
 
-const Layout = ({ handleThemeSwitch, theme }) => {
-  const [showLanguage, setShowLanguage] = useState(false);
+const Layout = ({
+  handleThemeSwitch,
+  theme,
+  showLanguage,
+  setShowLanguage,
+}) => {
   const sideLinks = [
     { path: "dashboard", icon: AiFillDashboard },
     { path: "account", icon: FaUser },
@@ -34,6 +40,12 @@ const Layout = ({ handleThemeSwitch, theme }) => {
   // PAGE TITLE
   const pathname = params.pathname.split("/")[1];
   const pageTitle = sideLinks.find((title) => title.path === pathname);
+
+  // TRANSLATE
+  const { t } = useTranslation();
+
+  // const { line1, line2 } = t("description");
+  // console.log(line1, line2);
 
   return (
     <div className=" h-screen">
@@ -62,26 +74,7 @@ const Layout = ({ handleThemeSwitch, theme }) => {
         {/* HEADER MENU */}
         <div className="w-full flex flex-row justify-end gap-3">
           {/* LANGUAGE SWITCH */}
-          <div className="w-full relative">
-            <button className="w-full border  border-gray-300 hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-center text-xl">
-              <img src="/images/lg/english.png" alt="" className="w-7 h-6" /> |
-              English
-            </button>
-            <div className="absolute bg-white dark:bg-navy-600 dark:hover:bg-navy-700 w-full top-11 shadow-2xl rounded-md ">
-              <button className="w-full  hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-center text-xl">
-                <img src="/images/lg/french.png" alt="" className="w-7 h-6" /> |
-                French
-              </button>
-              <button className="w-full  hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-center text-xl">
-                <img src="/images/lg/spanish.png" alt="" className="w-7 h-6" />{" "}
-                | Spanish
-              </button>
-              <button className="w-full  hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-center text-xl">
-                <img src="/images/lg/german.png" alt="" className="w-7 h-6" /> |
-                German
-              </button>
-            </div>
-          </div>
+          <LanguageSelector />
           {/* DARK MODE BUTTON */}
           <button className="" onClick={handleThemeSwitch}>
             {theme === "dark" ? <DarkButton /> : <LightButton />}

@@ -15,11 +15,13 @@ import { DataType, EditingMode, SortingMode } from "ka-table/enums";
 import Button from "../../components/ui/Buttons/Button";
 import Dropdown from "../../components/ui/Dropdown/Dropdown";
 import { useLoaderData } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
   const [entities, setEntities] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
     fetch("/entities.json")
