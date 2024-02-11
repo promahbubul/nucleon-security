@@ -14,8 +14,12 @@ import Vulnerabilities from "./pages/Vulnerabilities/Vulnerabilities";
 import Capacity from "./pages/Capacity/Capacity";
 import { useEffect, useState } from "react";
 
+import "react-tooltip/dist/react-tooltip.css";
+
 function App() {
+  const [showLanguage, setShowLanguage] = useState(false);
   const [theme, setTheme] = useState(null);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   // DARK MODE
 
@@ -46,14 +50,32 @@ function App() {
         {/* DASHBOARD LAYOUT */}
         <Route
           path="/"
-          element={<Layout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+          element={
+            <Layout
+              handleThemeSwitch={handleThemeSwitch}
+              theme={theme}
+              showLanguage={showLanguage}
+              setShowLanguage={setShowLanguage}
+              setShowMobileMenu={setShowMobileMenu}
+              showMobileMenu={showMobileMenu}
+            />
+          }
         >
           <Route path="dashboard" element={<Dashboard />} />
         </Route>
         {/* TRAINING LAYOUT */}
         <Route
           path="/"
-          element={<TrainingLayout handleThemeSwitch={handleThemeSwitch} theme={theme} />}
+          element={
+            <TrainingLayout
+              handleThemeSwitch={handleThemeSwitch}
+              theme={theme}
+              showLanguage={showLanguage}
+              setShowLanguage={setShowLanguage}
+              setShowMobileMenu={setShowMobileMenu}
+              showMobileMenu={showMobileMenu}
+            />
+          }
         >
           <Route path="training" element={<Training />} />
           <Route path="events" element={<Events />} />
