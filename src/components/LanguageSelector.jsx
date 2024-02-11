@@ -21,7 +21,7 @@ const LanguageSelector = () => {
 
   // console.log();
   return (
-    <div className="w-full relative ">
+    <div className="md:w-max w-full relative ">
       {showLanguages ? (
         <div
           onClick={() => setShowLanguages(false)}
@@ -33,9 +33,13 @@ const LanguageSelector = () => {
 
       <button
         onClick={() => setShowLanguages(!showLanguages)}
-        className="w-full border  border-gray-300 hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
+        className="w-full border  border-gray-300 hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl md:text-sm lg:text-base"
       >
-        <img src={"/images/lg/english.png"} alt="" className="w-7 h-6" />
+        <img
+          src={"/images/lg/english.png"}
+          alt=""
+          className="w-6 h-6 lg:w-6 lg:h-6 md:h-5 md:w-5 "
+        />
         <span>|</span>
         <span id="selectLanguage">{"English"}</span>
       </button>
@@ -48,9 +52,13 @@ const LanguageSelector = () => {
           {languages.map((lng) => (
             <button
               key={lng.code}
-              className="w-full  hover:bg-slate-100 dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
+              className="w-full  hover:bg-slate-100 md:text-sm lg:text-base dark:border-slate-500 dark:hover:bg-navy-600 py-1 px-2 rounded-md flex flex-row items-center gap-2 dark:text-navy-100 text-gray-500 justify-start text-xl"
             >
-              <img src={lng.img} alt="" className="w-7 h-6" />
+              <img
+                src={lng.img}
+                alt=""
+                className="w-6 h-6 lg:w-6 lg:h-6 md:h-5 md:w-5"
+              />
               <span> |</span>
               <span onClick={(e) => changeLanguage(e)} id={lng.code}>
                 {lng.lang}
