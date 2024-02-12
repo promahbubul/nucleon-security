@@ -19,30 +19,34 @@ const SideMenu = ({ sideLinks }) => {
     "
       >
         <div className="">
-          
           <div className="flex flex-col gap-1 mt-2">
-            {sideLinks.map((item, index) => (
-              <>
-                <NavLink
-                  data-tooltip-id={item.path}
-                  data-tooltip-content={item.path}
-                  to={item.path}
-                  key={index}
-                  className="text-gray-500 dark:text-navy-100 text-xl dark:hover:bg-navy-600 hover:bg-slate-200 py-3  rounded-full flex flex-col items-center "
-                >
-                  {item.icon()}
-                </NavLink>
-                <Tooltip
-                  id={item.path}
-                  style={{
-                    backgroundColor: "#31CDFE",
-                    color: "white",
-                    textTransform: "capitalize",
-                    zIndex: 200,
-                  }}
-                />
-              </>
-            ))}
+            {sideLinks &&
+              sideLinks.map((item, index) => (
+                <>
+                  <NavLink
+                    data-tooltip-id={item.path}
+                    data-tooltip-content={item.path}
+                    to={item.path}
+                    key={index}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "dark:bg-navy-600 bg-slate-200 text-gray-500 dark:text-navy-100 text-xl border border-info py-3  rounded-full flex flex-col items-center"
+                        : "text-gray-500 dark:text-navy-100 text-xl dark:hover:bg-navy-600 hover:bg-slate-200 py-3  rounded-full flex flex-col items-center "
+                    }
+                  >
+                    {item.icon()}
+                  </NavLink>
+                  <Tooltip
+                    id={item.path}
+                    style={{
+                      backgroundColor: "#31CDFE",
+                      color: "white",
+                      textTransform: "capitalize",
+                      zIndex: 200,
+                    }}
+                  />
+                </>
+              ))}
           </div>
         </div>
       </aside>

@@ -1,72 +1,80 @@
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useParams,
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import SideMenu from "../components/Layout/SideMenu";
 import {
+  FaUsersCog,
+  ImLab,
+  IoSearch,
   AiFillDashboard,
-  FaBell,
+  ImDisplay,
+  RiBankFill,
+  FaLockOpen,
   FaUser,
+  MdInsertChart,
   IoMdSettings,
   RiLogoutBoxRLine,
   GrMenu,
   IoIosArrowDown,
+  MdOutlineInventory,
+  IoMdApps,
 } from "../assets/Icons/Icons";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import DarkButton from "../components/ui/Buttons/DarkButton";
 import LightButton from "../components/ui/Buttons/LightButton";
-import { useEffect, useState } from "react";
-import { FaBook } from "react-icons/fa";
-import { Tooltip } from "react-tooltip";
-import { useTranslation } from "react-i18next";
+import { FaBell, FaBook } from "react-icons/fa";
 import LanguageSelector from "../components/LanguageSelector";
 
-const Layout = ({
+const OthersLayout = ({
   handleThemeSwitch,
   theme,
-  showDropDownMenu,
-  setShowDropDownMenu,
   showMobileMenu,
   setShowMobileMenu,
+  setShowDropDownMenu,
+  showDropDownMenu,
   dropdownMenuList,
-  handleDropDownMenu,
 }) => {
   const sideLinks = [
-    { path: "dashboard", icon: AiFillDashboard },
-    // { path: "training", icon: AiFillDashboard },
-    { path: "account", icon: FaUser },
+    { path: "others", icon: AiFillDashboard },
+    { path: "events", icon: IoSearch },
+    { path: "analyzes", icon: ImLab },
+    { path: "policies", icon: RiBankFill },
+    { path: "endpoints", icon: ImDisplay },
+    { path: "vulnerabilities", icon: FaLockOpen },
+    { path: "capacity", icon: MdInsertChart },
+    { path: "inventories", icon: MdOutlineInventory },
+    { path: "applications", icon: IoMdApps },
   ];
 
+  const others = ["others"];
+
   const mobileMenuLinks = [
-    { path: "dashboard", icon: AiFillDashboard },
     { path: "training", icon: AiFillDashboard },
-    { path: "account", icon: FaUser },
+    { path: "dashboard", icon: AiFillDashboard },
+    { path: "events", icon: IoSearch },
+    { path: "analyzes", icon: ImLab },
+    { path: "policies", icon: RiBankFill },
+    { path: "endpoints", icon: ImDisplay },
+    { path: "vulnerabilities", icon: FaLockOpen },
+    { path: "capacity", icon: MdInsertChart },
+    { path: "inventories", icon: MdOutlineInventory },
+    { path: "applications", icon: IoMdApps },
   ];
 
   // HEADER MENUS
   const headerMenu = [
-    { path: "/settings", icon: IoMdSettings, name: "Settings" },
-    { path: "/notification", icon: FaBell, name: "Notification" },
-    { path: "/help", icon: FaBook, name: "Book" },
-    { path: "/user", icon: FaUser, name: "User" },
-    { path: "/", icon: RiLogoutBoxRLine, name: "Logout" },
+    { path: "/account", icon: IoMdSettings },
+    { path: "/account", icon: FaBell },
+    { path: "/account", icon: FaBook },
+    { path: "/account", icon: FaUser },
+    { path: "/account", icon: RiLogoutBoxRLine },
   ];
 
-  const params = useLocation({ handleThemeSwitch });
+  const params = useLocation();
 
   // PAGE TITLE
   const pathname = params.pathname.split("/")[1];
-  const pageTitle = sideLinks.find((title) => title.path === pathname);
+  const pageTitle = others.find((title) => title === pathname);
 
-  // TRANSLATE
-  const { t } = useTranslation();
-
-  // const { line1, line2 } = t("description");
-  // console.log(line1, line2);
-
-  // HANDLE DROP DOWNN MENU
+  console.log(pageTitle);
 
   return (
     <div className=" h-screen">
@@ -276,9 +284,9 @@ const Layout = ({
       {/* MAIN */}
       <main className="flex flex-row h-[calc(100vh-56px)]">
         {/* SIDEBAR */}
-        <SideMenu />
+        <SideMenu sideLinks={sideLinks} />
         {/* CONTENT AREA */}
-        <div className="p-3 bg-slate-100 shadow-md w-full  dark:bg-navy-900   overflow-hidden overflow-y-auto scroll-smooth">
+        <div className="p-3 bg-slate-100 dark:bg-navy-900 w-full    overflow-hidden overflow-y-auto scroll-smooth">
           <Outlet />
         </div>
       </main>
@@ -286,4 +294,4 @@ const Layout = ({
   );
 };
 
-export default Layout;
+export default OthersLayout;

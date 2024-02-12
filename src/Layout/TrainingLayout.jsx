@@ -14,6 +14,8 @@ import {
   RiLogoutBoxRLine,
   GrMenu,
   IoIosArrowDown,
+  MdOutlineInventory,
+  IoMdApps,
 } from "../assets/Icons/Icons";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import DarkButton from "../components/ui/Buttons/DarkButton";
@@ -28,16 +30,18 @@ const TrainingLayout = ({
   setShowMobileMenu,
   setShowDropDownMenu,
   showDropDownMenu,
+  dropdownMenuList,
 }) => {
   const sideLinks = [
     { path: "training", icon: AiFillDashboard },
-    { path: "dashboard", icon: AiFillDashboard },
     { path: "events", icon: IoSearch },
     { path: "analyzes", icon: ImLab },
     { path: "policies", icon: RiBankFill },
     { path: "endpoints", icon: ImDisplay },
     { path: "vulnerabilities", icon: FaLockOpen },
     { path: "capacity", icon: MdInsertChart },
+    { path: "inventories", icon: MdOutlineInventory },
+    { path: "applications", icon: IoMdApps },
   ];
 
   const mobileMenuLinks = [
@@ -49,6 +53,8 @@ const TrainingLayout = ({
     { path: "endpoints", icon: ImDisplay },
     { path: "vulnerabilities", icon: FaLockOpen },
     { path: "capacity", icon: MdInsertChart },
+    { path: "inventories", icon: MdOutlineInventory },
+    { path: "applications", icon: IoMdApps },
   ];
 
   // HEADER MENUS
@@ -71,7 +77,6 @@ const TrainingLayout = ({
       {/* HEADER */}
       <header className="h-14 dark:bg-navy-800 bg-white border-b border-b-gray-200 dark:border-slate-700   flex flex-row  justify-between px-5 items-center">
         {/* PAGE TITLE */}
-
         <div className=" w-full">
           <div className="relative w-max group hover:bg-slate-200 dark:hover:bg-navy-600 px-2 py-1 rounded-md">
             {showDropDownMenu && (
@@ -84,15 +89,21 @@ const TrainingLayout = ({
               onClick={() => setShowDropDownMenu(!showDropDownMenu)}
               className="flex flex-row gap-2 items-center "
             >
-              <div
-                to={params}
-                className="flex-initial items-center justify-start "
-              >
-                {/* <img
-                src="/images/logo.png"
-                alt=""
-                className="w-8 h-8 p-2 cursor-pointer"
-              /> */}
+              {theme === "dark" ? (
+                <img
+                  src="/images/logo.png"
+                  alt=""
+                  className="w-8 h-8 p-2 cursor-pointer"
+                />
+              ) : (
+                <img
+                  src="/images/category/entities-logo.png"
+                  alt=""
+                  className="w-8 h-8 p-2 cursor-pointer"
+                />
+              )}
+
+              <div to={params} className="flex items-center justify-start   ">
                 <h3 className="w-full dark:text-white  text-black  text-base font-medium capitalize">
                   {pageTitle.path}
                 </h3>
@@ -109,7 +120,24 @@ const TrainingLayout = ({
                 onClick={() => setShowDropDownMenu(false)}
                 className="absolute    flex top-9 left-0 bg-white shadow-2xl dark:bg-navy-600  flex-col w-40 rounded-md z-50 "
               >
-                <NavLink
+                {dropdownMenuList.map((menu) => (
+                  <NavLink
+                    to={menu.path}
+                    onClick={() => handleDropDownMenu(menu)}
+                    key={menu.id}
+                    className={
+                      "cursor-pointer hover:bg-slate-100 text-gray-500 duration-300 p-2 dark:text-navy-100 dark:hover:bg-navy-700 w-full rounded-md  flex flex-row items-center gap-1 "
+                    }
+                  >
+                    <img
+                      src={menu.img1}
+                      alt=""
+                      className="w-8 h-8 p-2 cursor-pointer"
+                    />
+                    {menu.title}
+                  </NavLink>
+                ))}
+                {/* <NavLink
                   className={
                     "cursor-pointer hover:bg-slate-100 text-gray-500 duration-300 p-2 dark:text-navy-100 dark:hover:bg-navy-700 w-full rounded-md  flex flex-row items-center gap-1 "
                   }
@@ -147,13 +175,13 @@ const TrainingLayout = ({
                     className="w-8 h-8 p-2 cursor-pointer"
                   />
                   Others
-                </NavLink>
+                </NavLink> */}
               </div>
             )}
           </div>
         </div>
         {/* HEADER LOGO */}
-        <div className="w-full md:flex  text-center m-auto justify-center items-center hidden  ">
+        <div className="w-full md:flex  text-center m-auto justify-center items-center hidden ">
           {theme === "dark" ? (
             <img
               src="/images/header-logo-2.png"
@@ -184,8 +212,8 @@ const TrainingLayout = ({
                 onClick={() => setShowMobileMenu(false)}
                 className="fixed inset-y-0 inset-x-0 shadow-md bg-slate-400/70 dark:bg-navy-900/70 z-30"
               ></div>
-              <div className="fixed flex flex-col justify-between gap-5 h-full top-0 left-0 w-10/12  py-5 bg-white dark:bg-navy-700 z-40">
-                <div className="h-[calc(100vh-74px)] ">
+              <div className="fixed flex flex-col justify-between h-full top-0 left-0 w-10/12  py-5 bg-white dark:bg-navy-700 z-40">
+                <div className="">
                   <div className="flex flex-row px-5 justify-between items-center">
                     <div className="">
                       <LanguageSelector />
@@ -196,7 +224,7 @@ const TrainingLayout = ({
                     </button>
                   </div>
                   {/* SIDEMENU (MOBILE) */}
-                  <div className=" flex flex-col gap-0.5 mt-5 h-full  overflow-hidden overflow-y-auto">
+                  <div className=" flex flex-col gap-0.5 mt-5">
                     {mobileMenuLinks.map((item) => (
                       <NavLink
                         onClick={() => setShowMobileMenu(false)}
@@ -212,7 +240,7 @@ const TrainingLayout = ({
                   </div>
                 </div>
                 {/* HEADERMENU (MOBILE) */}
-                <div className=" flex flex-row justify-between   px-5 text-lg text-gray-500 dark:text-navy-100 ">
+                <div className=" flex flex-row justify-between  px-5 text-lg text-gray-500 dark:text-navy-100 md:hidden ">
                   {headerMenu.map((menu) => (
                     <Link
                       className="dark:bg-navy-500 hover:bg-slate-100 dark:hover:bg-navy-600 p-2  rounded-full"
