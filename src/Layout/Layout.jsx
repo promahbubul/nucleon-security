@@ -33,6 +33,7 @@ const Layout = ({
 }) => {
   const sideLinks = [
     { path: "dashboard", icon: AiFillDashboard },
+    { path: "training", icon: AiFillDashboard },
     { path: "account", icon: FaUser },
   ];
 
