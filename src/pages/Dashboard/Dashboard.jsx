@@ -18,6 +18,7 @@ const Dashboard = () => {
   const [showDropdown, setShowDropdown] = useState(false)
   const [showModal, setShowModal] = useState(false)
 
+
   useEffect(() => {
     fetch('/entities.json')
       .then((res) => res.json())

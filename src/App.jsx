@@ -16,6 +16,12 @@ import 'react-tooltip/dist/react-tooltip.css'
 import Inventories from './pages/Inventories/Inventories'
 import Applications from './pages/Applications/Applications'
 
+import "react-tooltip/dist/react-tooltip.css";
+import Inventories from "./pages/Inventories/Inventories";
+import Applications from "./pages/Applications/Applications";
+import Others from "./pages/Others/Others";
+import OthersLayout from "./Layout/OthersLayout";
+
 function App() {
   const [showLanguage, setShowLanguage] = useState(false)
   const [showDropDownMenu, setShowDropDownMenu] = useState(false)

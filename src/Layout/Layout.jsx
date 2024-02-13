@@ -84,6 +84,14 @@ const Layout = ({
 
   const params = useLocation()
 
+  // TRANSLATE
+  const { t } = useTranslation();
+
+  // const { line1, line2 } = t("description");
+  // console.log(line1, line2);
+
+  // HANDLE DROP DOWNN MENU
+
   return (
     <div className=' h-screen'>
       {/* HEADER */}
