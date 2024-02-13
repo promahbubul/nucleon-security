@@ -1,0 +1,125 @@
+[
+  {
+    "date": "05/02/2024",
+    "time": "16:38:02",
+    "host": "Bhaji",
+    "type": "Network",
+    "process": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe",
+    "target": "52.178.17.233",
+    "action": "Weak signal",
+    "context": {
+      "host": "DERRICK",
+      "user": "Saran/DERRICK",
+      "hostIp": "10.109.117.65",
+      "time": "06/02/2024 19:42:54:788",
+      "count": "1",
+      "type": "execute",
+      "action": "Block",
+      "notified": "Yes"
+    },
+    "processes": {
+      "pId": "9804",
+      "ppId": "10204",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "signature": "Adobe Inc.",
+      "device": "Adobe Inc.",
+      "size": "5.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    },
+    "file": {
+      "pID": "2528",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "command": "&quot;C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe&quot; --type=renderer /prefetch:1  &quot;C:UsersSaranDownloadsgate syllabus.pdf&quot;",
+      "signature": "Adobe Inc.",
+      "device": " Local",
+      "size": "15.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    }
+  },
+  {
+    "date": "05/02/2024",
+    "time": "16:38:02",
+    "host": "ExampleHost",
+    "type": "System",
+    "process": "C:\\Windows\\System32\\svchost.exe",
+    "target": "192.168.1.1",
+    "action": "Blocked",
+    "context": {
+      "host": "DERRICK",
+      "user": "Saran/DERRICK",
+      "hostIp": "10.109.117.65",
+      "time": "06/02/2024 19:42:54:788",
+      "count": "1",
+      "type": "execute",
+      "action": "Block",
+      "notified": "Yes"
+    },
+    "processes": {
+      "pId": "9804",
+      "ppId": "10204",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "signature": "Adobe Inc.",
+      "device": "Adobe Inc.",
+      "size": "5.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    },
+    "file": {
+      "pID": "2528",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "command": "&quot;C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe&quot; --type=renderer /prefetch:1  &quot;C:UsersSaranDownloadsgate syllabus.pdf&quot;",
+      "signature": "Adobe Inc.",
+      "device": " Local",
+      "size": "15.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    }
+  },
+  {
+    "date": "05/02/2024",
+    "time": "16:38:02",
+    "host": "TestHost",
+    "type": "Security",
+    "process": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+    "target": "10.0.0.1",
+    "action": "Allowed",
+    "context": {
+      "host": "DERRICK",
+      "user": "Saran/DERRICK",
+      "hostIp": "10.109.117.65",
+      "time": "06/02/2024 19:42:54:788",
+      "count": "1",
+      "type": "execute",
+      "action": "Block",
+      "notified": "Yes"
+    },
+    "processes": {
+      "pId": "9804",
+      "ppId": "10204",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "signature": "Adobe Inc.",
+      "device": "Adobe Inc.",
+      "size": "5.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha56": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    },
+    "file": {
+      "pID": "2528",
+      "path": "C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe",
+      "command": "&quot;C:Program FilesAdobeAcrobat DCAcrobatAcrobat.exe&quot; --type=renderer /prefetch:1  &quot;C:UsersSaranDownloadsgate syllabus.pdf&quot;",
+      "signature": "Adobe Inc.",
+      "device": " Local",
+      "size": "15.41 MB",
+      "md5": "0caf389cd3cc17e05ac018488b9e6690",
+      "sha1": "8644cdb2bb11359942c4e0d24e9a14ecfcf194a5",
+      "sha256": "4d7249b5eb82c7e73ac697989a076b1201948e66b604ac56a71a89b3441ef5ee"
+    }
+  }
+]
