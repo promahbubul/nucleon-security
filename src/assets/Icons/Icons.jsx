@@ -2,6 +2,7 @@ import { IoSearch, IoClose, IoWarning, IoMoonOutline } from "react-icons/io5";
 import { AiFillDashboard } from "react-icons/ai";
 import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
+
 import {
   FaCheck,
   FaLockOpen,
@@ -33,18 +34,22 @@ import {
   FaFile,
 } from "react-icons/fa";
 
-import { MdInsertChart, MdViewList } from "react-icons/md";
+import { MdInsertChart, MdViewList, MdOutlineInventory } from "react-icons/md";
 import { ImLab } from "react-icons/im";
 import { TiGroup } from "react-icons/ti";
 import { LuArrowLeftRight, LuLogIn } from "react-icons/lu";
-import { IoIosArrowDown, IoMdSettings } from "react-icons/io";
+import { IoIosArrowDown, IoMdSettings, IoMdApps } from "react-icons/io";
 import { LiaBookSolid } from "react-icons/lia";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
 import { FiSun } from "react-icons/fi";
+import { GrMenu } from "react-icons/gr";
 
 export {
+  MdOutlineInventory,
+  IoMdApps,
+  GrMenu,
   IoMoonOutline,
   FiSun,
   IoMdSettings,
