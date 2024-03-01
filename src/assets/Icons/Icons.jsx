@@ -12,6 +12,8 @@ import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
 
 import {
+  FaObjectGroup,
+  FaObjectUngroup,
   FaTh,
   FaCheckDouble,
   FaPlus,
@@ -63,6 +65,8 @@ import { FiSun, FiRefreshCcw } from "react-icons/fi";
 import { GrMenu } from "react-icons/gr";
 
 export {
+  FaObjectGroup,
+  FaObjectUngroup,
   FaTh,
   FaCheckDouble,
   FaPlus,
