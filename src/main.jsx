@@ -1,15 +1,13 @@
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
-// import i18n (needs to be bundled ;))
-import './i18n.js'
-import React from 'react'
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+// import { Provider } from "react-redux";
+// import { Toaster } from "react-hot-toast";
+// import { store } from "@store";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <React.Suspense fallback='Loading...'>
-      <App />
-    </React.Suspense>
-  </BrowserRouter>
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  // <Provider store={store}>
+  // <Toaster position="top-right" reverseOrder={false} />
+  <App />
+  // </Provider>
+);

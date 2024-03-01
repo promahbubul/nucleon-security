@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Absorption",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 39
+  },
+  {
+    "id": 2,
+    "name": "Security",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 45
+  },
+  {
+    "id": 3,
+    "name": "Firewall",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 30
+  },
+  {
+    "id": 4,
+    "name": "Detection",
+    "status": "Alert",
+    "endPoints": 0,
+    "applications": 55
+  },
+  {
+    "id": 5,
+    "name": "Prevention",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 42
+  },
+  {
+    "id": 6,
+    "name": "Monitoring",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 38
+  },
+  {
+    "id": 7,
+    "name": "Analysis",
+    "status": "Alert",
+    "endPoints": 0,
+    "applications": 51
+  },
+  {
+    "id": 8,
+    "name": "Encryption",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 47
+  },
+  {
+    "id": 9,
+    "name": "Authentication",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 36
+  },
+  {
+    "id": 10,
+    "name": "Authorization",
+    "status": "Protect",
+    "endPoints": 0,
+    "applications": 33
+  }
+]

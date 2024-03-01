@@ -1,9 +1,22 @@
-import { IoSearch, IoClose, IoWarning, IoMoonOutline } from "react-icons/io5";
+import {
+  IoSearch,
+  IoClose,
+  IoWarning,
+  IoMoonOutline,
+  IoCloseSharp,
+  IoReload,
+} from "react-icons/io5";
+import { TbLetterV } from "react-icons/tb";
 import { AiFillDashboard } from "react-icons/ai";
 import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
 
 import {
+  FaTh,
+  FaCheckDouble,
+  FaPlus,
+  FaLandmark,
+  FaBook,
   FaCheck,
   FaLockOpen,
   FaUser,
@@ -32,7 +45,10 @@ import {
   FaDatabase,
   FaList,
   FaFile,
+  FaCogs,
 } from "react-icons/fa";
+
+import { FaFolderOpen } from "react-icons/fa6";
 
 import { MdInsertChart, MdViewList, MdOutlineInventory } from "react-icons/md";
 import { ImLab } from "react-icons/im";
@@ -43,10 +59,22 @@ import { LiaBookSolid } from "react-icons/lia";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { GiNuclear } from "react-icons/gi";
 import { PiBankFill } from "react-icons/pi";
-import { FiSun } from "react-icons/fi";
+import { FiSun, FiRefreshCcw } from "react-icons/fi";
 import { GrMenu } from "react-icons/gr";
 
 export {
+  FaTh,
+  FaCheckDouble,
+  FaPlus,
+  FaUsersCog,
+  FaCogs,
+  FaLandmark,
+  TbLetterV,
+  IoReload,
+  FaFolderOpen,
+  FiRefreshCcw,
+  IoCloseSharp,
+  FaBook,
   MdOutlineInventory,
   IoMdApps,
   GrMenu,
@@ -89,7 +117,6 @@ export {
   LuArrowLeftRight,
   MdViewList,
   TiGroup,
-  FaUsersCog,
   ImLab,
   IoSearch,
   AiFillDashboard,

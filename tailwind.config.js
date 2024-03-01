@@ -4,13 +4,22 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        "nucleon-main": ["Nucleon-Main"],
+        "nucleon-secondary": ["Nucleon-Secondary"],
+      },
+      borderWidth: {
+        1: "1px",
+        2: "2px",
+        3: "3px",
+      },
       colors: {
         secondary: "#BDBDBD",
         "dark-gray": "#3A3A3A",
         "silver-gray": "#7f7f7f",
         black: "#272727",
         success: "#17B017",
-        info: "#31CDFE",
+        info: "#36a9e1",
         warning: "#ffa500",
         danger: "#DB3549",
         navy: {
@@ -22,6 +31,7 @@ export default {
           800: "#202b40",
           900: "#192132",
         },
+        transparent: "transparent",
       },
     },
   },

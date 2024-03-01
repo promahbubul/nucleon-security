@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "date": "6/12/2023",
+    "time": "5:15:56",
+    "fileName": "ProcessHeacker.exe",
+    "fileType": "PE32 executable (GUI) Intel 80386 for MS Windows",
+    "fileSize": "1.4MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "mimikatz.exe",
+      "type": "PE32+ executable (console) x86-64, for MS Windows",
+      "size": "1.4MB",
+      "maliciousScore": 99.61,
+      "flags": "Mikitaz",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "17/11/2023",
+      "createdTime": "9:11:55",
+      "updateDate": "17/11/2023",
+      "updateTime": "9:11:55",
+      "md5": "a3ab3b02a683275fe0a0f8a9a5c9e07",
+      "sha1": "d241df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "31eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539a0fc"
+    }
+  },
+  {
+    "id": 2,
+    "date": "7/12/2023",
+    "time": "6:20:32",
+    "fileName": "Trojan.exe",
+    "fileType": "Executable file",
+    "fileSize": "800KB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "trojan_variant.exe",
+      "type": "Win32 EXE",
+      "size": "750KB",
+      "maliciousScore": 98.21,
+      "flags": "Trojan.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "18/11/2023",
+      "createdTime": "8:12:45",
+      "updateDate": "18/11/2023",
+      "updateTime": "8:12:45",
+      "md5": "b4c1e3f5a682375fe0a0f8a9a5c9e01",
+      "sha1": "e1231df7b9d2ec0b8194751cd5ce153e27cc40fa",
+      "sha256": "45eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539b0fc"
+    }
+  },
+  {
+    "id": 3,
+    "date": "8/12/2023",
+    "time": "7:45:18",
+    "fileName": "SafeProgram.exe",
+    "fileType": "Application",
+    "fileSize": "2.1MB",
+    "result": "Safe",
+    "status": "Done",
+    "details": {
+      "fileName": "safe_program.exe",
+      "type": "Application",
+      "size": "2.1MB",
+      "maliciousScore": 0,
+      "flags": "",
+      "verdict": "Safe"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "19/11/2023",
+      "createdTime": "10:30:20",
+      "updateDate": "19/11/2023",
+      "updateTime": "10:30:20",
+      "md5": "d6b5f6f5a682375fe0a0f8a9a5c9e09",
+      "sha1": "f741df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "79eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539c0fc"
+    }
+  },
+  {
+    "id": 4,
+    "date": "9/12/2023",
+    "time": "8:55:43",
+    "fileName": "AdwareInstaller.exe",
+    "fileType": "Installer",
+    "fileSize": "1.6MB",
+    "result": "Suspicious",
+    "status": "Done",
+    "details": {
+      "fileName": "adware_installer.exe",
+      "type": "Installer",
+      "size": "1.6MB",
+      "maliciousScore": 56.32,
+      "flags": "Adware.Generic",
+      "verdict": "Suspicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "20/11/2023",
+      "createdTime": "11:45:30",
+      "updateDate": "20/11/2023",
+      "updateTime": "11:45:30",
+      "md5": "c5a6f6f5a682375fe0a0f8a9a5c9e04",
+      "sha1": "a831df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "89eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539c0fc"
+    }
+  },
+  {
+    "id": 5,
+    "date": "10/12/2023",
+    "time": "9:30:12",
+    "fileName": "Ransomware.exe",
+    "fileType": "Executable file",
+    "fileSize": "1.9MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "ransomware.exe",
+      "type": "Win32 EXE",
+      "size": "1.9MB",
+      "maliciousScore": 98.76,
+      "flags": "Ransomware.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "21/11/2023",
+      "createdTime": "12:55:40",
+      "updateDate": "21/11/2023",
+      "updateTime": "12:55:40",
+      "md5": "f5a6c6f5a682375fe0a0f8a9a5c9e01",
+      "sha1": "b751df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "99eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539c0fc"
+    }
+  },
+  {
+    "id": 6,
+    "date": "11/12/2023",
+    "time": "10:10:22",
+    "fileName": "Keylogger.exe",
+    "fileType": "Application",
+    "fileSize": "1.3MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "keylogger.exe",
+      "type": "Application",
+      "size": "1.3MB",
+      "maliciousScore": 97.21,
+      "flags": "Keylogger.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "22/11/2023",
+      "createdTime": "13:45:50",
+      "updateDate": "22/11/2023",
+      "updateTime": "13:45:50",
+      "md5": "a2b3c02a683275fe0a0f8a9a5c9e07",
+      "sha1": "d241df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "31eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539a0fc"
+    }
+  },
+  {
+    "id": 7,
+    "date": "12/12/2023",
+    "time": "11:25:36",
+    "fileName": "LegitimateProgram.exe",
+    "fileType": "PE32 executable (GUI) Intel 80386 for MS Windows",
+    "fileSize": "1.7MB",
+    "result": "Safe",
+    "status": "Done",
+    "details": {
+      "fileName": "legitimate_program.exe",
+      "type": "PE32+ executable (console) x86-64, for MS Windows",
+      "size": "1.7MB",
+      "maliciousScore": 0,
+      "flags": "",
+      "verdict": "Safe"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "23/11/2023",
+      "createdTime": "14:20:55",
+      "updateDate": "23/11/2023",
+      "updateTime": "14:20:55",
+      "md5": "c3ab3b02a683275fe0a0f8a9a5c9e05",
+      "sha1": "e241df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "35eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539a0fc"
+    }
+  },
+  {
+    "id": 8,
+    "date": "13/12/2023",
+    "time": "12:40:48",
+    "fileName": "Virus.exe",
+    "fileType": "Executable file",
+    "fileSize": "1.2MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "virus.exe",
+      "type": "Win32 EXE",
+      "size": "1.2MB",
+      "maliciousScore": 98.43,
+      "flags": "Virus.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "24/11/2023",
+      "createdTime": "15:35:00",
+      "updateDate": "24/11/2023",
+      "updateTime": "15:35:00",
+      "md5": "d4a2b02a683275fe0a0f8a9a5c9e06",
+      "sha1": "f5c1df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "49eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539b0fc"
+    }
+  },
+  {
+    "id": 9,
+    "date": "14/12/2023",
+    "time": "13:55:55",
+    "fileName": "Rootkit.exe",
+    "fileType": "PE32 executable (GUI) Intel 80386 for MS Windows",
+    "fileSize": "1.5MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "rootkit.exe",
+      "type": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+      "size": "1.5MB",
+      "maliciousScore": 99.12,
+      "flags": "Rootkit.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "25/11/2023",
+      "createdTime": "16:40:15",
+      "updateDate": "25/11/2023",
+      "updateTime": "16:40:15",
+      "md5": "b5a2b02a683275fe0a0f8a9a5c9e03",
+      "sha1": "c4d1df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "59eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539b0fc"
+    }
+  },
+  {
+    "id": 10,
+    "date": "15/12/2023",
+    "time": "14:30:10",
+    "fileName": "Spyware.exe",
+    "fileType": "Application",
+    "fileSize": "1.8MB",
+    "result": "Malicious",
+    "status": "Done",
+    "details": {
+      "fileName": "spyware.exe",
+      "type": "Win32 EXE",
+      "size": "1.8MB",
+      "maliciousScore": 98.87,
+      "flags": "Spyware.Generic",
+      "verdict": "Malicious"
+    },
+    "metaData": {
+      "staticAnalysis": "Enabled",
+      "createdDate": "26/11/2023",
+      "createdTime": "17:50:25",
+      "updateDate": "26/11/2023",
+      "updateTime": "17:50:25",
+      "md5": "e3ab3b02a683275fe0a0f8a9a5c9e02",
+      "sha1": "a4d1df7b9d2ec0b8194751cd5ce153e27cc40fa4",
+      "sha256": "69eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539a0fc"
+    }
+  }
+]
