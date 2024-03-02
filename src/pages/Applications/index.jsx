@@ -1,24 +1,24 @@
-import SectionContainer from "../../shared/components/SectionContainer";
 import TopButtonSection from "./components/TopButtonSection";
-import { FaObjectGroup, FaObjectUngroup } from "../../assets/Icons/Icons";
+import ApplicationsSection from "./components/ApplicationsSection";
+import ObjectsSection from "./components/ObjectSection";
+import { useEffect, useState } from "react";
 
 const Applications = () => {
+  const [applications, setApplications] = useState(null);
+
+  useEffect(() => {
+    fetch("/applications.json")
+      .then((res) => res.json())
+      .then((data) => setApplications(data));
+  }, []);
+
   return (
     <div>
       {/* TOP BUTTON SECTION */}
       <TopButtonSection />
-
       <div className="flex flex-row gap-2 mt-3">
-        <SectionContainer
-          className={"w-full"}
-          icon={FaObjectGroup}
-          title={"Applications"}
-        ></SectionContainer>
-        <SectionContainer
-          className={"w-full"}
-          icon={FaObjectUngroup}
-          title={"Objects"}
-        ></SectionContainer>
+        <ApplicationsSection applications={applications?.applications} />
+        <ObjectsSection others={applications?.others} />
       </div>
     </div>
   );

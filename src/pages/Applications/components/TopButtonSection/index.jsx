@@ -1,5 +1,5 @@
-import Button from "../../../../shared/components/Buttons/Button/Button";
-import { FaDownload, FaCheckDouble } from "../../../../assets/Icons/Icons";
+import Button from "@shared/components/Buttons/Button/Button";
+import { FaDownload, FaCheckDouble } from "@assets/Icons/Icons";
 
 const TopButtonSection = () => {
   return (

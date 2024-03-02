@@ -1,0 +1,38 @@
+{
+  "applications": [
+    { "name": "MACfee", "logo": "/images/policies/macfee.png", "priority": 1 },
+    { "name": "Adobe", "logo": "/images/policies/adobe.png", "priority": 2 },
+    { "name": "Dell", "logo": "/images/policies/dell.png", "priority": 3 },
+    {
+      "name": "Samsung",
+      "logo": "/images/policies/samsung.png",
+      "priority": 4
+    },
+    {
+      "name": "Microsoft",
+      "logo": "/images/policies/microsoft-office.png",
+      "priority": 5
+    },
+    { "name": "Google", "logo": "/images/policies/google.png", "priority": 6 },
+    { "name": "Apple", "logo": "/images/policies/apple.png", "priority": 7 },
+    { "name": "Brave", "logo": "/images/policies/Brave.png", "priority": 8 },
+    { "name": "Cisco", "logo": "/images/policies/cisco.png", "priority": 9 },
+    {
+      "name": "Dropbox",
+      "logo": "/images/policies/dropbox.png",
+      "priority": 10
+    }
+  ],
+  "others": [
+    { "name": "MACfee", "type": "antivirus" },
+    { "name": "Adobe", "type": "software" },
+    { "name": "Dell", "type": "hardware" },
+    { "name": "Samsung", "type": "hardware" },
+    { "name": "Microsoft", "type": "software" },
+    { "name": "Google", "type": "software" },
+    { "name": "Apple", "type": "hardware" },
+    { "name": "Brave", "type": "software" },
+    { "name": "Cisco", "type": "hardware" },
+    { "name": "Dropbox", "type": "software" }
+  ]
+}

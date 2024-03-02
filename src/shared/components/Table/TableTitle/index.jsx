@@ -11,3 +11,5 @@ const TableTitle = ({ children, className }) => {
 };
 
 export default TableTitle;
+
+
