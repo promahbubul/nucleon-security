@@ -37,6 +37,9 @@ export default {
     },
   },
   plugins: [
-    require("tailwind-scrollbar")({ preferredStrategy: "pseudoelements" }), // default: 'standard'
+    require("tailwind-scrollbar")({
+      preferredStrategy: "pseudoelements",
+      nocompatible: true,
+    }), // default: 'standard'
   ],
 };
