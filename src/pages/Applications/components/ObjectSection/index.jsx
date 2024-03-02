@@ -17,7 +17,7 @@ const ObjectsSection = ({ others }) => {
       {/* FILTER SECTION */}
       <SectionFiltter searchTotal={"114/114"} title={"object"} />
       {/* TABLE */}
-      <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto ">
+      <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info hover:scrollbar-thumb-info/80 scrollbar-track-slate-300 ">
         {/* TABLE HEADING */}
         <HeadingRow className={"mb-2"}>
           <TableHeading className={"col-span-8 "}>Name</TableHeading>
