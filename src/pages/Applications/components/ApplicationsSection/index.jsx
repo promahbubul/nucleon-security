@@ -6,9 +6,18 @@ import HeadingRow from "../../../../shared/components/Table/HeadingRow";
 import TableBody from "../../../../shared/components/Table/TableBody";
 import TableData from "../../../../shared/components/Table/TableData";
 import Loading from "../../../../shared/components/Loading";
+import ApplicationModal from "./ApplicationModal";
+import { useState } from "react";
 
 const ApplicationsSection = ({ applications }) => {
   // console.table(applications ? "" : applications?.name);
+  const [applicationModal, setApplicationModal] = useState(false);
+
+  // const handleModal = () => {
+  //   console.log("Hello");
+  // };
+
+  console.log(applicationModal);
   return (
     <SectionContainer
       className={"w-full "}
@@ -16,7 +25,11 @@ const ApplicationsSection = ({ applications }) => {
       title={"Applications"}
     >
       {/* FILTER SECTION */}
-      <SectionFiltter searchTotal={"114/114"} title={"applications"} />
+      <SectionFiltter
+        handleModal={setApplicationModal}
+        searchTotal={"114/114"}
+        title={"applications"}
+      />
       {/* TABLE */}
       <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info hover:scrollbar-thumb-info/80 scrollbar-track-slate-300  ">
         {/* TABLE HEADING */}
@@ -43,6 +56,10 @@ const ApplicationsSection = ({ applications }) => {
           <Loading />
         )}
       </div>
+      <ApplicationModal
+        showModal={applicationModal}
+        handleModal={setApplicationModal}
+      ></ApplicationModal>
     </SectionContainer>
   );
 };

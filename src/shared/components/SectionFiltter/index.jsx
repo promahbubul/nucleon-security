@@ -7,11 +7,12 @@ import {
   IoIosArrowDown,
 } from "../../../assets/Icons/Icons";
 
-const SectionFiltter = ({ title, searchTotal }) => {
+const SectionFiltter = ({ title, searchTotal, handleModal }) => {
   return (
     <div className="flex flex-row  justify-between">
       <div className="">
         <Button
+          onClick={() => handleModal(true)}
           className={
             "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 duration-300"
           }
