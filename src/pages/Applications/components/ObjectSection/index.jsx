@@ -3,11 +3,21 @@ import SectionFiltter from "../../../../shared/components/SectionFiltter";
 import { FaObjectUngroup } from "../../../../assets/Icons/Icons";
 import HeadingRow from "../../../../shared/components/Table/HeadingRow";
 import TableHeading from "../../../../shared/components/Table/TableHeading";
-import TableBody from "../../../../shared/components/Table/TableBody";
+import TBody from "../../../../shared/components/Table/TableBody";
 import TableData from "../../../../shared/components/Table/TableData";
 import Loading from "../../../../shared/components/Loading";
+import UpdateObject from "./UpdateObject";
+import { useState } from "react";
 
 const ObjectsSection = ({ others }) => {
+  const [updateObject, setUpdateObject] = useState(false);
+  const [selectObject, setSelectObject] = useState({});
+
+  const handleObjects = (object) => {
+    console.log(object);
+    setUpdateObject(true);
+    setSelectObject(object);
+  };
   return (
     <SectionContainer
       className={"w-full"}
@@ -25,15 +35,25 @@ const ObjectsSection = ({ others }) => {
         </HeadingRow>
         {others ? (
           others?.map((other, index) => (
-            <TableBody key={index} className={"hover:bg-slate-200"}>
+            <TBody
+              onClick={() => handleObjects(other)}
+              key={index}
+              className={"hover:bg-slate-100 dark:hover:bg-navy-700"}
+            >
               <TableData className={"col-span-8 "}>{other?.name}</TableData>
               <TableData className={"col-span-4 "}>{other?.type}</TableData>
-            </TableBody>
+            </TBody>
           ))
         ) : (
           <Loading />
         )}
       </div>
+      {/* MODAL [UPDATE OBJECT] */}
+      <UpdateObject
+        selectObject={selectObject}
+        showModal={updateObject}
+        handleModal={setUpdateObject}
+      ></UpdateObject>
     </SectionContainer>
   );
 };

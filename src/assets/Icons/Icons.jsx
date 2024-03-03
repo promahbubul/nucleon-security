@@ -12,6 +12,13 @@ import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
 
 import {
+  FaKey,
+  FaPowerOff,
+  FaHeartbeat,
+  FaTimes,
+  FaHdd,
+  FaShareAlt,
+  FaUsb,
   FaObjectGroup,
   FaObjectUngroup,
   FaTh,
@@ -36,7 +43,6 @@ import {
   FaFlask,
   FaSkull,
   FaBox,
-  FaPowerOff,
   FaHistory,
   FaArchive,
   FaChevronDown,
@@ -65,6 +71,12 @@ import { FiSun, FiRefreshCcw } from "react-icons/fi";
 import { GrMenu } from "react-icons/gr";
 
 export {
+  FaKey,
+  FaHeartbeat,
+  FaTimes,
+  FaHdd,
+  FaShareAlt,
+  FaUsb,
   TbLoader2,
   FaObjectGroup,
   FaObjectUngroup,

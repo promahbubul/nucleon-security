@@ -1,11 +1,12 @@
-const TableBody = ({ children, className }) => {
+const TBody = ({ children, className, onClick }) => {
   return (
     <div
-      className={`grid grid-cols-12 gap-2  border-b dark:border-b-slate-700 ${className} `}
+      onClick={onClick}
+      className={`grid gap-2 grid-cols-12 gap-3- text-gray-500 dark:text-navy-100 hover:bg-slate-100 dark:hover:bg-navy-700  p-2  cursor-pointer ${className} `}
     >
       {children}
     </div>
   );
 };
 
-export default TableBody;
+export default TBody;

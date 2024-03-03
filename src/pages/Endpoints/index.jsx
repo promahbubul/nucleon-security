@@ -1,9 +1,17 @@
+import Status from "./components/Status";
+import { useEffect, useState } from "react";
+import EndPointTable from "./components/Table";
+
 const Endpoints = () => {
+  
   return (
     <div>
-      <h1 className="text-center text-3xl font-extrabold text-black dark:text-white underline">
-        Endpoints
-      </h1>
+      {/* STATUS */}
+      <Status />
+      {/* CHART */}
+      {/* TABLE */}
+      {/* <Table /> */}
+      <EndPointTable />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { customApplications } from "../../../../../../../shared/constants/policies.constants";
-import DropDownSelect from "../../../../../../../shared/components/Select";
+import DropDownSelect from "../../../../../../../shared/components/DropDownSelect";
 import TableTitle from "../../../../../../../shared/components/Table/TableTitle";
 
 const CustomApplications = () => {

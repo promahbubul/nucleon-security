@@ -3,21 +3,23 @@ import SectionFiltter from "../../../../shared/components/SectionFiltter";
 import { FaObjectGroup } from "../../../../assets/Icons/Icons";
 import TableHeading from "../../../../shared/components/Table/TableHeading";
 import HeadingRow from "../../../../shared/components/Table/HeadingRow";
-import TableBody from "../../../../shared/components/Table/TableBody";
+import TBody from "../../../../shared/components/Table/TableBody";
 import TableData from "../../../../shared/components/Table/TableData";
 import Loading from "../../../../shared/components/Loading";
-import ApplicationModal from "./ApplicationModal";
+import CreateApplication from "./CreateApplication";
 import { useState } from "react";
+import UpdateApplication from "./UpdateApplication";
 
 const ApplicationsSection = ({ applications }) => {
   // console.table(applications ? "" : applications?.name);
   const [applicationModal, setApplicationModal] = useState(false);
+  const [updateApplication, setUpdateApplication] = useState(false);
 
   // const handleModal = () => {
   //   console.log("Hello");
   // };
 
-  console.log(applicationModal);
+  console.log(updateApplication);
   return (
     <SectionContainer
       className={"w-full "}
@@ -40,7 +42,11 @@ const ApplicationsSection = ({ applications }) => {
         </HeadingRow>
         {applications ? (
           applications?.map((application, index) => (
-            <TableBody key={index} className={"hover:bg-slate-200"}>
+            <TBody
+              onClick={() => setUpdateApplication(true)}
+              key={index}
+              className={"hover:bg-slate-100 dark:hover:bg-navy-700"}
+            >
               <TableData className={"col-span-2 "}>
                 <img src={application?.logo} alt="" className="h-7 w-7" />
               </TableData>
@@ -50,16 +56,22 @@ const ApplicationsSection = ({ applications }) => {
               <TableData className={"col-span-3 "}>
                 {application?.priority}
               </TableData>
-            </TableBody>
+            </TBody>
           ))
         ) : (
           <Loading />
         )}
       </div>
-      <ApplicationModal
+      {/* MODAL  [CREATE APPLICATION] */}
+      <CreateApplication
         showModal={applicationModal}
         handleModal={setApplicationModal}
-      ></ApplicationModal>
+      ></CreateApplication>
+      {/* MODAL  [UPDATE APPLICATION] */}
+      <UpdateApplication
+        handleModal={setUpdateApplication}
+        showModal={updateApplication}
+      ></UpdateApplication>
     </SectionContainer>
   );
 };

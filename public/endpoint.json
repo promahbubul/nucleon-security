@@ -1,0 +1,92 @@
+[
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-1",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-2",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-3",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Disable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-4",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-5",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Disable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-6",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-7",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-8",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-9",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  },
+  {
+    "date": "03/03/2024",
+    "time": "14:49:31",
+    "hostname": "host-10",
+    "os_version": "Windows 10 Home Single Language 22621",
+    "endpoint_version": "4.6.9",
+    "policy": "Protection",
+    "status": "Enable"
+  }
+]

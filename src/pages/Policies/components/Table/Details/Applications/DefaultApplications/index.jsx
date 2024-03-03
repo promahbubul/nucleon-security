@@ -1,4 +1,4 @@
-import DropDownSelect from "../../../../../../../shared/components/Select";
+import DropDownSelect from "../../../../../../../shared/components/DropDownSelect";
 import TableTitle from "../../../../../../../shared/components/Table/TableTitle";
 import { defaultApplications } from "../../../../../../../shared/constants/policies.constants";
 

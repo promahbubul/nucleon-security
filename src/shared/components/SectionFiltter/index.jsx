@@ -14,7 +14,7 @@ const SectionFiltter = ({ title, searchTotal, handleModal }) => {
         <Button
           onClick={() => handleModal(true)}
           className={
-            "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 duration-300"
+            "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 "
           }
           icon={FaPlus}
         >
@@ -24,7 +24,7 @@ const SectionFiltter = ({ title, searchTotal, handleModal }) => {
       <div className=" flex flex-row gap-1">
         <Button
           className={
-            "bg-info  text-slate-100 dark:text-navy-100 p-2 text-sm hover:text-white duration-500 hover:shadow-md"
+            "bg-info  text-slate-100 dark:text-white p-2 text-sm hover:text-white duration-500 hover:shadow-md"
           }
           icon={IoSearch}
         >
