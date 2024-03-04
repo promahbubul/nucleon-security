@@ -199,7 +199,7 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
         {/* HEADER MENU */}
         <div className="hidden md:flex flex-row gap-2  ">
           {headerMenu.map((menu, index) => (
-            <Link key={index} to={"/"} className="">
+            <Link key={index} to={menu.path} className="">
               <button className=" hover:bg-slate-100  p-2 text-gray-500 dark:text-navy-100 dark:hover:bg-navy-600   rounded-full">
                 {menu.icon()}
               </button>

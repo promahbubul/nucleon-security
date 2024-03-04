@@ -1,9 +1,14 @@
+import OsVulnerability from "./components/OsVulnerability";
+import SoftwareVulnerability from "./components/SoftwareVulnerability";
+
 const Vulnerabilities = () => {
   return (
     <div>
-      <h1 className="text-center text-3xl font-extrabold text-black dark:text-white underline">
-        Vulnerabilities
-      </h1>
+      {/* CHART */}
+      {/* SOFTWARE VULNERABILITY */}
+      <SoftwareVulnerability />
+      {/* OS VULNERABILITY */}
+      <OsVulnerability />
     </div>
   );
 };

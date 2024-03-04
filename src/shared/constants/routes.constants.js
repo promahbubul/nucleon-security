@@ -10,6 +10,7 @@ export const Routes = {
   capacity: "/dashboard/capacity",
   inventories: "/dashboard/inventories",
   applications: "/dashboard/applications",
+  accounts: "/dashboard/accounts",
 
   login: "/login",
   register: "/register",

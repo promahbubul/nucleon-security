@@ -97,11 +97,11 @@ export const mobileMenuLinks = [
 
 // HEADER MENUS
 export const headerMenu = [
-  { path: "/account", icon: IoMdSettings },
-  { path: "/account", icon: FaBell },
-  { path: "/account", icon: FaBook },
-  { path: "/account", icon: FaUser },
-  { path: "/account", icon: RiLogoutBoxRLine },
+  { path: "/", icon: IoMdSettings },
+  { path: "/", icon: FaBell },
+  { path: "/", icon: FaBook },
+  { path: "/dashboard/accounts", icon: FaUser },
+  { path: "/", icon: RiLogoutBoxRLine },
 ];
 
 // TABLE SIDEMENU LINKS

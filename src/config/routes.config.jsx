@@ -11,6 +11,7 @@ import Vulnerabilities from "@pages/Vulnerabilities";
 import Capacity from "@pages/Capacity";
 import Inventories from "@pages/Inventories";
 import Applications from "@pages/Applications";
+import Accounts from "../pages/Accounts";
 
 export const RoutesConfig = [
   {
@@ -27,6 +28,7 @@ export const RoutesConfig = [
       { path: Routes.capacity, element: <Capacity /> },
       { path: Routes.inventories, element: <Inventories /> },
       { path: Routes.applications, element: <Applications /> },
+      { path: Routes.accounts, element: <Accounts /> },
     ],
   },
   {
