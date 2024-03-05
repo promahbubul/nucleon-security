@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import EndPointTable from "./components/Table";
 
 const Endpoints = () => {
-  
   return (
     <div>
       {/* STATUS */}

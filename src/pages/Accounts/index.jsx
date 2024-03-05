@@ -10,7 +10,7 @@ import UpdateAccount from "./components/UpdateAccount";
 
 const Accounts = () => {
   const [accounts, setAccounts] = useState(null);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetch("/accounts.json")
@@ -40,7 +40,7 @@ const Accounts = () => {
           </THead>
           {accounts ? (
             accounts.map((account, index) => (
-              <TBody onClick={() => setShowModal(true)} key={index}>
+              <TBody className={""} onClick={() => setShowModal(true)} key={index}>
                 <p className={"col-span-2"}>{account?.email}</p>
                 <p className={"col-span-1"}>{account?.first_name}</p>
                 <p className={"col-span-1"}>{account?.last_name}</p>

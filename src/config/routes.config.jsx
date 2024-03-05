@@ -12,6 +12,7 @@ import Capacity from "@pages/Capacity";
 import Inventories from "@pages/Inventories";
 import Applications from "@pages/Applications";
 import Accounts from "../pages/Accounts";
+import EndpointDetails from "../pages/EndpointDetails";
 
 export const RoutesConfig = [
   {
@@ -29,6 +30,7 @@ export const RoutesConfig = [
       { path: Routes.inventories, element: <Inventories /> },
       { path: Routes.applications, element: <Applications /> },
       { path: Routes.accounts, element: <Accounts /> },
+      { path: Routes.endpointDetails, element: <EndpointDetails /> },
     ],
   },
   {

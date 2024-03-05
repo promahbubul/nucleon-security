@@ -6,6 +6,7 @@ import { FaDesktop, FaTimes, FaCheck } from "../../../../assets/Icons/Icons";
 import TableHeading from "../../../../shared/components/Table/TableHeading";
 import Table from "../../../../shared/components/Table";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const EndPointTable = () => {
   const [endpointData, setEndPointData] = useState(null);
@@ -37,29 +38,35 @@ const EndPointTable = () => {
         </THead>
         {endpointData &&
           endpointData.map((endpoint, index) => (
-            <TBody key={index}>
-              <div className="col-span-2 flex flex-col ">
-                <span className="">{endpoint?.date}</span>
-                <span className="">{endpoint?.time}</span>
-              </div>
-              <p className="col-span-2">{endpoint?.hostname}</p>
-              <p className="col-span-4">{endpoint?.os_version}</p>
-              <p className="col-span-2">{endpoint?.endpoint_version}</p>
-              <p className="col-span-1 ">{endpoint?.policy}</p>
-              <p className="col-span-1 ">
-                {endpoint?.status === "Enable" ? (
-                  <div className="flex flex-row items-center gap-1">
-                    <FaCheck className="text-lg text-success" />
-                    <span className="">{endpoint?.status}</span>
-                  </div>
-                ) : (
-                  <div className="flex flex-row items-center gap-1">
-                    <FaTimes className="text-lg text-danger" />
-                    <span className="">{endpoint?.status}</span>
-                  </div>
-                )}
-              </p>
-            </TBody>
+            <Link
+              target="_blank"
+              key={index}
+              to={"/dashboard/endpoints/details"}
+            >
+              <TBody className={""}>
+                <div className="col-span-2 flex flex-col ">
+                  <span className="">{endpoint?.date}</span>
+                  <span className="">{endpoint?.time}</span>
+                </div>
+                <p className="col-span-2">{endpoint?.hostname}</p>
+                <p className="col-span-4">{endpoint?.os_version}</p>
+                <p className="col-span-2">{endpoint?.endpoint_version}</p>
+                <p className="col-span-1 ">{endpoint?.policy}</p>
+                <p className="col-span-1 ">
+                  {endpoint?.status === "Enable" ? (
+                    <div className="flex flex-row items-center gap-1">
+                      <FaCheck className="text-lg text-success" />
+                      <span className="">{endpoint?.status}</span>
+                    </div>
+                  ) : (
+                    <div className="flex flex-row items-center gap-1">
+                      <FaTimes className="text-lg text-danger" />
+                      <span className="">{endpoint?.status}</span>
+                    </div>
+                  )}
+                </p>
+              </TBody>
+            </Link>
           ))}
       </Table>
     </SectionContainer>
