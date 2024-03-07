@@ -16,7 +16,7 @@ const Applications = () => {
     <div>
       {/* TOP BUTTON SECTION */}
       <TopButtonSection />
-      <div className="flex flex-row gap-2 mt-3">
+      <div className="flex  flex-col md:flex-row gap-2 mt-3">
         <ApplicationsSection applications={applications?.applications} />
         <ObjectsSection others={applications?.others} />
       </div>

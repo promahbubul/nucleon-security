@@ -10,11 +10,12 @@ const Details = ({ details }) => {
   console.log(details);
   return (
     <SectionContainer
+      childrenClass={" overflow-auto"}
       icon={FaDesktop}
       title={details?.endpoint}
-      className={"col-span-6"}
+      className={"col-span-12 md:col-span-6 "}
     >
-      <div className=" flex flex-row gap-5">
+      <div className="w-max md:w-full flex flex-row gap-5">
         {/* left */}
         <div className="grid grid-cols-12 bord items-center gap-3 ">
           <DetailLabel>Domain</DetailLabel>

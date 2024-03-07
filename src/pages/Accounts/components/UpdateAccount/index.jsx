@@ -1,21 +1,17 @@
-import SectionContainer from "../../../../shared/components/SectionContainer";
-import {
-  FaUser,
-  FaAddressCard,
-  FaEnvelopeOpenText,
-} from "../../../../assets/Icons/Icons";
-import Modal from "../../../../shared/components/Modal";
-import Label from "../../../../shared/components/Form/Label";
-import Input from "../../../../shared/components/Form/Input";
-import DropDownSelect from "../../../../shared/components/DropDownSelect";
-import { entitiesOptions } from "../../../../shared/constants/updateaccounts.constants";
-import OffButton from "../../../../shared/components/Buttons/OffButton";
-import Button from "../../../../shared/components/Buttons/Button/Button";
+import SectionContainer from "@shared/components/SectionContainer";
+import { FaUser, FaAddressCard, FaEnvelopeOpenText } from "@assets/Icons/Icons";
+import Modal from "@shared/components/Modal";
+import Label from "@shared/components/Form/Label";
+import Input from "@shared/components/Form/Input";
+import DropDownSelect from "@shared/components/DropDownSelect";
+import { entitiesOptions } from "@shared/constants/updateaccounts.constants";
+import OffButton from "@shared/components/Buttons/OffButton";
+import Button from "@shared/components/Buttons/Button/Button";
 
 const UpdateAccount = ({ showModal, handleModal }) => {
   return (
     <Modal showModal={showModal} handleModal={handleModal}>
-      <div className="fixed  w-8/12 left-1/2 -translate-x-1/2 top-5  ">
+      <div className="fixed w-11/12 md:w-8/12 left-1/2 -translate-x-1/2 top-5  ">
         <SectionContainer icon={FaUser} title={"Update Account"}>
           {/* TOP MENU */}
           <div className="flex flex-row items-center">

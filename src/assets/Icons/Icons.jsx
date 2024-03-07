@@ -12,6 +12,9 @@ import { ImDisplay } from "react-icons/im";
 import { RiBankFill } from "react-icons/ri";
 
 import {
+  FaTrash,
+  FaInfoCircle,
+  FaFileDownload,
   FaAddressCard,
   FaEnvelopeOpenText,
   FaEye,
@@ -74,6 +77,9 @@ import { FiSun, FiRefreshCcw } from "react-icons/fi";
 import { GrMenu } from "react-icons/gr";
 
 export {
+  FaTrash,
+  FaInfoCircle,
+  FaFileDownload,
   FaAddressCard,
   FaEnvelopeOpenText,
   FaEye,

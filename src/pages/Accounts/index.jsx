@@ -19,8 +19,12 @@ const Accounts = () => {
   }, []);
   return (
     <>
-      <SectionContainer icon={FaUser} title={"Accounts"}>
-        <Table>
+      <SectionContainer
+        icon={FaUser}
+        title={"Accounts"}
+        childrenClass={"overflow-auto"}
+      >
+        <Table className={"w-max md:w-full "}>
           <THead>
             <TableHeading className={"col-span-2"}>Email</TableHeading>
             <TableHeading className={"col-span-1"}>First name</TableHeading>
@@ -40,7 +44,11 @@ const Accounts = () => {
           </THead>
           {accounts ? (
             accounts.map((account, index) => (
-              <TBody className={""} onClick={() => setShowModal(true)} key={index}>
+              <TBody
+                className={""}
+                onClick={() => setShowModal(true)}
+                key={index}
+              >
                 <p className={"col-span-2"}>{account?.email}</p>
                 <p className={"col-span-1"}>{account?.first_name}</p>
                 <p className={"col-span-1"}>{account?.last_name}</p>

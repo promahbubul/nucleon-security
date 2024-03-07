@@ -29,7 +29,7 @@ const UpdateApplication = ({ handleModal, showModal }) => {
   };
   return (
     <Modal showModal={showModal} handleModal={handleModal}>
-      <div className="fixed  top-1/4 w-10/12 left-1/2 -translate-x-1/2 ">
+      <div className="fixed top-1/2 -translate-y-1/2 md:-translate-y-1/2  md:top-1/4 w-10/12 left-1/2 -translate-x-1/2 ">
         <SectionContainer icon={FaObjectGroup} title={"Update application"}>
           {/* Form */}
           <form
@@ -40,16 +40,16 @@ const UpdateApplication = ({ handleModal, showModal }) => {
             <InputFile
               file={file}
               handleUploadFile={handleUploadFile}
-              className={"col-span-1"}
+              className={"col-span-12 md:col-span-1"}
             />
-            <div className="col-span-6 grid grid-cols-12 gap-3">
+            <div className="col-span-12 md:col-span-6 grid grid-cols-12 gap-3">
               <InputText
-                className="col-span-6 flex flex-row gap-2 w-full items-center "
+                className="col-span-12 md:col-span-6 flex flex-row gap-2 w-full items-center "
                 label={"Name"}
                 placeholder={"Name"}
               />
               <InputText
-                className="col-span-6 flex flex-row gap-2 w-full items-center "
+                className=" col-span-12 md:col-span-6 flex flex-row gap-2 w-full items-center "
                 label={"Priority"}
                 placeholder={"Priority"}
               />
@@ -71,7 +71,7 @@ const UpdateApplication = ({ handleModal, showModal }) => {
             <InputTextArea
               label={"Description"}
               placeholder={"Description"}
-              className="col-span-5  flex items-start flex-row gap-2"
+              className="col-span-12 md:col-span-5  flex items-start flex-row gap-2"
               height={"w-80"}
               width={"w-full"}
             ></InputTextArea>

@@ -33,9 +33,9 @@ const ApplicationsSection = ({ applications }) => {
         title={"applications"}
       />
       {/* TABLE */}
-      <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info hover:scrollbar-thumb-info/80 scrollbar-track-slate-300  ">
+      <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info hover:scrollbar-thumb-info/80 scrollbar-track-slate-300 ">
         {/* TABLE HEADING */}
-        <HeadingRow className={"mb-2"}>
+        <HeadingRow className={"mb-2 w-full"}>
           <TableHeading className={"col-span-2 "}>Logo</TableHeading>
           <TableHeading className={"col-span-7 "}>Name</TableHeading>
           <TableHeading className={"col-span-3 "}>Priority</TableHeading>

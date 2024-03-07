@@ -1,4 +1,10 @@
-const SectionContainer = ({ children, icon, title, className }) => {
+const SectionContainer = ({
+  children,
+  icon,
+  title,
+  className,
+  childrenClass,
+}) => {
   return (
     <div className={`pb-2 dark:bg-navy-800 bg-white rounded-md ${className}`}>
       <div
@@ -12,7 +18,7 @@ const SectionContainer = ({ children, icon, title, className }) => {
           {title}
         </h3>
       </div>
-      <div className="p-2 ">{children}</div>
+      <div className={`p-2 ${childrenClass}`}>{children}</div>
     </div>
   );
 };

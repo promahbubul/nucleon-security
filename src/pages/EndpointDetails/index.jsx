@@ -2,7 +2,7 @@ import { details } from "../../shared/constants/endPoint.constants";
 import Details from "./components/Details";
 import RemoteAction from "./components/RemoteAction/RemoteAction";
 
-import { useState } from "react";
+
 
 const EndpointDetails = () => {
   return (

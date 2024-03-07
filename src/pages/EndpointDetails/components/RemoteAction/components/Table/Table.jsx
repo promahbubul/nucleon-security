@@ -8,7 +8,7 @@ const RemoteTable = ({ remote_action }) => {
   return (
     <Table
       className={
-        "h-[300px]  overflow-hidden overflow-y-auto scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info scrollbar-track-slate-200 pr-1 scrollbar-thin mt-2"
+        "h-[300px]  overflow-hidden overflow-y-auto scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info scrollbar-track-slate-200 pr-1 scrollbar-thin mt-2  w-max md:w-full"
       }
     >
       <THead>
