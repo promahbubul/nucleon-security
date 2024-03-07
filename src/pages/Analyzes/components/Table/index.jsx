@@ -3,7 +3,7 @@ import TableHeading from "./TableHeading";
 
 const Table = () => {
   return (
-    <div>
+    <div className="w-max md:w-full">
       <TableHeading />
       <TableData />
     </div>

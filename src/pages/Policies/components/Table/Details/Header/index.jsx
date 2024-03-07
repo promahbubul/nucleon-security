@@ -14,7 +14,7 @@ const Header = () => {
           <IoWarning className="text text-3xl" />
           <p className="text-lg">Alert only</p>
         </div>
-        <p className="text-base font-medium mt-3">
+        <p className="text-sm md:text-base font-medium mt-3">
           Notify administrators when a threat or a malware is detected
         </p>
       </div>
@@ -31,7 +31,7 @@ const Header = () => {
           <FaShieldAlt />
           <h3 className="text-lg"> Protect</h3>
         </div>
-        <p className="text-base font-medium text-center text-slate-400 mt-3">
+        <p className="text-sm md:text-base font-medium text-center text-slate-400 mt-3">
           Notify administrators when a threat or a malware is detected
         </p>
       </div>

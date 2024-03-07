@@ -15,12 +15,12 @@ const Table = () => {
       .then((data) => setPolicies(data));
   }, []);
   return (
-    <div className="mt-4 flex flex-col gap-1">
+    <div className="mt-4 flex flex-col gap-1 ">
       {/* CARD 1 */}
       {policies?.map((policie, index) => (
         <div
           key={index}
-          className=" flex bg-white dark:text-navy-100 text-gray-500  dark:bg-navy-700   shadow-md rounded-md  flex-col relative"
+          className=" flex overflow-auto bg-white dark:text-navy-100 text-gray-500  dark:bg-navy-700   shadow-md rounded-md  flex-col relative"
         >
           <input
             type="checkbox"
@@ -29,7 +29,7 @@ const Table = () => {
             className="absolute peer opacity-0 cursor-pointer inset-x-0 h-[64px] w-full "
           />
 
-          <div className="flex rounded-md   flex-row w-full  peer-checked:rounded-b-none rounded-b-sm rounded-t-sm px-2 py-5  select-none justify-between  cursor-pointer ">
+          <div className="flex w-fit md:w-full gap-5 rounded-md   flex-row  peer-checked:rounded-b-none rounded-b-sm rounded-t-sm px-2 py-5  select-none justify-between  cursor-pointer ">
             <p className="w-full">{policie.name}</p>
             <div className="w-full flex items-center flex-row gap-2">
               {policie.status === "Protect" ? (

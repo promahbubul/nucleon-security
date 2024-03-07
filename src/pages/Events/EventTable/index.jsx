@@ -34,11 +34,16 @@ const EventTable = () => {
   console.log(events);
   return (
     <div className="mt-3">
-      <SectionContainer icon={FaList} title={"Events"}>
+      <SectionContainer
+        icon={FaList}
+        title={"Events"}
+        childrenClass={""}
+        className={"overflow-auto"}
+      >
         {/* HEAD */}
         <div className="flex flex-col md:flex-row bg-white dark:bg-navy-800 ">
           {/* HEAD LEFT  */}
-          <div className="w-6/12  grid grid-cols-12  items-center gap-2 ">
+          <div className="w-full md:w-6/12  grid grid-cols-12  items-center gap-2 ">
             <select
               className="py-1 col-span-3 h-full cursor-pointer px-2 rounded-md  border-gray-600  bg-slate-200 dark:bg-navy-500   text-gray-500 dark:text-navy-100"
               disabled
@@ -55,7 +60,7 @@ const EventTable = () => {
             />
           </div>
           {/* HEAD RIGHT */}
-          <div className="flex flex-row justify-end gap-2 text-sm  w-6/12">
+          <div className="flex flex-row flex-wrap mt-2 justify-center md:justify-end gap-2 text-sm  w-full md:w-6/12">
             <Button icon={IoSearch} className={"bg-info py-2 px-4"}>
               Search
             </Button>

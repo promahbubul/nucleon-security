@@ -5,7 +5,7 @@ import { Tooltip } from "react-tooltip";
 
 const Settings = () => {
   return (
-    <div className="w-5/12 flex flex-col">
+    <div className="w-full md:w-5/12 flex flex-col">
       <h3 className="text-md text-base border-b-gray-200 dark:border-b-navy-500 py-2 border-b font-bold text-center dark:text-navy-100 text-gray-500">
         Settings
       </h3>

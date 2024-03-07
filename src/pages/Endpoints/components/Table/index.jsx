@@ -23,8 +23,9 @@ const EndPointTable = () => {
       className={"w-full mt-3"}
       icon={FaDesktop}
       title={"Endpoints"}
+      childrenClass={"overflow-auto"}
     >
-      <Table className={""}>
+      <Table className={"w-max md:w-full"}>
         {/* TABLE HEADING */}
         <THead>
           <TableHeading className={" col-span-2"}>Last connection</TableHeading>

@@ -28,12 +28,12 @@ const Status = () => {
       ></StatusCard>
       {/* DEFAULT APPLICATIONS */}
       <StatusCard
-        className={"col-span-6 md:col-span-3"}
+        className={"col-span-12 md:col-span-3"}
         title={"Default Applications"}
         number={118}
         icon={FaCogs}
       ></StatusCard>
-      <div className="grid grid-cols-2 gap-1.5 md:col-span-3 ">
+      <div className="grid col-span-12  gap-1.5 md:col-span-3 ">
         <Button
           icon={FaCheckDouble}
           className={

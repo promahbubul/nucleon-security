@@ -11,7 +11,12 @@ const Analyzes = () => {
         {/* STATUS */}
         <Status />
         {/* TABLE */}
-        <SectionContainer title={"Analyzes"} icon={FaList} className={"mt-3"}>
+        <SectionContainer
+          title={"Analyzes"}
+          icon={FaList}
+          className={"mt-3 "}
+          childrenClass={"overflow-auto"}
+        >
           <Table />
         </SectionContainer>
       </div>
