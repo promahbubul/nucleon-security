@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
-import {
-  FaDesktop,
-  FaShieldAlt,
-  IoWarning,
-  FaTh,
-} from "../../../../assets/Icons/Icons";
+import { FaDesktop, FaShieldAlt, IoWarning, FaTh } from "@assets/Icons/Icons";
 import Details from "./Details";
+
 const Table = () => {
   const [policies, setPolicies] = useState(null);
 

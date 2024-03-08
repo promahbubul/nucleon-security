@@ -5,9 +5,10 @@ import TableHeading from "../../../../shared/components/Table/TableHeading";
 import THead from "../../../../shared/components/Table/THead";
 import DetailLabel from "./components/DetailLabel";
 import Text from "./components/Text";
+import { useTranslation } from "react-i18next";
 
 const Details = ({ details }) => {
-  console.log(details);
+  const { t } = useTranslation();
   return (
     <SectionContainer
       childrenClass={" overflow-auto"}
@@ -18,20 +19,20 @@ const Details = ({ details }) => {
       <div className="w-max md:w-full flex flex-row gap-5">
         {/* left */}
         <div className="grid grid-cols-12 bord items-center gap-3 ">
-          <DetailLabel>Domain</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.domain")}</DetailLabel>
           <Text>{details.domain}</Text>
-          <DetailLabel>OS</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.os")}</DetailLabel>
           <Text>{details.os}</Text>
-          <DetailLabel>SEEN</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.seen")}</DetailLabel>
           <Text>{details.seen}</Text>
-          <DetailLabel>Ip address</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.ipAddress")}</DetailLabel>
           <Text>{details.ip_address}</Text>
-          <DetailLabel>Version</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.version")}</DetailLabel>
           <Text>{details.version}</Text>
         </div>
         {/* left */}
         <div className="grid grid-cols-12 items-center  gap-3">
-          <DetailLabel>Status</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.status")}</DetailLabel>
           <select
             name=""
             id=""
@@ -44,7 +45,7 @@ const Details = ({ details }) => {
               Disable
             </option>
           </select>
-          <DetailLabel>Policy</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.policy")}</DetailLabel>
           <select
             name=""
             id=""
@@ -57,7 +58,7 @@ const Details = ({ details }) => {
               Policy 1
             </option>
           </select>
-          <DetailLabel>Debug</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.debug")}</DetailLabel>
           <select
             name=""
             id=""
@@ -70,7 +71,7 @@ const Details = ({ details }) => {
               Policy 1
             </option>
           </select>
-          <DetailLabel>Upgrade</DetailLabel>
+          <DetailLabel>{t("singleEndpoint.upgrade")}</DetailLabel>
           <select
             name=""
             id=""

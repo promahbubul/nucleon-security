@@ -8,28 +8,30 @@ import {
 } from "@assets/Icons/Icons";
 import Button from "@shared/components/Buttons/Button/Button";
 import StatusCard from "@shared/components/Card/StatusCard";
+import { useTranslation } from "react-i18next";
 
 const Status = () => {
+  const { t } = useTranslation();
   return (
     <div className="grid grid-cols-12 gap-2 md:gap-3">
       {/* POLICIES */}
       <StatusCard
         className={"col-span-6 md:col-span-3"}
-        title={"Policies"}
+        title={t("policies.policies")}
         number={118}
         icon={FaLandmark}
       ></StatusCard>
       {/* CUSTOM APPLICATIONS */}
       <StatusCard
         className={"col-span-6 md:col-span-3"}
-        title={"Custom Applications"}
+        title={t("policies.customApplications")}
         number={118}
         icon={FaUsersCog}
       ></StatusCard>
       {/* DEFAULT APPLICATIONS */}
       <StatusCard
         className={"col-span-12 md:col-span-3"}
-        title={"Default Applications"}
+        title={t("policies.defaultApplications")}
         number={118}
         icon={FaCogs}
       ></StatusCard>
@@ -40,7 +42,7 @@ const Status = () => {
             "rounded-md col-span-2 p-2  bg-white dark:text-slate-300 text-gray-500 dark:bg-navy-600  text-base shadow-md"
           }
         >
-          Apply & push to endpoints
+          {t("policies.applyEndpoints")}
         </Button>
 
         <Button
@@ -49,7 +51,7 @@ const Status = () => {
             "rounded-md col-span-1 p-2  bg-white dark:text-slate-300 text-gray-500 dark:bg-navy-600  text-base shadow-md "
           }
         >
-          Create New
+          {t("policies.createNew")}
         </Button>
         <Button
           icon={FaDownload}
@@ -57,7 +59,7 @@ const Status = () => {
             "rounded-md col-span-1 p-2  bg-white dark:text-slate-300 text-gray-500 dark:bg-navy-600  text-base shadow-md "
           }
         >
-          Export
+          {t("policies.export")}
         </Button>
       </div>
     </div>

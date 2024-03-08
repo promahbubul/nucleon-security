@@ -7,9 +7,11 @@ import TableHeading from "../../../../shared/components/Table/TableHeading";
 import Table from "../../../../shared/components/Table";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const EndPointTable = () => {
   const [endpointData, setEndPointData] = useState(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch("/endpoint.json")
@@ -22,20 +24,30 @@ const EndPointTable = () => {
     <SectionContainer
       className={"w-full mt-3"}
       icon={FaDesktop}
-      title={"Endpoints"}
+      title={t("endpoints.section-title")}
       childrenClass={"overflow-auto"}
     >
       <Table className={"w-max md:w-full"}>
         {/* TABLE HEADING */}
         <THead>
-          <TableHeading className={" col-span-2"}>Last connection</TableHeading>
-          <TableHeading className={" col-span-2"}>Hostname</TableHeading>
-          <TableHeading className={" col-span-4"}>OS version</TableHeading>
           <TableHeading className={" col-span-2"}>
-            Endpoint version
+            {t("endpoints.lastConnection")}
           </TableHeading>
-          <TableHeading className={" col-span-1"}>Policy</TableHeading>
-          <TableHeading className={" col-span-1"}>Status</TableHeading>
+          <TableHeading className={" col-span-2"}>
+            {t("endpoints.hostname")}
+          </TableHeading>
+          <TableHeading className={" col-span-4"}>
+            {t("endpoints.osVersion")}
+          </TableHeading>
+          <TableHeading className={" col-span-2"}>
+            {t("endpoints.endpointVersion")}
+          </TableHeading>
+          <TableHeading className={" col-span-1"}>
+            {t("endpoints.policy")}
+          </TableHeading>
+          <TableHeading className={" col-span-1"}>
+            {t("endpoints.status")}
+          </TableHeading>
         </THead>
         {endpointData &&
           endpointData.map((endpoint, index) => (

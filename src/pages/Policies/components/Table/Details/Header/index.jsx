@@ -21,7 +21,6 @@ const Header = () => {
       {/* RIGHT */}
       <div className="w-full   flex items-center justify-center">
         <div onClick={() => setbuttonSwitch(!buttonSwitch)} className="">
-          {" "}
           {buttonSwitch ? <OnButton className={"bg-warning"} /> : <OffButton />}
         </div>
       </div>

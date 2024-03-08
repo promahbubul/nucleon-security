@@ -1,10 +1,11 @@
+import { useTranslation } from "react-i18next";
 import Table from "../../../../../../shared/components/Table";
 import THead from "../../../../../../shared/components/Table/THead";
 import TBody from "../../../../../../shared/components/Table/TableBody";
 import TableHeading from "../../../../../../shared/components/Table/TableHeading";
 
 const RemoteTable = ({ remote_action }) => {
-  console.log(remote_action);
+  const { t } = useTranslation();
   return (
     <Table
       className={
@@ -12,10 +13,18 @@ const RemoteTable = ({ remote_action }) => {
       }
     >
       <THead>
-        <TableHeading className={"col-span-3 "}>Request date</TableHeading>
-        <TableHeading className={"col-span-3 "}>Type</TableHeading>
-        <TableHeading className={"col-span-4 "}>Parameter</TableHeading>
-        <TableHeading className={"col-span-2 "}>Status</TableHeading>
+        <TableHeading className={"col-span-3 "}>
+          {t("singleEndpoint.requestDate")}
+        </TableHeading>
+        <TableHeading className={"col-span-3 "}>
+          {t("singleEndpoint.type")}
+        </TableHeading>
+        <TableHeading className={"col-span-4 "}>
+          {t("singleEndpoint.parameter")}
+        </TableHeading>
+        <TableHeading className={"col-span-2 "}>
+          {t("singleEndpoint.status")}
+        </TableHeading>
       </THead>
       {remote_action.map((remote, index) => (
         <TBody key={index} className={""}>

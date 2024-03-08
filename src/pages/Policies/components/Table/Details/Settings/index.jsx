@@ -2,12 +2,14 @@ import { FaQuestionCircle } from "react-icons/fa";
 import OnButton from "../../../../../../shared/components/Buttons/OnButton";
 import { tableSettings } from "../../../../../../shared/constants/policies.constants";
 import { Tooltip } from "react-tooltip";
+import { useTranslation } from "react-i18next";
 
 const Settings = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full md:w-5/12 flex flex-col">
       <h3 className="text-md text-base border-b-gray-200 dark:border-b-navy-500 py-2 border-b font-bold text-center dark:text-navy-100 text-gray-500">
-        Settings
+        {t("policies.settings")}
       </h3>
 
       <div className=" flex flex-col gap-2 mt-5">
