@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { FaLevelUpAlt } from "../../../assets/Icons/Icons";
 import Title from "../Title";
 
 const ExecutedProcess = ({ executedProcess }) => {
+  const { t } = useTranslation();
   return (
     <div className=" p-2 rounded-md dark:bg-navy-700 bg-white w-5/12  shadow-md overflow-y-auto overflow-hidden">
-      <Title>Executed processes (0)</Title>
+      <Title>{t("training.executed")} (0)</Title>
       <div className="text-sm flex flex-col gap-1 h-[296px] overflow-hidden overflow-y-auto">
         {executedProcess.length > 0 ? (
           executedProcess.map((executed, index) => (

@@ -12,8 +12,10 @@ import {
 import ContextInformation from "../ContextInformation";
 import ProcessDetails from "../ProcessDetails";
 import FileDetails from "../FileDetails";
+import { useTranslation } from "react-i18next";
 
 const RelatedEvents = ({ relatedEvents }) => {
+  const { t } = useTranslation();
   const eventsMenu = [
     { path: "/", icon: FaSitemap },
     { path: "/", icon: FaMagic },
@@ -31,28 +33,28 @@ const RelatedEvents = ({ relatedEvents }) => {
         className="absolute w-full top-0 peer opacity-0 inset-x-0 h-9 cursor-pointer"
       />
       <h3 className="text-gray-500 dark:text-navy-100 p-1 text-base peer-checked:border-b border-b-slate-200  dark:peer-checked:border-slate-600  font-medium ">
-        Related events (3)
+        {t("training.relatedEvents")} (3)
       </h3>
       <div className=" peer-checked:block hidden">
         <div className="tbody">
           <div className=" grid grid-cols-12 text-gray-500 dark:text-navy-100 text-base font-bold text-left border-b-2 border-gray-200 pb-3 dark:border-b-slate-600 mt-3 ">
             <p className=" col-span-2  hover:text-gray-400 cursor-pointer">
-              Date
+              {t("training.date")}
             </p>
             <p className=" col-span-1  hover:text-gray-400 cursor-pointer">
-              Host
+              {t("training.host")}
             </p>
             <p className=" col-span-1  hover:text-gray-400 cursor-pointer">
-              Type
+              {t("training.type")}
             </p>
             <p className=" col-span-4  hover:text-gray-400 cursor-pointer">
-              Process
+              {t("training.process")}
             </p>
             <p className=" col-span-2  hover:text-black cursor-pointer">
-              Target
+              {t("training.target")}
             </p>
             <p className=" col-span-2  hover:text-black cursor-pointer">
-              Action
+              {t("training.action")}
             </p>
           </div>
           {relatedEvents.map((event, index) => (

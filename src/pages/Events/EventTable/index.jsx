@@ -20,8 +20,10 @@ import { eventTableMenu } from "../../../shared/constants/menuLinks.constants";
 import ContextInformation from "../../../shared/components/ContextInformation";
 import ProcessDetails from "../../../shared/components/ProcessDetails";
 import FileDetails from "../../../shared/components/FileDetails";
+import { useTranslation } from "react-i18next";
 
 const EventTable = () => {
+  const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -36,7 +38,7 @@ const EventTable = () => {
     <div className="mt-3">
       <SectionContainer
         icon={FaList}
-        title={"Events"}
+        title={t("events.section-title")}
         childrenClass={""}
         className={"overflow-auto"}
       >
@@ -110,22 +112,22 @@ const EventTable = () => {
           <div className="w-max md:w-full overflow-hidden ">
             <div className=" grid grid-cols-12  text-gray-500 dark:text-navy-100  text-base font-bold text-left border-b-2 pb-2 border-b-gray-200 dark:border-b-gray-600  mt-3  w-auto md:w-full ">
               <h3 className=" col-span-2  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Date
+                {t("events.date")}
               </h3>
               <h3 className=" col-span-1  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Host
+                {t("events.host")}
               </h3>
               <h3 className=" col-span-1  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Type
+                {t("events.type")}
               </h3>
               <h3 className=" col-span-4  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Process
+                {t("events.process")}
               </h3>
               <h3 className=" col-span-2  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Target
+                {t("events.target")}
               </h3>
               <h3 className=" col-span-2  hover:text-gray-600 dark:hover:text-slate-100 cursor-pointer">
-                Action
+                {t("events.action")}
               </h3>
             </div>
             {events.map((event, index) => (

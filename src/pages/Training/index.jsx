@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   FaDesktop,
   FaLockOpen,
@@ -7,27 +8,27 @@ import {
 import StatusCard from "../../shared/components/Card/StatusCard";
 import TrainingTable from "./components/Table/TrainingTable";
 
-
 const Training = () => {
+  const { t } = useTranslation();
   return (
     <div>
       {/* SATUS */}
       <div className="grid grid-cols-12 gap-2 md:gap-3">
         <StatusCard
           icon={FaDesktop}
-          title={"Online endpoints"}
+          title={t("training.endpoint")}
           number={1}
           className={"col-span-6 md:col-span-3"}
         />
         <StatusCard
           icon={FaBiohazard}
-          title={"Threats"}
+          title={t("training.threats")}
           number={2}
           className={"col-span-6 md:col-span-3"}
         />
         <StatusCard
           icon={FaLockOpen}
-          title={"Vulnerabilities"}
+          title={t("training.vulnerabilities")}
           number={3}
           className={"col-span-6 md:col-span-3"}
         />
@@ -37,7 +38,7 @@ const Training = () => {
               <div className="w-7/12 bg-[#11B883] h-full rounded-full"></div>
             </div>
             <h5 className="text-sm md:text-sm text-gray-500 dark:text-navy-100 font-normal text-center mt-2">
-              Security level 95%
+              {t("training.security")} 95%
             </h5>
           </div>
           <div className="relative flex justify-center w-3/12">

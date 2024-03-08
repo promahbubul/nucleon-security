@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const LanguageSelector = () => {
+  const { i18n } = useTranslation();
   const [showLanguages, setShowLanguages] = useState(false);
 
   const languages = [
@@ -11,12 +13,12 @@ const LanguageSelector = () => {
     { code: "ar", lang: "Arabian", img: "/images/lg/arabic.png" },
   ];
 
-  const changeLanguage = (language) => {
-    const targetLanguage = language.target.innerText;
-    // const selectLanguage = document.getElementById("selectLanguage").innerText;
-    const languageChange = languages.find((lng) => lng.lang != targetLanguage);
-
-    console.log(languageChange);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    // const targetLanguage = language.target.innerText;
+    // // const selectLanguage = document.getElementById("selectLanguage").innerText;
+    // const languageChange = languages.find((lng) => lng.lang != targetLanguage);
+    console.log(lng);
   };
 
   // console.log();
@@ -60,7 +62,7 @@ const LanguageSelector = () => {
                 className="w-6 h-6 lg:w-6 lg:h-6 md:h-5 md:w-5"
               />
               <span> |</span>
-              <span onClick={(e) => changeLanguage(e)} id={lng.code}>
+              <span onClick={() => changeLanguage(lng.code)} id={lng.code}>
                 {lng.lang}
               </span>
             </button>

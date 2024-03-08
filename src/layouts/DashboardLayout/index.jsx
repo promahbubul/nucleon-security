@@ -6,9 +6,11 @@ import { sideLinks } from "@shared/constants/menuLinks.constants";
 import SideMenu from "@shared/components/Menus/SideMenu";
 import Header from "./components/Header";
 import { dropdownMenuList } from "../../shared/constants/dropdownMenu.constants";
+import { useTranslation } from "react-i18next";
 
 const DashboardLayout = () => {
   const [selectedMenu, setSelectedMenu] = useState(dropdownMenuList[0]);
+  const { t } = useTranslation("translation", "about");
   return (
     <div>
       <div className=" h-screen">
