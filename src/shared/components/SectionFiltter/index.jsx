@@ -6,8 +6,10 @@ import {
   FaList,
   IoIosArrowDown,
 } from "../../../assets/Icons/Icons";
+import { useTranslation } from "react-i18next";
 
 const SectionFiltter = ({ title, searchTotal, handleModal }) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-row  justify-between">
       <div className="">
@@ -18,7 +20,7 @@ const SectionFiltter = ({ title, searchTotal, handleModal }) => {
           }
           icon={FaPlus}
         >
-          New {title}
+          {title}
         </Button>
       </div>
       <div className=" flex flex-row gap-1">
@@ -28,7 +30,7 @@ const SectionFiltter = ({ title, searchTotal, handleModal }) => {
           }
           icon={IoSearch}
         >
-          Search
+          {t("applications.search")}
         </Button>
         <Button
           className={

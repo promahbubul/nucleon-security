@@ -9,36 +9,39 @@ import Loading from "../../../../shared/components/Loading";
 import CreateApplication from "./CreateApplication";
 import { useState } from "react";
 import UpdateApplication from "./UpdateApplication";
+import { useTranslation } from "react-i18next";
 
 const ApplicationsSection = ({ applications }) => {
   // console.table(applications ? "" : applications?.name);
   const [applicationModal, setApplicationModal] = useState(false);
   const [updateApplication, setUpdateApplication] = useState(false);
+  const { t } = useTranslation();
 
-  // const handleModal = () => {
-  //   console.log("Hello");
-  // };
-
-  console.log(updateApplication);
   return (
     <SectionContainer
       className={"w-full "}
       icon={FaObjectGroup}
-      title={"Applications"}
+      title={t("applications.section-title")}
     >
       {/* FILTER SECTION */}
       <SectionFiltter
         handleModal={setApplicationModal}
         searchTotal={"114/114"}
-        title={"applications"}
+        title={t("applications.newApplications")}
       />
       {/* TABLE */}
       <div className="my-5 max-h-[calc(100vh-280.67px)] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-info hover:scrollbar-thumb-info/80 scrollbar-track-slate-300 ">
         {/* TABLE HEADING */}
         <HeadingRow className={"mb-2 w-full"}>
-          <TableHeading className={"col-span-2 "}>Logo</TableHeading>
-          <TableHeading className={"col-span-7 "}>Name</TableHeading>
-          <TableHeading className={"col-span-3 "}>Priority</TableHeading>
+          <TableHeading className={"col-span-2 "}>
+            {t("applications.logo")}
+          </TableHeading>
+          <TableHeading className={"col-span-7 "}>
+            {t("applications.name")}
+          </TableHeading>
+          <TableHeading className={"col-span-3 "}>
+            {t("applications.priority")}
+          </TableHeading>
         </HeadingRow>
         {applications ? (
           applications?.map((application, index) => (

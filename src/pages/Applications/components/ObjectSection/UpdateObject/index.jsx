@@ -12,9 +12,11 @@ import {
   signatureOptions,
 } from "../../../../../shared/constants/applications.constants";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const UpdateObject = ({ handleModal, showModal, selectObject }) => {
   const [file, setFile] = useState(null);
+  const { t } = useTranslation();
   const handleUpdate = (e) => {
     e.preventDefault();
     // console.log(e);
@@ -39,7 +41,7 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
         <SectionContainer
           icon={FaObjectUngroup}
           className={""}
-          title={"Update object"}
+          title={t("applications.updateApplication")}
         >
           {/* <div className="flex flex-row gap-2 items-center">
             <InputText
@@ -54,7 +56,7 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
             className="flex flex-col gap-2 max-h-[calc(100vh-120px)] overflow-hidden overflow-y-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-track-rounded-full  scrollbar-thumb-info scrollbar-track-slate-200 p-5"
           >
             <div className="grid grid-cols-12  items-center ">
-              <Label className={"col-span-3"}>Name</Label>
+              <Label className={"col-span-3"}>{t("applications.name")}</Label>
               <Input
                 onChange={(e) => e.target.value}
                 className={"col-span-9"}
@@ -64,7 +66,9 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
               />
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Description</Label>
+              <Label className={"col-span-3"}>
+                {t("applications.description")}
+              </Label>
               <Input
                 className={"col-span-9"}
                 placeholder={"Description"}
@@ -72,26 +76,26 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
               />
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Type</Label>
+              <Label className={"col-span-3"}>{t("applications.type")}</Label>
               <Select className={"col-span-9"}>
                 <option>System</option>
                 <option>Network</option>
               </Select>
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Device</Label>
+              <Label className={"col-span-3"}>{t("applications.device")}</Label>
               <DropDownSelect
                 className={" col-span-9"}
                 options={deviceOptions}
               />
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Path</Label>
+              <Label className={"col-span-3"}>{t("applications.path")}</Label>
               <DropDownSelect className={" col-span-9"} options={pathOptions} />
             </div>
             {/* file upload */}
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Hash</Label>
+              <Label className={"col-span-3"}>{t("applications.hash")}</Label>
 
               <div className="relative col-span-9 border-2 border-dotted rounded-md   border-slate-200 ">
                 {file ? (
@@ -104,7 +108,7 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
                   <div className="flex flex-row gap-3 items-center  inset-y-0 inset-x-0 col-span-9  justify-center   cursor-pointer absolute  ">
                     <FaFile className="text-2xl font-extrabold text-slate-400 dark:text-navy-100" />
                     <span className="dark:text-navy-100  text-slate-400">
-                      File
+                      {t("applications.file")}
                     </span>
                   </div>
                 )}
@@ -119,18 +123,22 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
               </div>
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Command line</Label>
+              <Label className={"col-span-3"}>
+                {t("applications.commandLine")}
+              </Label>
               <DropDownSelect className={" col-span-9"} />
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Signed</Label>
+              <Label className={"col-span-3"}>{t("applications.signed")}</Label>
               <DropDownSelect
                 className={" col-span-9"}
                 options={SignedOptions}
               />
             </div>
             <div className="grid grid-cols-12  items-center">
-              <Label className={"col-span-3"}>Signature</Label>
+              <Label className={"col-span-3"}>
+                {t("applications.signature")}
+              </Label>
               <DropDownSelect
                 className={" col-span-9 bg-info"}
                 options={signatureOptions}
@@ -141,22 +149,22 @@ const UpdateObject = ({ handleModal, showModal, selectObject }) => {
                 onClick={handleDeleteObject}
                 className="text-danger border hover:bg-danger hover:text-white border-danger rounded-md p-2 text-sm"
               >
-                Delete
+                {t("applications.delete")}
               </button>
               <div className="flex flex-row gap-3">
                 <input
                   type="submit"
-                  value={"Update"}
+                  value={t("applications.update")}
                   className="bg-slate-200 dark:bg-navy-500 dark:text-navy-100  text-navy-500 p-2 rounded-md text-sm cursor-pointer"
                 />
                 <button className="bg-slate-200 dark:bg-navy-500 dark:text-navy-100  text-navy-500 p-2 rounded-md text-sm">
-                  Clone
+                  {t("applications.clone")}
                 </button>
                 <button
                   onClick={() => handleModal(false)}
                   className="bg-slate-200 dark:bg-navy-500 dark:text-navy-100  text-navy-500 p-2 rounded-md text-sm"
                 >
-                  Close
+                  {t("applications.close")}
                 </button>
               </div>
             </div>

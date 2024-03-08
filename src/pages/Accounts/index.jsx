@@ -7,10 +7,12 @@ import TBody from "../../shared/components/Table/TableBody";
 import { useEffect, useState } from "react";
 import Loading from "../../shared/components/Loading";
 import UpdateAccount from "./components/UpdateAccount";
+import { useTranslation } from "react-i18next";
 
 const Accounts = () => {
   const [accounts, setAccounts] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch("/accounts.json")
@@ -21,25 +23,31 @@ const Accounts = () => {
     <>
       <SectionContainer
         icon={FaUser}
-        title={"Accounts"}
+        title={t("accounts.section-title")}
         childrenClass={"overflow-auto"}
       >
         <Table className={"w-max md:w-full "}>
           <THead>
-            <TableHeading className={"col-span-2"}>Email</TableHeading>
-            <TableHeading className={"col-span-1"}>First name</TableHeading>
-            <TableHeading className={"col-span-1"}>Last name</TableHeading>
-            <TableHeading className={"col-span-2 "}>
-              Endpoint notification
+            <TableHeading className={"col-span-2"}>
+              {t("accounts.email")}
+            </TableHeading>
+            <TableHeading className={"col-span-1"}>
+              {t("accounts.firstName")}
+            </TableHeading>
+            <TableHeading className={"col-span-1"}>
+              {t("accounts.lastName")}
             </TableHeading>
             <TableHeading className={"col-span-2 "}>
-              License notification
+              {t("accounts.endpointNotification")}
+            </TableHeading>
+            <TableHeading className={"col-span-2 "}>
+              {t("accounts.licenseNotification")}
             </TableHeading>
             <TableHeading className={"col-span-2"}>
-              Threat notification
+              {t("accounts.threatNotification")}
             </TableHeading>
             <TableHeading className={"col-span-2"}>
-              One-Time password
+              {t("accounts.oneTimePassword")}
             </TableHeading>
           </THead>
           {accounts ? (

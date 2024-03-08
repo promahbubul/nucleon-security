@@ -12,9 +12,11 @@ import { policieOptions } from "../../../../../shared/constants/applications.con
 import Button from "../../../../../shared/components/Buttons/Button/Button";
 import InputFile from "../../../../../shared/components/Form/InputFile";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const CreateApplication = ({ handleModal, showModal }) => {
   const [file, setFile] = useState(null);
+  const { t } = useTranslation();
   const createApplication = (e) => {
     e.preventDefault();
     alert("Ami");
@@ -30,7 +32,10 @@ const CreateApplication = ({ handleModal, showModal }) => {
   return (
     <Modal showModal={showModal} handleModal={handleModal}>
       <div className="fixed top-1/2 -translate-y-1/2 md:-translate-y-0 md:top-1/4 w-10/12 left-1/2 -translate-x-1/2 ">
-        <SectionContainer icon={FaObjectGroup} title={"Create application"}>
+        <SectionContainer
+          icon={FaObjectGroup}
+          title={t("applications.createApplication")}
+        >
           {/* Form */}
           <form
             onSubmit={(e) => createApplication(e)}
@@ -45,12 +50,12 @@ const CreateApplication = ({ handleModal, showModal }) => {
             <div className=" col-span-12 md:col-span-6 grid grid-cols-12 gap-3">
               <InputText
                 className="col-span-12 md:col-span-6 flex flex-row gap-2 w-full items-center "
-                label={"Name"}
+                label={t("applications.name")}
                 placeholder={"Name"}
               />
               <InputText
                 className="col-span-12 md:col-span-6 flex flex-row gap-2 w-full items-center "
-                label={"Priority"}
+                label={t("applications.priority")}
                 placeholder={"Priority"}
               />
               {/* <InputText
@@ -63,13 +68,13 @@ const CreateApplication = ({ handleModal, showModal }) => {
               /> */}
               <div className="col-span-12 flex flex-row items-center gap-2">
                 <p className="text-gray-600 hover:text-gray-700 dark:text-navy-100  text-sm md:text-base font-semibold text-left dark:hover:text-slate-400 cursor-pointer">
-                  Policies
+                  {t("applications.policies")}
                 </p>
                 <DropDownSelect options={policieOptions} className={"  "} />
               </div>
             </div>
             <InputTextArea
-              label={"Description"}
+              label={t("applications.description")}
               placeholder={"Description"}
               className=" col-span-12 md:col-span-5  flex items-start flex-row gap-2"
               height={"w-80"}
@@ -78,7 +83,7 @@ const CreateApplication = ({ handleModal, showModal }) => {
             <div className="border-b flex flex-row justify-between border-b-slate-200 w-full py-2 col-span-12">
               <h4 className="flex flex-row gap-2 items-center text-black font-medium dark:text-navy-100 ">
                 <FaList className="" />
-                Results
+                {t("applications.results")}
               </h4>
               <Button
                 className={
@@ -86,7 +91,7 @@ const CreateApplication = ({ handleModal, showModal }) => {
                 }
                 icon={FaPlus}
               >
-                New rule
+                {t("applications.newRule")}
               </Button>
             </div>
           </form>
@@ -96,7 +101,7 @@ const CreateApplication = ({ handleModal, showModal }) => {
                 "p-2 bg-slate-200 hover:bg-slate-300 shadow-sm duration-300 dark:bg-navy-500 text-black dark:text-navy-100"
               }
             >
-              Create
+              {t("applications.create")}
             </Button>
             <Button
               onClick={() => handleModal(false)}
@@ -104,7 +109,7 @@ const CreateApplication = ({ handleModal, showModal }) => {
                 "p-2 bg-slate-200 shadow-sm hover:bg-slate-300 duration-300 dark:bg-navy-500 text-black dark:text-navy-100"
               }
             >
-              Close
+              {t("applications.close")}
             </Button>
           </div>
         </SectionContainer>
