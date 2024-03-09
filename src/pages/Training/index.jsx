@@ -37,7 +37,7 @@ const Training = () => {
             <div className="dark:bg-[#384766] bg-slate-300 h-2 md:h-3 rounded-full">
               <div className="w-7/12 bg-[#11B883] h-full rounded-full"></div>
             </div>
-            <h5 className="text-sm md:text-sm text-gray-500 dark:text-navy-100 font-normal text-center mt-2">
+            <h5 className="text-sm font-nucleon-secondary md:text-sm text-gray-500 dark:text-navy-100 font-normal text-center mt-2">
               {t("training.security")} 95%
             </h5>
           </div>

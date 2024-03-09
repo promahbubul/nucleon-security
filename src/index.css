@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Nucleon-Main";
+  src: url("./fonts/Quciner.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nucleon-Secondary";
+  src: url("./fonts/Cexed.otf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Nucleon-Secondary";
+}

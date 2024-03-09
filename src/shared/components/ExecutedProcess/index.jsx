@@ -21,7 +21,7 @@ const ExecutedProcess = ({ executedProcess }) => {
             </div>
           ))
         ) : (
-          <p className="text-base text-center italic text-gray-500 dark:text-navy-100 font-semibold mt-3">
+          <p className="text-base text-center font-nucleon-secondary italic text-gray-500 dark:text-navy-100 font-semibold mt-3">
             No files related to the threat
           </p>
         )}

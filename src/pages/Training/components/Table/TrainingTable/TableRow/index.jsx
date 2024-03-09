@@ -73,7 +73,7 @@ const TableRow = ({ training, handleShowMore }) => {
           </div>
         </div>
         {/* COLLAPSE ROW*/}
-        <div className="rounded-b-sm duration-500 peer-checked:flex hidden flex-col  gap-2 py-2 px-4 bg-slate-200 dark:bg-navy-800">
+        <div className="rounded-b-sm  peer-checked:flex hidden flex-col  gap-2 py-2 px-4 bg-slate-200 dark:bg-navy-800">
           <div className="flex flex-row gap-2">
             {/* MENU */}
             <RowSideMenu />

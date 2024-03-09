@@ -14,7 +14,7 @@ const SectionContainer = ({
         <span className="text-md dark:text-navy-100 text-slate-800">
           {icon && icon()}
         </span>
-        <h3 className="text-md font-semibold dark:text-navy-100 text-slate-800">
+        <h3 className="text-md font-semibold font-nucleon-secondary dark:text-navy-100 text-slate-800">
           {title}
         </h3>
       </div>

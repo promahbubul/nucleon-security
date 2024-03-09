@@ -18,7 +18,7 @@ const StatusCard = ({ icon, number, title, className }) => {
     <div
       className={`bg-slate-200 dark:bg-navy-700 rounded-md pl-2 pr-1 pb-1 cursor-pointer ${className} justify-center flex flex-col h-full`}
     >
-      <h5 className="text-sm text-gray-500 dark:text-navy-100 md:font-medium">
+      <h5 className="text-sm font-nucleon-secondary text-gray-500 dark:text-navy-100 md:font-medium">
         {title}
       </h5>
       <div

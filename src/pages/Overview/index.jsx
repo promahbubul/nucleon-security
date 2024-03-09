@@ -33,12 +33,15 @@ const Overview = () => {
         title={t("dashboard.section-title")}
       >
         <div className="flex  flex-row flex-wrap justify-end gap-2 text-sm">
-          <Button icon={IoSearch} className={"bg-info py-2 px-4"}>
+          <Button
+            icon={IoSearch}
+            className={"bg-info py-2 text-white dark:text-slate-100 px-4"}
+          >
             {t("dashboard.search")}
           </Button>
           <Button
             className={
-              "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 duration-300"
+              "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 "
             }
           >
             {t("dashboard.results")}
@@ -46,7 +49,7 @@ const Overview = () => {
           <Button
             icon={FaFilter}
             className={
-              "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 duration-300"
+              "bg-slate-200 dark:bg-navy-500 text-gray-500 dark:text-navy-100 p-2 text-sm hover:bg-slate-300 hover:text-gray-600 "
             }
           >
             {t("dashboard.addFilter")}
@@ -78,18 +81,18 @@ const Overview = () => {
             {/* TABLE HEAD */}
             <div className="w-max md:w-full py-1 border-b-2 border-b-gray-200 dark:border-b-slate-700 ">
               <div className=" grid grid-cols-12 gap-2 text-gray-600 hover:text-gray-700 dark:text-navy-100  text-sm md:text-base font-semibold text-left">
-                <p className=" col-span-2  dark:hover:text-slate-400 cursor-pointer">
+                <h4 className=" col-span-2 font-nucleon-secondary  dark:hover:text-slate-400 cursor-pointer">
                   {t("dashboard.logo")}
-                </p>
-                <p className=" col-span-4  dark:hover:text-slate-400 cursor-pointer">
+                </h4>
+                <h4 className=" col-span-4 font-nucleon-secondary  dark:hover:text-slate-400 cursor-pointer">
                   {t("dashboard.name")}
-                </p>
-                <p className=" col-span-2  dark:hover:text-slate-400 cursor-pointer">
+                </h4>
+                <h4 className=" col-span-2 font-nucleon-secondary  dark:hover:text-slate-400 cursor-pointer">
                   {t("dashboard.lcenseCount")}
-                </p>
-                <p className=" col-span-4  dark:hover:text-slate-400 cursor-pointer">
+                </h4>
+                <h4 className=" col-span-4 font-nucleon-secondary  dark:hover:text-slate-400 cursor-pointer">
                   {t("dashboard.domain")}
-                </p>
+                </h4>
               </div>
             </div>
             {/* TABLE BODY */}

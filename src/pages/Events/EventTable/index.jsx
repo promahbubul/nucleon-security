@@ -68,7 +68,7 @@ const EventTable = () => {
             </Button>
             <Button
               className={
-                "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 hover:bg-slate-300 hover:text-gray-600 p-2 text-sm duration-300"
+                "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 hover:bg-slate-300 hover:text-gray-600 p-2 text-sm "
               }
             >
               5 / 5 results
@@ -76,7 +76,7 @@ const EventTable = () => {
             <Button
               icon={FaFilter}
               className={
-                "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 hover:bg-slate-300 hover:text-gray-600 p-2 text-sm duration-300"
+                "bg-slate-200 dark:bg-navy-500  text-gray-500 dark:text-navy-100 hover:bg-slate-300 hover:text-gray-600 p-2 text-sm "
               }
             >
               Add Filter
