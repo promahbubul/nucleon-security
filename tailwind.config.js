@@ -6,8 +6,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        "nucleon-secondary": ["Orbitron", "sans-serif"],
         "nucleon-main": ["Nucleon-Main"],
-        "nucleon-secondary": ["Nucleon-Secondary"],
+        // "nucleon-secondary": ["Nucleon-Secondary"],
       },
       borderWidth: {
         1: "1px",
