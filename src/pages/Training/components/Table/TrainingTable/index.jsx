@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TableRow from "./TableRow";
 
-const TrainingTable = () => {
+const Table = () => {
   const [showMore, setShowMore] = useState(true);
-  const trainings = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const [trainings, setTrainings] = useState(null);
+  useEffect(() => {
+    fetch("/training.json")
+      .then((res) => res.json())
+      .then((data) => setTrainings(data));
+  }, []);
 
   const handleShowMore = (training) => {
     // const item = training;
@@ -13,7 +18,7 @@ const TrainingTable = () => {
   return (
     <div className=" overflow-hidden overflow-x-auto w-full">
       <tbody className="flex flex-col gap-1 mt-3 w-max  md:w-full">
-        {trainings.map((training, index) => (
+        {trainings?.map((training, index) => (
           <TableRow
             handleShowMore={handleShowMore}
             training={training}
@@ -25,4 +30,4 @@ const TrainingTable = () => {
   );
 };
 
-export default TrainingTable;
+export default Table;

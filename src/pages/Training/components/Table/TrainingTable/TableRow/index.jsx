@@ -20,6 +20,7 @@ const TableRow = ({ training, handleShowMore }) => {
   const [executedProcess, setExecutedProcess] = useState([
     1, 2, 3, 4, 5, 6, 7, 8, 9,
   ]);
+
   const [relatedFiles, setRelatedFiles] = useState([]);
   const [networkActivitys, setNetworkActivitys] = useState([]);
   const [accessedProcesses, setAccessProcess] = useState([]);
@@ -50,24 +51,24 @@ const TableRow = ({ training, handleShowMore }) => {
         <div className="bg-white shadow-md dark:bg-navy-700  peer-checked:rounded-b-none rounded-b-sm rounded-t-sm px-2 py-3 grid  grid-cols-12 select-none justify-between dark:text-navy-100 text-gray-500">
           <div className="  col-span-3  flex flex-row items-center gap-2">
             <FaBiohazard className="text-danger text-4xl" />
-            <p className=" ">24/01/2024 14:01:41</p>
+            <p className=" ">{training.dateAndTime}</p>
           </div>
           <div className="  col-span-2  flex flex-row gap-2 items-center">
             <FaDesktop className="text-sm text-gray-500 dark:text-navy-100" />
-            <p className="">Nucleon-Zenbook-ABO</p>
+            <p className="">{training.title}</p>
           </div>
           <div className="  col-span-2  flex flex-row gap-2 items-center">
             <GiNuclear className="text-sm text-gray-500 dark:text-navy-100" />
-            <p className="">Nucleon-Zenbook-ABO</p>
+            <p className="">{training.category}</p>
           </div>
           <div className="  col-span-3  flex flex-row gap-2 items-center">
             <PiBankFill className="text-sm text-gray-500 dark:text-navy-100" />
-            <p className="">Nucleon-Zenbook-ABO</p>
+            <p className="">{training.tag}</p>
           </div>
           <div className=" flex flex-row justify-end  col-span-2   items-center gap-2 text-success">
             <div className="flex flex-row gap-2 items-center">
               <FaShieldAlt className="text-sm text-success " />
-              <p className="font-bold">Blocked</p>
+              <p className="font-bold">{training.status}</p>
             </div>
             <IoIosArrowDown className=" text-gray-500 dark:text-navy-100 text-2xl font-bold " />
           </div>
