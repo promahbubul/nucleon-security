@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import CardTable from "../Table/CardTable";
+
 import Title from "../Title";
+import CardTable from "../Table/CardTable";
 
 const ContextInformation = ({ context }) => {
   const { t } = useTranslation();

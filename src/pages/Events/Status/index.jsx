@@ -1,11 +1,11 @@
-import StatusCard from "../../../shared/components/Card/StatusCard";
+import StatusCard from "@shared/components/Card/StatusCard";
 
 import {
   FaBiohazard,
   IoWarning,
   FaCalendarDay,
   FaDatabase,
-} from "../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 import { useTranslation } from "react-i18next";
 
 const Status = () => {

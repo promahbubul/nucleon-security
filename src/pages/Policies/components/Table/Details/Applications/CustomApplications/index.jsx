@@ -1,6 +1,6 @@
-import { customApplications } from "../../../../../../../shared/constants/policies.constants";
-import DropDownSelect from "../../../../../../../shared/components/DropDownSelect";
-import TableTitle from "../../../../../../../shared/components/Table/TableTitle";
+import { customApplications } from "@shared/constants/policies.constants";
+import DropDownSelect from "@shared/components/DropDownSelect";
+import TableTitle from "@shared/components/Table/TableTitle";
 import { useTranslation } from "react-i18next";
 
 const CustomApplications = () => {

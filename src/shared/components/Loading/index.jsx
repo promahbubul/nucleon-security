@@ -1,4 +1,4 @@
-import { TbLoader2 } from "../../../assets/Icons/Icons";
+import { TbLoader2 } from "@assets/Icons/Icons";
 const Loading = () => {
   return (
     <div className="flex justify-center items-center h-20 ">

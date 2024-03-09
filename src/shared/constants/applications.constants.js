@@ -4,7 +4,7 @@ import {
   FaUsb,
   FaCheck,
   FaTimes,
-} from "../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 
 export const policieOptions = [
   { label: "Absorption", value: "absorption" },

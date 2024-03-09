@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FaLevelUpAlt } from "../../../assets/Icons/Icons";
+import { FaLevelUpAlt } from "@assets/Icons/Icons";
 import Title from "../Title";
 
 const ExecutedProcess = ({ executedProcess }) => {

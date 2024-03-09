@@ -1,21 +1,21 @@
-import { apiSlice } from '../api/apiSlice'
-import { setUsers } from './usersSlice'
+import { apiSlice } from "@api/apiSlice";
+import { setUsers } from "./usersSlice";
 
 export const usersApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getUsers: builder.query({
       query: (params) => ({
-        url: `/users?${params || ''}`,
-        method: 'GET',
+        url: `/users?${params || ""}`,
+        method: "GET",
       }),
       keepUnusedDataFor: 60,
-      providesTags: ['Users'],
+      providesTags: ["Users"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
-          dispatch(setUsers(result?.data))
+          const result = await queryFulfilled;
+          dispatch(setUsers(result?.data));
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
@@ -23,53 +23,53 @@ export const usersApi = apiSlice.injectEndpoints({
     addUsers: builder.mutation({
       query: (data) => ({
         url: `/auth/register`,
-        method: 'POST',
+        method: "POST",
         body: data,
       }),
-      providesTags: ['Users'],
+      providesTags: ["Users"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
     updateUsers: builder.mutation({
       query: ({ userId, data }) => ({
         url: `/users/${userId}`,
-        method: 'PUT',
+        method: "PUT",
         body: data,
       }),
-      providesTags: ['Users'],
+      providesTags: ["Users"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
     deleteUsers: builder.mutation({
       query: (userId) => ({
         url: `/users/${userId}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      providesTags: ['Users'],
+      providesTags: ["Users"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
   }),
-})
+});
 
 export const {
   useGetUsersQuery,
   useAddUsersMutation,
   useUpdateUsersMutation,
   useDeleteUsersMutation,
-} = usersApi
+} = usersApi;

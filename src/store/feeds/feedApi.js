@@ -1,74 +1,74 @@
-import { apiSlice } from '../api/apiSlice'
-import { setFeeds } from './feedSlice'
+import { apiSlice } from "@api/apiSlice";
+import { setFeeds } from "./feedSlice";
 
 export const feedApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getFeeds: builder.query({
       query: (params) => ({
-        url: `/feeds?${params || ''}`,
-        method: 'GET',
+        url: `/feeds?${params || ""}`,
+        method: "GET",
       }),
       keepUnusedDataFor: 60,
-      providesTags: ['Feeds'],
+      providesTags: ["Feeds"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
-          dispatch(setFeeds(result?.data))
+          const result = await queryFulfilled;
+          dispatch(setFeeds(result?.data));
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
     getFeed: builder.query({
       query: () => {},
-      providesTags: ['Feeds'],
+      providesTags: ["Feeds"],
     }),
     addFeed: builder.mutation({
       query: (data) => ({
         url: `/feeds`,
-        method: 'POST',
+        method: "POST",
         body: data,
       }),
-      providesTags: ['Feeds'],
+      providesTags: ["Feeds"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
     updateFeed: builder.mutation({
       query: ({ data, feedId }) => ({
         url: `/feeds/${feedId}`,
-        method: 'PUT',
+        method: "PUT",
         body: data,
       }),
-      providesTags: ['Feeds'],
+      providesTags: ["Feeds"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
     deleteFeed: builder.mutation({
       query: (feedId) => ({
         url: `/feeds/${feedId}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      providesTags: ['Feeds'],
+      providesTags: ["Feeds"],
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          const result = await queryFulfilled
+          const result = await queryFulfilled;
         } catch (error) {
-          console.log({ error })
+          console.log({ error });
         }
       },
     }),
   }),
-})
+});
 
 export const {
   useGetFeedsQuery,
@@ -76,4 +76,4 @@ export const {
   useAddFeedMutation,
   useUpdateFeedMutation,
   useDeleteFeedMutation,
-} = feedApi
+} = feedApi;

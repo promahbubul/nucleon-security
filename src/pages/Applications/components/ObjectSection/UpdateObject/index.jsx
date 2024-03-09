@@ -1,16 +1,16 @@
-import Modal from "../../../../../shared/components/Modal";
-import SectionContainer from "../../../../../shared/components/SectionContainer";
-import { FaFile, FaObjectUngroup } from "../../../../../assets/Icons/Icons";
-import Label from "../../../../../shared/components/Form/Label";
-import Input from "../../../../../shared/components/Form/Input";
-import Select from "../../../../../shared/components/Form/Select";
-import DropDownSelect from "../../../../../shared/components/DropDownSelect";
+import Modal from "@shared/components/Modal";
+import SectionContainer from "@shared/components/SectionContainer";
+import { FaFile, FaObjectUngroup } from "@assets/Icons/Icons";
+import Label from "@shared/components/Form/Label";
+import Input from "@shared/components/Form/Input";
+import Select from "@shared/components/Form/Select";
+import DropDownSelect from "@shared/components/DropDownSelect";
 import {
   SignedOptions,
   deviceOptions,
   pathOptions,
   signatureOptions,
-} from "../../../../../shared/constants/applications.constants";
+} from "@shared/constants/applications.constants";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 

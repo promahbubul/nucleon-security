@@ -1,6 +1,6 @@
 import { FaQuestionCircle } from "react-icons/fa";
-import OnButton from "../../../../../../shared/components/Buttons/OnButton";
-import { tableSettings } from "../../../../../../shared/constants/policies.constants";
+import OnButton from "@shared/components/Buttons/OnButton";
+import { tableSettings } from "@shared/constants/policies.constants";
 import { Tooltip } from "react-tooltip";
 import { useTranslation } from "react-i18next";
 

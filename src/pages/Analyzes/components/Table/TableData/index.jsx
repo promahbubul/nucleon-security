@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import { TbLoaderQuarter } from "react-icons/tb";
+
+import { FaChevronDown, IoCloseSharp, FaCheck } from "@assets/Icons/Icons";
 import DataDetails from "../DataDetails";
-import {
-  FaChevronDown,
-  IoCloseSharp,
-  FaCheck,
-} from "../../../../../assets/Icons/Icons";
 const TableData = () => {
   const [analyzes, setAnalyzes] = useState(null);
   useEffect(() => {

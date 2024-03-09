@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import DropDownSelect from "../../../../../../../shared/components/DropDownSelect";
-import TableTitle from "../../../../../../../shared/components/Table/TableTitle";
-import { defaultApplications } from "../../../../../../../shared/constants/policies.constants";
+import DropDownSelect from "@shared/components/DropDownSelect";
+import TableTitle from "@shared/components/Table/TableTitle";
+import { defaultApplications } from "@shared/constants/policies.constants";
 
 const DefaultApplications = () => {
   const { t } = useTranslation();

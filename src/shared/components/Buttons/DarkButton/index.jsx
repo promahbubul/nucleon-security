@@ -1,4 +1,4 @@
-import { IoMoonOutline } from "../../../../assets/Icons/Icons";
+import { IoMoonOutline } from "@assets/Icons/Icons";
 
 const DarkButton = () => {
   return (

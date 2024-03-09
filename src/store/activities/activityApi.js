@@ -1,4 +1,4 @@
-import { apiSlice } from '../api/apiSlice'
+import { apiSlice } from "@api/apiSlice";
 
 export const activityApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -8,7 +8,7 @@ export const activityApi = apiSlice.injectEndpoints({
     updateActivity: builder.mutation({}),
     deleteActivity: builder.mutation({}),
   }),
-})
+});
 
 export const {
   useGetActivitiesQuery,
@@ -16,4 +16,4 @@ export const {
   useAddActivityMutation,
   useUpdateActivityMutation,
   useDeleteActivityMutation,
-} = activityApi
+} = activityApi;

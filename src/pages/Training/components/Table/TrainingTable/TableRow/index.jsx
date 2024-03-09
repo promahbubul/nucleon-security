@@ -7,14 +7,14 @@ import {
   IoIosArrowDown,
   PiBankFill,
   FaShieldAlt,
-} from "../../../../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 
-import ExecutedProcess from "../../../../../../shared/components/ExecutedProcess";
-import RelatedFiles from "../../../../../../shared/components/RelatedFiles";
-import NetworkActivities from "../../../../../../shared/components/NetworkActivities";
-import AccessedProcess from "../../../../../../shared/components/AccessedProcess";
-import RelatedEvents from "../../../../../../shared/components/RelatedEvents";
-import RowSideMenu from "../../../../../../shared/components/Menus/RowSideMenu";
+import ExecutedProcess from "@shared/components/ExecutedProcess";
+import RelatedFiles from "@shared/components/RelatedFiles";
+import NetworkActivities from "@shared/components/NetworkActivities";
+import AccessedProcess from "@shared/components/AccessedProcess";
+import RelatedEvents from "@shared/components/RelatedEvents";
+import RowSideMenu from "@shared/components/Menus/RowSideMenu";
 
 const TableRow = ({ training, handleShowMore }) => {
   const [executedProcess, setExecutedProcess] = useState([

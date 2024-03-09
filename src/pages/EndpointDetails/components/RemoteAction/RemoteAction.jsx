@@ -1,4 +1,4 @@
-import SectionContainer from "../../../../shared/components/SectionContainer";
+import SectionContainer from "@shared/components/SectionContainer";
 import { FaSatelliteDish } from "@assets/Icons/Icons";
 import Filter from "./components/Filter";
 import RemoteTable from "./components/Table/Table";

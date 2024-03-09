@@ -29,7 +29,7 @@ import {
   FaFolderOpen,
   IoReload,
   TbLetterV,
-} from "../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 
 export const sideLinks = [
   {

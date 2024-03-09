@@ -1,18 +1,18 @@
-import { apiSlice } from '../api/apiSlice'
+import { apiSlice } from "@api/apiSlice";
 
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (data) => ({
-        url: '/auth/login',
-        method: 'POST',
+        url: "/auth/login",
+        method: "POST",
         body: data,
       }),
     }),
     loggedInInfo: builder.query({
       query: () => ({
-        url: '/auth/profile',
-        method: 'GET',
+        url: "/auth/profile",
+        method: "GET",
       }),
     }),
     // logout: builder.query({
@@ -73,7 +73,7 @@ export const authApi = apiSlice.injectEndpoints({
     //   },
     // }),
   }),
-})
+});
 
 export const {
   useLoginMutation,
@@ -81,4 +81,4 @@ export const {
   // useLogoutQuery,
   // useGetActiveSessionsQuery,
   // useDeactivateSessionMutation,
-} = authApi
+} = authApi;

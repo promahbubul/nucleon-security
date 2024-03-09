@@ -1,7 +1,7 @@
 import { IoWarning } from "react-icons/io5";
-import OnButton from "../../../../../../shared/components/Buttons/OnButton";
+import OnButton from "@shared/components/Buttons/OnButton";
 import { useState } from "react";
-import OffButton from "../../../../../../shared/components/Buttons/OffButton";
+import OffButton from "@shared/components/Buttons/OffButton";
 import { FaShieldAlt } from "react-icons/fa";
 
 const Header = () => {

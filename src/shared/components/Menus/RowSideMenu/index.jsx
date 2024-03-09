@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { tableSideMenu } from "../../../constants/menuLinks.constants";
+import { tableSideMenu } from "@shared/constants/menuLinks.constants";
 
 const RowSideMenu = () => {
   // MENU OBJECT

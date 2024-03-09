@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { FaBiohazard, FaFlask, FaFile } from "../../../../assets/Icons/Icons";
-import StatusCard from "../../../../shared/components/Card/StatusCard";
-import OnButton from "../../../../shared/components/Buttons/OnButton";
-import OffButton from "../../../../shared/components/Buttons/OffButton";
+import { FaBiohazard, FaFlask, FaFile } from "@assets/Icons/Icons";
+import StatusCard from "@shared/components/Card/StatusCard";
+import OnButton from "@shared/components/Buttons/OnButton";
+import OffButton from "@shared/components/Buttons/OffButton";
 
 const Status = () => {
   const [toggleButton, setToggleButton] = useState(false);

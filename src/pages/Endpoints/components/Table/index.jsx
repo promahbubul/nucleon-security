@@ -1,10 +1,10 @@
-import SectionContainer from "../../../../shared/components/SectionContainer";
-import THead from "../../../../shared/components/Table/THead";
-import TBody from "../../../../shared/components/Table/TableBody";
+import SectionContainer from "@shared/components/SectionContainer";
+import THead from "@shared/components/Table/THead";
+import TBody from "@shared/components/Table/TableBody";
 
-import { FaDesktop, FaTimes, FaCheck } from "../../../../assets/Icons/Icons";
-import TableHeading from "../../../../shared/components/Table/TableHeading";
-import Table from "../../../../shared/components/Table";
+import { FaDesktop, FaTimes, FaCheck } from "@assets/Icons/Icons";
+import TableHeading from "@shared/components/Table/TableHeading";
+import Table from "@shared/components/Table";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";

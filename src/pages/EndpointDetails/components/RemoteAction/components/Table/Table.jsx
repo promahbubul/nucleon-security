@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import Table from "../../../../../../shared/components/Table";
-import THead from "../../../../../../shared/components/Table/THead";
-import TBody from "../../../../../../shared/components/Table/TableBody";
-import TableHeading from "../../../../../../shared/components/Table/TableHeading";
+import Table from "@shared/components/Table";
+import THead from "@shared/components/Table/THead";
+import TBody from "@shared/components/Table/TableBody";
+import TableHeading from "@shared/components/Table/TableHeading";
 
 const RemoteTable = ({ remote_action }) => {
   const { t } = useTranslation();

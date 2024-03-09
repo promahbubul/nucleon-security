@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import CardTable from "../../../../../../shared/components/Table/CardTable";
-import Title from "../../../../../../shared/components/Title";
+import CardTable from "@shared/components/Table/CardTable";
+import Title from "@shared/components/Title";
 
 const MetaData = ({ metaData }) => {
   const { t } = useTranslation();

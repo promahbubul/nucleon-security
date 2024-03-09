@@ -8,11 +8,12 @@ import {
   FaMagic,
   FaShieldAlt,
   FaSatelliteDish,
-} from "../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
+
+import { useTranslation } from "react-i18next";
 import ContextInformation from "../ContextInformation";
 import ProcessDetails from "../ProcessDetails";
 import FileDetails from "../FileDetails";
-import { useTranslation } from "react-i18next";
 
 const RelatedEvents = ({ relatedEvents }) => {
   const { t } = useTranslation();

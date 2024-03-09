@@ -1,12 +1,12 @@
-import Button from "../Buttons/Button/Button";
 import {
   FaPlus,
   IoSearch,
   FaFilter,
   FaList,
   IoIosArrowDown,
-} from "../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 import { useTranslation } from "react-i18next";
+import Button from "../Buttons/Button/Button";
 
 const SectionFiltter = ({ title, searchTotal, handleModal }) => {
   const { t } = useTranslation();

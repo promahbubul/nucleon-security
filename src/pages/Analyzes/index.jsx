@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { FaList } from "../../assets/Icons/Icons";
-import SectionContainer from "../../shared/components/SectionContainer";
+import { FaList } from "@assets/Icons/Icons";
+import SectionContainer from "@shared/components/SectionContainer";
 
-import Status from "../Events/Status";
 import Table from "./components/Table";
+import Status from "./components/Status";
 
 const Analyzes = () => {
   const { t } = useTranslation();

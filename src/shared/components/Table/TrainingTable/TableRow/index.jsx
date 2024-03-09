@@ -7,7 +7,7 @@ import {
   IoIosArrowDown,
   PiBankFill,
   FaShieldAlt,
-} from "../../../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 
 const TableRow = ({ training, handleShowMore }) => {
   const [executedProcess, setExecutedProcess] = useState([

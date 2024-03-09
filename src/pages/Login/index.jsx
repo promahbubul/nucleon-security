@@ -1,4 +1,4 @@
-import { LuLogIn } from "../../assets/Icons/Icons";
+import { LuLogIn } from "@assets/Icons/Icons";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {

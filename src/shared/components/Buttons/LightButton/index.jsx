@@ -1,4 +1,4 @@
-import { FiSun } from "../../../../assets/Icons/Icons";
+import { FiSun } from "@assets/Icons/Icons";
 const LightButton = () => {
   return (
     <button className="bg-slate-200 shadow-md w-14 h-7 rounded-full flex justify-start items-center p-1">

@@ -1,8 +1,8 @@
-import SectionContainer from "../../../../shared/components/SectionContainer";
+import SectionContainer from "@shared/components/SectionContainer";
 import { FaDesktop } from "@assets/Icons/Icons";
-import Table from "../../../../shared/components/Table";
-import TableHeading from "../../../../shared/components/Table/TableHeading";
-import THead from "../../../../shared/components/Table/THead";
+import Table from "@shared/components/Table";
+import TableHeading from "@shared/components/Table/TableHeading";
+import THead from "@shared/components/Table/THead";
 import DetailLabel from "./components/DetailLabel";
 import Text from "./components/Text";
 import { useTranslation } from "react-i18next";

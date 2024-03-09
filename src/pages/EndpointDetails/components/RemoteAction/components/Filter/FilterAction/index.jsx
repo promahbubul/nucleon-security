@@ -1,15 +1,15 @@
-import Modal from "../../../../../../../shared/components/Modal";
-import SectionContainer from "../../../../../../../shared/components/SectionContainer";
+import Modal from "@shared/components/Modal";
+import SectionContainer from "@shared/components/SectionContainer";
 import {
   FaList,
   FaTrash,
   FaFileDownload,
   FaInfoCircle,
   FaPlus,
-} from "../../../../../../../assets/Icons/Icons";
-import OffButton from "../../../../../../../shared/components/Buttons/OffButton";
+} from "@assets/Icons/Icons";
+import OffButton from "@shared/components/Buttons/OffButton";
 import { Tooltip } from "react-tooltip";
-import Button from "../../../../../../../shared/components/Buttons/Button/Button";
+import Button from "@shared/components/Buttons/Button/Button";
 
 const FilterAction = ({ showModal, handleModal }) => {
   return (

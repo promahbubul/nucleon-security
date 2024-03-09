@@ -5,11 +5,11 @@ import {
   IoIosArrowDown,
   MdViewList,
   IoSearch,
-} from "../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 import { useEffect, useState } from "react";
-import SectionContainer from "../../shared/components/SectionContainer";
-import Button from "../../shared/components/Buttons/Button/Button";
-import Dropdown from "../../shared/components";
+import SectionContainer from "@shared/components/SectionContainer";
+import Button from "@shared/components/Buttons/Button/Button";
+import Dropdown from "@shared/components";
 import { useTranslation } from "react-i18next";
 
 const Overview = () => {

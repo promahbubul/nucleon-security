@@ -11,8 +11,8 @@ import Vulnerabilities from "@pages/Vulnerabilities";
 import Capacity from "@pages/Capacity";
 import Inventories from "@pages/Inventories";
 import Applications from "@pages/Applications";
-import Accounts from "../pages/Accounts";
-import EndpointDetails from "../pages/EndpointDetails";
+import Accounts from "@pages/Accounts";
+import EndpointDetails from "@pages/EndpointDetails";
 
 export const RoutesConfig = [
   {

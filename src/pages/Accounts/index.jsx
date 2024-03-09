@@ -1,11 +1,11 @@
-import SectionContainer from "../../shared/components/SectionContainer";
-import { FaUser, FaCheck, FaTimes } from "../../assets/Icons/Icons";
-import Table from "../../shared/components/Table";
-import THead from "../../shared/components/Table/THead";
-import TableHeading from "../../shared/components/Table/TableHeading";
-import TBody from "../../shared/components/Table/TableBody";
+import SectionContainer from "@shared/components/SectionContainer";
+import { FaUser, FaCheck, FaTimes } from "@assets/Icons/Icons";
+import Table from "@shared/components/Table";
+import THead from "@shared/components/Table/THead";
+import TableHeading from "@shared/components/Table/TableHeading";
+import TBody from "@shared/components/Table/TableBody";
 import { useEffect, useState } from "react";
-import Loading from "../../shared/components/Loading";
+import Loading from "@shared/components/Loading";
 import UpdateAccount from "./components/UpdateAccount";
 import { useTranslation } from "react-i18next";
 

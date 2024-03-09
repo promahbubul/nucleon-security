@@ -1,8 +1,6 @@
-import { details } from "../../shared/constants/endPoint.constants";
+import { details } from "@shared/constants/endPoint.constants";
 import Details from "./components/Details";
 import RemoteAction from "./components/RemoteAction/RemoteAction";
-
-
 
 const EndpointDetails = () => {
   return (

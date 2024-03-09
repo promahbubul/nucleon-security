@@ -1,16 +1,12 @@
-import Modal from "../../../../../shared/components/Modal";
-import SectionContainer from "../../../../../shared/components/SectionContainer";
-import {
-  FaObjectGroup,
-  FaList,
-  FaPlus,
-} from "../../../../../assets/Icons/Icons";
-import InputText from "../../../../../shared/components/Form/InputText";
-import InputTextArea from "../../../../../shared/components/Form/InputTextArea";
-import DropDownSelect from "../../../../../shared/components/DropDownSelect";
-import { policieOptions } from "../../../../../shared/constants/applications.constants";
-import Button from "../../../../../shared/components/Buttons/Button/Button";
-import InputFile from "../../../../../shared/components/Form/InputFile";
+import Modal from "@shared/components/Modal";
+import SectionContainer from "@shared/components/SectionContainer";
+import { FaObjectGroup, FaList, FaPlus } from "@assets/Icons/Icons";
+import InputText from "@shared/components/Form/InputText";
+import InputTextArea from "@shared/components/Form/InputTextArea";
+import DropDownSelect from "@shared/components/DropDownSelect";
+import { policieOptions } from "@shared/constants/applications.constants";
+import Button from "@shared/components/Buttons/Button/Button";
+import InputFile from "@shared/components/Form/InputFile";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 

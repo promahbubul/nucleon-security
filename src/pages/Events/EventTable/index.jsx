@@ -11,15 +11,15 @@ import {
   IoWarning,
   IoClose,
   FaCheck,
-} from "../../../assets/Icons/Icons";
+} from "@assets/Icons/Icons";
 import { Link } from "react-router-dom";
-import SectionContainer from "../../../shared/components/SectionContainer";
-import Button from "../../../shared/components/Buttons/Button/Button";
-import Dropdown from "../../../shared/components";
-import { eventTableMenu } from "../../../shared/constants/menuLinks.constants";
-import ContextInformation from "../../../shared/components/ContextInformation";
-import ProcessDetails from "../../../shared/components/ProcessDetails";
-import FileDetails from "../../../shared/components/FileDetails";
+import SectionContainer from "@shared/components/SectionContainer";
+import Button from "@shared/components/Buttons/Button/Button";
+import Dropdown from "@shared/components";
+import { eventTableMenu } from "@shared/constants/menuLinks.constants";
+import ContextInformation from "@shared/components/ContextInformation";
+import ProcessDetails from "@shared/components/ProcessDetails";
+import FileDetails from "@shared/components/FileDetails";
 import { useTranslation } from "react-i18next";
 
 const EventTable = () => {

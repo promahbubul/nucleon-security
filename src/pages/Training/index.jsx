@@ -4,8 +4,8 @@ import {
   FaLockOpen,
   FaBiohazard,
   FaLightbulb,
-} from "../../assets/Icons/Icons";
-import StatusCard from "../../shared/components/Card/StatusCard";
+} from "@assets/Icons/Icons";
+import StatusCard from "@shared/components/Card/StatusCard";
 import TrainingTable from "./components/Table/TrainingTable";
 
 const Training = () => {

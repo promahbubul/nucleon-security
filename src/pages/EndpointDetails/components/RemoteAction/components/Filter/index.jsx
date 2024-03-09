@@ -1,10 +1,5 @@
-import Button from "../../../../../../shared/components/Buttons/Button/Button";
-import {
-  FaPlus,
-  IoSearch,
-  FaFilter,
-  FaList,
-} from "../../../../../../assets/Icons/Icons";
+import Button from "@shared/components/Buttons/Button/Button";
+import { FaPlus, IoSearch, FaFilter, FaList } from "@assets/Icons/Icons";
 import FilterAction from "./FilterAction";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";

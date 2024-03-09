@@ -1,10 +1,5 @@
-import StatusCard from "../../../../shared/components/Card/StatusCard";
-import {
-  FaKey,
-  FaPowerOff,
-  FaHeartbeat,
-  FaDesktop,
-} from "../../../../assets/Icons/Icons";
+import StatusCard from "@shared/components/Card/StatusCard";
+import { FaKey, FaPowerOff, FaHeartbeat, FaDesktop } from "@assets/Icons/Icons";
 import { useTranslation } from "react-i18next";
 
 const Status = () => {

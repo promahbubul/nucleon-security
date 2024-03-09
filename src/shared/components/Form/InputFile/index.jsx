@@ -1,4 +1,4 @@
-import { FaFile } from "../../../../assets/Icons/Icons";
+import { FaFile } from "@assets/Icons/Icons";
 
 const InputFile = ({ file, handleUploadFile, className }) => {
   return (
