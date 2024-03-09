@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,5 +21,5 @@ h4,
 h5,
 h6,
 label {
-  font-family: "Nucleon-Secondary";
+  font-family: "Orbitron", sans-serif;
 }
