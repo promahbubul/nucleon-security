@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    {
+      "email": "john.doe@example.com",
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    {
+      "email": "jane.smith@example.com",
+      "firstname": "Jane",
+      "lastname": "Smith"
+    },
+    {
+      "email": "bob.johnson@example.com",
+      "firstname": "Bob",
+      "lastname": "Johnson"
+    },
+    {
+      "email": "mary.jones@example.com",
+      "firstname": "Mary",
+      "lastname": "Jones"
+    },
+    {
+      "email": "michael.williams@example.com",
+      "firstname": "Michael",
+      "lastname": "Williams"
+    }
+  ],
+  "groups": ["default", "Devices"]
+}

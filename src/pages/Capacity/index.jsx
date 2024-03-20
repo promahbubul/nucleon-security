@@ -1,9 +1,37 @@
+import ChartSection from "../../shared/components/Chart/ChartSection";
+import LineChart from "../../shared/components/Chart/LineChart";
+
 const Capacity = () => {
   return (
-    <div>
-      <h1 className="text-center text-3xl font-extrabold text-black dark:text-white underline">
-        Capacity
-      </h1>
+    <div className="grid grid-cols-12 gap-2">
+      <ChartSection
+        chartTitle={"Top CPU usage "}
+        number={0}
+        className={"col-span-12 md:col-span-6"}
+      >
+        <LineChart className={"mt-5"} />
+      </ChartSection>
+      <ChartSection
+        chartTitle={"Top Memory usage "}
+        number={0}
+        className={"col-span-12 md:col-span-6"}
+      >
+        <LineChart className={"mt-5"} />
+      </ChartSection>
+      <ChartSection
+        chartTitle={"Average CPU usage "}
+        number={0}
+        className={"col-span-12 md:col-span-6"}
+      >
+        <LineChart className={"mt-5"} />
+      </ChartSection>
+      <ChartSection
+        chartTitle={"Average Memory usage "}
+        number={0}
+        className={"col-span-12 md:col-span-6"}
+      >
+        <LineChart className={"mt-5"} />
+      </ChartSection>
     </div>
   );
 };

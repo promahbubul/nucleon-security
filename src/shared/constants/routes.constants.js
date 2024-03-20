@@ -11,6 +11,7 @@ export const Routes = {
   inventories: "/dashboard/inventories",
   applications: "/dashboard/applications",
   accounts: "/dashboard/accounts",
+  permissions: "/dashboard/permissions",
   endpointDetails: "/dashboard/endpoints/details",
 
   login: "/login",

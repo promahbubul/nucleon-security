@@ -13,6 +13,7 @@ import Inventories from "@pages/Inventories";
 import Applications from "@pages/Applications";
 import Accounts from "@pages/Accounts";
 import EndpointDetails from "@pages/EndpointDetails";
+import Permissions from "../pages/Permissions";
 
 export const RoutesConfig = [
   {
@@ -31,6 +32,7 @@ export const RoutesConfig = [
       { path: Routes.applications, element: <Applications /> },
       { path: Routes.accounts, element: <Accounts /> },
       { path: Routes.endpointDetails, element: <EndpointDetails /> },
+      { path: Routes.permissions, element: <Permissions /> },
     ],
   },
   {
