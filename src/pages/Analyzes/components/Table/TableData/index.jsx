@@ -11,7 +11,6 @@ const TableData = () => {
       .then((data) => setAnalyzes(data));
   }, []);
 
-  console.log(analyzes);
   return (
     <>
       {analyzes ? (

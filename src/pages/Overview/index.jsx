@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import FilterSection from "../../shared/components/FilterSection";
 import TableSection from "./components/Table";
 import { useState } from "react";
+import ChartSection from "../../shared/components/Chart/ChartSection";
+import LineChartBasic from "../../shared/components/Chart/LineChart";
 
 const Overview = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -11,7 +13,22 @@ const Overview = () => {
 
   return (
     <div>
-      <div className="flex flex-row"></div>
+      <div className="grid grid-cols-12 mb-3 gap-3">
+        <ChartSection
+          dropDown={true}
+          chartTitle={t("dashboard.securityLevel")}
+          className={"col-span-12 md:col-span-6"}
+        >
+          <LineChartBasic className={"mt-2"} />
+        </ChartSection>
+        <ChartSection
+          dropDown={true}
+          chartTitle={t("dashboard.vulnerabilities")}
+          className={"col-span-12 md:col-span-6"}
+        >
+          <LineChartBasic className={"mt-2"} />
+        </ChartSection>
+      </div>
       <SectionContainer
         icon={FaBuilding}
         className={"w-full"}

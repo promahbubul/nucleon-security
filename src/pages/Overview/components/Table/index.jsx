@@ -16,7 +16,7 @@ const TableSection = () => {
       .then((data) => setEntities(data));
   }, []);
   return (
-    <div className="mt-3 w-full  overflow-auto">
+    <div className="mt-3 w-full  overflow-auto scrollbar-thin scrollbar-track-slate-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-info ">
       <Table className={" h-[calc(100vh-220px)]  w-max md:w-full"}>
         <THead>
           <TableHeading className={"col-span-1 md:col-span-2"}>

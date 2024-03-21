@@ -8,7 +8,9 @@
     "logo": "Logo",
     "name": "Name",
     "lcenseCount": "License Count",
-    "domain": "Domain"
+    "domain": "Domain",
+    "securityLevel": "Security level",
+    "vulnerabilities": "Vulnerabilities"
   },
   "training": {
     "endpoint": "Online endpoints",
@@ -154,7 +156,10 @@
     "version": "Version",
     "cveCount": "CVE Count",
     "hosts": "Hosts",
-    "contextScore": "Context score"
+    "contextScore": "Context score",
+    "topVulnerablePrograms": "Top vulnerable programs",
+    "topVulnerableEndpoints": "Top vulnerable endpoints",
+    "totalVulnerabilities": "Top vulnerable endpoints"
   },
   "applications": {
     "section-title": "Applications",
@@ -206,5 +211,26 @@
     "delete": "Delete",
     "update": "Update",
     "close": "close"
+  },
+  "inventories": {
+    "section-title": "Inventory",
+    "hostname": "Hostname",
+    "filename": "Filename",
+    "filepath": "Filepath",
+    "fileType": "File type",
+    "fileSize": "File size",
+    "verdict": "Verdict",
+    "maliciousFiles": "Malicious files",
+    "fileCount": "File count",
+    "search": "Search",
+    "results": "Results",
+    "filter": "Add Filter",
+    "columns": "Columns"
+  },
+  "capacity": {
+    "section-title1": "Top CPU usage",
+    "section-title2": "Top Memory usage",
+    "section-title3": "Average CPU usage",
+    "section-title4": "Average Memory usage"
   }
 }

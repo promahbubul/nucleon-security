@@ -8,7 +8,9 @@
     "logo": "Logo",
     "name": "Nom",
     "lcenseCount": "Nombre de licences",
-    "domain": "Domaine"
+    "domain": "Domaine",
+    "securityLevel": "Niveau de sécurité",
+    "vulnerabilities": "Vulnérabilités"
   },
   "training": {
     "endpoint": "Points d'accès en ligne",
@@ -141,7 +143,10 @@
     "version": "Version",
     "cveCount": "Nombre de CVE",
     "hosts": "Hôtes",
-    "contextScore": "Note contextuelle"
+    "contextScore": "Note contextuelle",
+    "topVulnerablePrograms": "Programmes les plus vulnérables",
+    "topVulnerableEndpoints": "Points de terminaison les plus vulnérables",
+    "totalVulnerabilities": "Points de terminaison les plus vulnérables"
   },
   "applications": {
     "section-title": "Applications",
@@ -173,7 +178,7 @@
     "clone": "Cloner",
     "update": "Mettre à jour"
   },
-   "accounts": {
+  "accounts": {
     "section-title": "Comptes",
     "email": "Email",
     "firstName": "Prénom",
@@ -193,6 +198,26 @@
     "delete": "Supprimer",
     "update": "Mettre à jour",
     "close": "Fermer"
+  },
+  "inventories": {
+    "section-title": "Inventaire",
+    "hostname": "Nom d'hôte",
+    "filename": "Nom de fichier",
+    "filepath": "Chemin du fichier",
+    "fileType": "Type de fichier",
+    "fileSize": "Taille du fichier",
+    "verdict": "Verdict",
+    "maliciousFiles": "Fichiers malveillants",
+    "fileCount": "Nombre de fichiers",
+    "search": "Recherche",
+    "results": "Résultats",
+    "filter": "Ajouter un filtre",
+    "columns": "Colonnes"
+  },
+  "capacity": {
+    "section-title1": "Utilisation maximale du processeur",
+    "section-title2": "Utilisation de la mémoire supérieure",
+    "section-title3": "Utilisation moyenne du processeur",
+    "section-title4": "Utilisation moyenne de la mémoire"
   }
-  
 }

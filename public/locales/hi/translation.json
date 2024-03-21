@@ -8,7 +8,9 @@
     "logo": "प्रतीक चिन्ह",
     "name": "नाम",
     "lcenseCount": "लाइसेंस संख्या",
-    "domain": "कार्यक्षेत्र"
+    "domain": "कार्यक्षेत्र",
+    "securityLevel": "सुरक्षा स्तर",
+    "vulnerabilities": "कमजोरियाँ"
   },
   "training": {
     "endpoint": "ऑनलाइन एंडपॉइंट्स",
@@ -154,7 +156,10 @@
     "version": "संस्करण",
     "cveCount": "सीवीई गिनती",
     "hosts": "मेजबान",
-    "contextScore": "प्रसंग स्कोर"
+    "contextScore": "प्रसंग स्कोर",
+    "topVulnerablePrograms": "शीर्ष भेदयोग्य कार्यक्रम",
+    "topVulnerableEndpoints": "शीर्ष भेदयोग्य अंत स्थल",
+    "totalVulnerabilities": "कुल भेदयोग्यताएँ"
   },
   "applications": {
     "section-title": "एप्लिकेशन्स",
@@ -206,5 +211,27 @@
     "delete": "हटाएं",
     "update": "अपडेट",
     "close": "बंद करें"
+  },
+
+  "inventories": {
+    "section-title": "भंडार",
+    "hostname": "होस्ट का नाम",
+    "filename": "फ़ाइल का नाम",
+    "filepath": "दस्तावेज पथ",
+    "fileType": "फाइल का प्रकार",
+    "fileSize": "फ़ाइल का साइज़",
+    "verdict": "निर्णय",
+    "maliciousFiles": "दुर्भावनापूर्ण फ़ाइलें",
+    "fileCount": "फ़ाइल संख्या",
+    "search": "खोज",
+    "results": "परिणाम",
+    "filter": "फ़िल्टर जोड़ें",
+    "columns": "कॉलम"
+  },
+  "capacity": {
+    "section-title1": "शीर्ष CPU उपयोग",
+    "section-title2": "शीर्ष मेमोरी उपयोग",
+    "section-title3": "औसत CPU उपयोग",
+    "section-title4": "औसत मेमोरी उपयोग"
   }
 }
