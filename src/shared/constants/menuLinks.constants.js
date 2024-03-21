@@ -97,7 +97,7 @@ export const mobileMenuLinks = [
 
 // HEADER MENUS
 export const headerMenu = [
-  { path: "/", icon: IoMdSettings },
+  { path: "/dashboard/permissions", icon: IoMdSettings },
   { path: "/", icon: FaBell },
   { path: "/", icon: FaBook },
   { path: "/dashboard/accounts", icon: FaUser },
