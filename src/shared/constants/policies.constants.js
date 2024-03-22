@@ -38,22 +38,6 @@ export const tableSettings = [
     caption:
       "Create a snapshot for each local disk on the endpoint (network shares excluded)",
   },
-  {
-    id: 8,
-    title: "Snapshot frequency",
-    caption: "Delay between each volume snapshot",
-  },
-  {
-    id: 9,
-    title: "Heartbeat frequency",
-    caption: "Seconds between each server communication done by an endpoint",
-  },
-  {
-    id: 10,
-    title: "Analysis limit",
-    caption:
-      "Maximum size (in Megabytes) of a file to send for analysis, if higher the anlaysis switch to offline condition",
-  },
 ];
 
 export const customApplications = [
@@ -79,4 +63,19 @@ export const defaultApplications = [
   { value: "brave", label: "Brave", image: "/images/policies/Brave.png" },
   { value: "cisco", label: "Cisco", image: "/images/policies/cisco.png" },
   { value: "dropbox", label: "Dropbox", image: "/images/policies/dropbox.png" },
+];
+
+export const snapShortOptions = [
+  "Every hours",
+  "Every 3 hours",
+  "Every 6 hours",
+  "Every 12 hours",
+  "Every 24 hours",
+  "Every 2 days",
+  "Every 3 days",
+  "Every 5 days",
+  "Every 7 days",
+  "Every 14 days",
+  "Every 21 days",
+  "Every Every month",
 ];

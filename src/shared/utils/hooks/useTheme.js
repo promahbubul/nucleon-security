@@ -1,12 +1,11 @@
-import { useSelector } from 'react-redux'
-
 const useTheme = () => {
-  const { theme } = useSelector((state) => state.global)
-  if (theme === 'dark') {
-    return true
+  const theme = localStorage.getItem("theme");
+  console.log(theme);
+  if (theme === "dark") {
+    return true;
   } else {
-    return false
+    return false;
   }
-}
+};
 
-export default useTheme
+export default useTheme;

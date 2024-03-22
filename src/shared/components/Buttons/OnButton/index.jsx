@@ -1,9 +1,10 @@
-const OnButton = ({ className }) => {
+const OnButton = ({ className, handleButton }) => {
   return (
     <button
-      className={`w-16 h-9 rounded-full ${className} flex items-center justify-end pr-1`}
+      onClick={handleButton}
+      className={`w-14 h-7 shadow-inner rounded-full ${className} flex items-center justify-end pr-1`}
     >
-      <div className="bg-white h-7 w-7 rounded-full  "></div>
+      <div className="bg-white h-5 w-5 rounded-full  "></div>
     </button>
   );
 };

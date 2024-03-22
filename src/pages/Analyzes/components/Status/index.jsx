@@ -10,20 +10,20 @@ const Status = () => {
     <div className="grid grid-cols-12 gap-3">
       {/* MALICIOUS FILE */}
       <StatusCard
-        className={"col-span-3"}
+        className={"col-span-6 md:col-span-3"}
         title={"Malicious File"}
         number={17}
         icon={FaBiohazard}
       ></StatusCard>
       {/* ANALYSIS COUNT  */}
       <StatusCard
-        className={"col-span-3"}
+        className={"col-span-6 md:col-span-3"}
         title={"Analysis count"}
         number={118}
         icon={FaFlask}
       ></StatusCard>
       {/* UPLOAD FILE */}
-      <div className="col-span-3 border-2 border-dashed hover:border-info border-slate-400 rounded-sm h-full w-full bg-slate-200  drop-shadow-md dark:bg-navy-700 flex flex-row items-center justify-center gap-2 relative">
+      <div className="col-span-6 md:col-span-3 border-2 border-dashed hover:border-info border-slate-400 rounded-sm h-full w-full bg-slate-200  drop-shadow-md dark:bg-navy-700 flex flex-row items-center justify-center gap-2 relative">
         <input
           type="file"
           name="file"
@@ -36,7 +36,7 @@ const Status = () => {
         </p>
       </div>
       {/* SHARE ANALYSIS  */}
-      <div className="bg-slate-200 drop-shadow-md dark:bg-navy-700 h-full w-full col-span-3 flex flex-row justify-center items-center gap-3">
+      <div className="bg-slate-200 drop-shadow-md dark:bg-navy-700 h-full w-full col-span-6 md:col-span-3 flex flex-row justify-center items-center gap-3">
         <p className="text-gray-500 dark:text-navy-100 text-base font-normal">
           Share Analysis
         </p>

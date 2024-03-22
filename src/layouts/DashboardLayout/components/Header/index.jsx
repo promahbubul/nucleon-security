@@ -9,15 +9,17 @@ import {
   headerMenu,
   mobileMenuLinks,
 } from "@shared/constants/menuLinks.constants";
+import useTheme from "../../../../shared/utils/hooks/useTheme";
 
 const Header = ({ selectedMenu, setSelectedMenu }) => {
+  const checkMode = useTheme();
+  const [dark, setDark] = useState(checkMode);
   const [showLanguage, setShowLanguage] = useState(false);
   const [showDropDownMenu, setShowDropDownMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const navigate = useNavigate();
   // Selected environment
 
-  const [theme, setTheme] = useState(null);
   const params = useLocation();
 
   function handleDropDownMenu(menu) {
@@ -26,24 +28,19 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
   }
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
-
-  useEffect(() => {
-    if (theme === "dark") {
+    if (dark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [theme]);
+  }, [dark]);
 
   const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem("theme", dark ? "light" : "dark");
+    setDark(!dark);
+    console.log(dark);
   };
+
   return (
     <header className="h-14 dark:bg-navy-800 bg-white border-b border-b-gray-200 dark:border-slate-700 flex flex-row justify-between px-5 items-center">
       {/* PAGE TITLE */}
@@ -59,7 +56,7 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
             onClick={() => setShowDropDownMenu(!showDropDownMenu)}
             className="flex flex-row gap-2 items-center"
           >
-            {theme === "dark" ? (
+            {dark ? (
               <img
                 src="/images/logo.png"
                 alt=""
@@ -113,11 +110,7 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
       {/* HEADER LOGO */}
       <div className="w-full md:flex  text-center m-auto justify-center items-center hidden cursor-pointer select-none">
         <img
-          src={
-            theme === "dark"
-              ? "/images/icon-light.png"
-              : "/images/icon-dark.png"
-          }
+          src={dark ? "/images/icon-light.png" : "/images/icon-dark.png"}
           alt=""
           className="h-9"
         />
@@ -144,12 +137,12 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
             <div className="fixed flex flex-col justify-between h-full top-0 left-0 w-10/12  py-5 bg-white dark:bg-navy-700 z-40">
               <div className="">
                 <div className="flex flex-row px-5 justify-between items-center">
-                  <div className="">
+                  {/* <div className="">
                     <LanguageSelector />
-                  </div>
+                  </div> */}
                   {/* DARK MODE BUTTON */}
                   <button className="" onClick={handleThemeSwitch}>
-                    {theme === "dark" ? <DarkButton /> : <LightButton />}
+                    {dark ? <DarkButton /> : <LightButton />}
                   </button>
                 </div>
                 {/* SIDEMENU (MOBILE) */}
@@ -188,12 +181,12 @@ const Header = ({ selectedMenu, setSelectedMenu }) => {
       {/* HEADER MENU */}
       <div className="w-full hidden md:flex flex-row justify-end gap-3">
         {/* LANGUAGE SWITCH */}
-        <div className="md:flex hidden">
+        {/* <div className="md:flex hidden">
           <LanguageSelector />
-        </div>
+        </div> */}
         {/* DARK MODE BUTTON */}
         <button className="" onClick={handleThemeSwitch}>
-          {theme === "dark" ? <DarkButton /> : <LightButton />}
+          {dark ? <DarkButton /> : <LightButton />}
         </button>
 
         {/* HEADER MENU */}

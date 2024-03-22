@@ -5,11 +5,16 @@ import Label from "@shared/components/Form/Label";
 import Input from "@shared/components/Form/Input";
 import DropDownSelect from "@shared/components/DropDownSelect";
 import { entitiesOptions } from "@shared/constants/updateaccounts.constants";
-import OffButton from "@shared/components/Buttons/OffButton";
+
 import Button from "@shared/components/Buttons/Button/Button";
 import { useTranslation } from "react-i18next";
+import LanguageSelector from "../../../../shared/components/LanguageSelector";
+import { useState } from "react";
+import OnButton from "../../../../shared/components/Buttons/OnButton";
+import OffButton from "../../../../shared/components/Buttons/OffButton";
 
 const UpdateAccount = ({ showModal, handleModal }) => {
+  const [oneTimePassword, setOneTimePassword] = useState(false);
   const { t } = useTranslation();
   return (
     <Modal showModal={showModal} handleModal={handleModal}>
@@ -33,54 +38,91 @@ const UpdateAccount = ({ showModal, handleModal }) => {
           {/* PROFILE */}
           <div className="">
             <div className="grid grid-cols-12 gap-3  h-[calc(100vh-230.1px)] overflow-y-auto scrollbar-thumb-rounded-full scrollbar-track-rounded-full mt-5 scrollbar-thumb-info scrollbar-track-slate-200 scrollbar-thin pb-5 px-5">
-              <Label className={"col-span-4 "}>
+              <Label className={"col-span-12 md:col-span-4 "}>
                 {t("accounts.notification")}
               </Label>
               <Input
                 type={"text"}
                 placeholder={"dev@temp.com"}
-                className={"col-span-8  p-1 rounded-sm "}
+                className={"col-span-12 md:col-span-8  p-1 rounded-sm "}
               />
-              <Label className={"col-span-4 "}>{t("accounts.firstName")}</Label>
+              <Label className={"col-span-12 md:col-span-4 "}>
+                {t("accounts.firstName")}
+              </Label>
               <Input
                 type={"text"}
                 placeholder={"Fristname"}
-                className={"col-span-8 p-1 rounded-sm"}
+                className={"col-span-12 md:col-span-8 p-1 rounded-sm"}
               />
-              <Label className={"col-span-4 "}>{t("accounts.lastName")}</Label>
+              <Label className={"col-span-12 md:col-span-4 "}>
+                {t("accounts.lastName")}
+              </Label>
               <Input
                 type={"text"}
                 placeholder={"Lastname"}
-                className={"col-span-8 "}
+                className={"col-span-12 md:col-span-8 "}
               />
+              {/* AUTHORIZATIONS */}
               <div className="col-span-12 flex flex-row border-b-1 border-b-slate-200 pb-3 items-center gap-3 mt-3">
                 <div className="h-0.5 w-8 bg-slate-300"></div>
                 <p className=" text-navy-500 dark:text-navy-100">
                   {t("accounts.authorizations")}
                 </p>
               </div>
-              <Label className={"col-span-4 "}>{t("accounts.entities")}</Label>
+              <Label className={"col-span-12 md:col-span-4 "}>
+                {t("accounts.entities")}
+              </Label>
               <DropDownSelect
-                className={"col-span-8"}
+                className={"col-span-12 md:col-span-8"}
                 options={entitiesOptions}
               />
+              {/* CONFIGURATION */}
+              <div className="col-span-12 flex flex-row border-b-1 border-b-slate-200 pb-3 items-center gap-3 mt-5">
+                <div className="h-0.5 w-8 bg-slate-300"></div>
+                <p className=" text-navy-500 dark:text-navy-100">
+                  Configuration
+                </p>
+              </div>
+              <Label className={"col-span-12 md:col-span-4 "}>
+                Change Language
+              </Label>
+              <div className="col-span-12 md:col-span-4">
+                <LanguageSelector />
+              </div>
+              {/* AUTHENTICATION */}
               <div className="col-span-12 flex flex-row border-b-1 border-b-slate-200 pb-3 items-center gap-3 mt-3">
                 <div className="h-0.5 w-8 bg-slate-300"></div>
                 <p className=" text-navy-500 dark:text-navy-100">
                   {t("accounts.authentication")}
                 </p>
               </div>
-              <Label className={"col-span-4 "}> {t("accounts.password")}</Label>
-              <Input type={"password"} className={"col-span-8 "} />
-              <Label className={"col-span-4 "}>
+              <Label className={"col-span-12 md:col-span-4 "}>
+                {" "}
+                {t("accounts.password")}
+              </Label>
+              <Input
+                type={"password"}
+                className={"col-span-12 md:col-span-8 "}
+              />
+              <Label className={"col-span-12 md:col-span-4 "}>
                 {t("accounts.confirmPassword")}
               </Label>
-              <Input type={"password"} className={"col-span-8 "} />
+              <Input
+                type={"password"}
+                className={"col-span-12 md:col-span-8 "}
+              />
               <Label className={"col-span-4 "}>
                 {t("accounts.oneTimePassword")}
               </Label>
-              <div className="col-span-8 flex justify-end ">
-                <OffButton />
+              <div className="col-span-8 flex  justify-end ">
+                {oneTimePassword ? (
+                  <OnButton
+                    className={"bg-info"}
+                    handleButton={() => setOneTimePassword(false)}
+                  />
+                ) : (
+                  <OffButton handleButton={() => setOneTimePassword(true)} />
+                )}
               </div>
             </div>
             <div className="pt-3 pr-3 flex flex-row justify-between border-t border-slate-300">

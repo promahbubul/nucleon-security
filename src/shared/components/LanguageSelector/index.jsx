@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const LanguageSelector = () => {
+const   LanguageSelector = () => {
   const { i18n } = useTranslation();
   const [showLanguages, setShowLanguages] = useState(false);
 
